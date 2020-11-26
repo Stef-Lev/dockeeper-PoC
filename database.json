@@ -1,0 +1,36 @@
+{
+  "tutorials": [
+    {
+      "id": 1,
+      "title": "How to setup a serverless React App",
+      "author": "Stefanos Leventis",
+      "content": [
+        {
+          "header": "How to setup a serverless React App"
+        },
+        {
+          "text": "Lorem ipsum mpla mpla mpla mpla mpla. Lorem ipsum mpla mpla mpla mpla mpla. Lorem ipsum mpla mpla mpla mpla mpla."
+        },
+        {
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "How to make a CSS animation",
+      "author": "Stefanos Leventis",
+      "content": [
+        {
+          "header": "How to make a CSS animation"
+        },
+        {
+          "text": "Lorem ipsum mpla mpla mpla mpla mpla. Lorem ipsum mpla mpla mpla mpla mpla. Lorem ipsum mpla mpla mpla mpla mpla."
+        },
+        {
+          "image": "123"
+        }
+      ]
+    }
+  ]
+}
