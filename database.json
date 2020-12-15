@@ -35,6 +35,10 @@
         {
           "type": "image",
           "url": "https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        },
+        {
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=wfaDzSL6ll0"
         }
       ]
     }
