@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
-import AllDocsPage from './AllDocsPage';
+import AllDocsPage from '../routes/AllDocsPage';
 
 function Navigation() {
     return (
