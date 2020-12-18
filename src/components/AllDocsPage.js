@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from 'react-loader-spinner';
 import { Button } from 'react-bootstrap';
@@ -48,6 +49,7 @@ function AllDocsPage() {
                             }
                         })}
                     </div>
+                    <Link to={`/article/${section.id}`}>GO TO ARTICLE</Link>
                 </section>)
             })}
         </div>

@@ -1,7 +1,7 @@
 {
   "tutorials": [
     {
-      "id": 1,
+      "id": 1001,
       "title": "How to setup a new computer",
       "author": "Stefanos Leventis",
       "body": [
@@ -20,7 +20,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 1002,
       "title": "How to make a CSS animation",
       "author": "Stefanos Leventis",
       "body": [
