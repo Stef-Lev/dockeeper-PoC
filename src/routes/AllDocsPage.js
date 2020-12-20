@@ -38,15 +38,16 @@ function AllDocsPage() {
                     <p>{section.author}</p>
                     <div style={{ border: '2px solid grey' }} className='body-content'>
                         {section.body.map((item, index) => {
-                            if (item.type == 'header') {
+                            if (item.type === 'header') {
                                 return <h3 key={`${item.type}${index}`}>{item.content}{index}</h3>
-                            } else if (item.type == 'text') {
-                                return <p>{item.content}</p>
-                            } else if (item.type == 'image') {
-                                return <img src={item.url} width="200px" />
-                            } else if (item.type == 'video') {
-                                return <iframe width="560" height="315" src={item.url.replace('watch?v=', 'embed/')} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                            } else if (item.type === 'text') {
+                                return <p key={`${item.type}${index}`}>{item.content}</p>
+                            } else if (item.type === 'image') {
+                                return <img src={item.url} width="200px" key={`${item.type}${index}`} />
                             }
+                            // else if (item.type === 'video') {
+                            //     return <iframe width="560" height="315" src={item.url.replace('watch?v=', 'embed/')} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                            // }
                         })}
                     </div>
                     <Link to={`/article/${section.id}`}>GO TO ARTICLE</Link>
@@ -55,5 +56,6 @@ function AllDocsPage() {
         </div>
     )
 }
+//Way to import google image as html image. Add ID at the end of URL https://drive.google.com/uc?export=view&id=XXX
 
 export default AllDocsPage;

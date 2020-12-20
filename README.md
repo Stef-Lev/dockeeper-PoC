@@ -72,3 +72,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### JSON SERVER
 
 To run mock server run this command json-server --watch database.json --port 3002.
+
+### GOOGLE DRIVE IMAGE
+The main url of the google drive image 'https://drive.google.com/uc?export=view&id='
+The user must add the id of the image e.g. '1epEKgoF745padrvXFWERPqYTTgJqCPPp'

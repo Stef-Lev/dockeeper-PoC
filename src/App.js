@@ -9,15 +9,9 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navigation />
         <Container fluid={true}>
-          <Switch>
-            <Route path='/home' component={HomePage} />
-            <Route path='/documents' component={AllDocsPage} />
-            <Route render={function () {
-              return <p>Not found</p>
-            }} />
-          </Switch>
+          <Route path='/' component={HomePage} />
+          <Route path='/documents' component={AllDocsPage} />
         </Container>
       </div>
     </Router>
