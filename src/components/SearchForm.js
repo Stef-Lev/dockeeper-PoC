@@ -13,7 +13,7 @@ const SearchForm = ({ fetchResults }) => {
                         <option>By title</option>
                         <option>By tag</option>
                     </Form.Control>
-                    <Button variant="primary" type="button" >
+                    <Button variant="primary" type="button" onClick>
                         Submit
                 </Button>
                 </Form.Group>
