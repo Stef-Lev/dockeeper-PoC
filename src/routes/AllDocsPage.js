@@ -5,6 +5,19 @@ import Loader from 'react-loader-spinner';
 import { Button } from 'react-bootstrap';
 
 function AllDocsPage() {
+
+      // const [data, setData] = useState('');
+
+    // useEffect(() => {
+    //     fetch('http://localhost:3002/tutorials').then(res => res.json()).then(docs => setData(docs))
+    // }, [])
+
+    // const filterResults = (e) => {
+    //     data.filter(item => item === e.target.value)
+    // }
+
+    // console.log(data);
+    
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
 
