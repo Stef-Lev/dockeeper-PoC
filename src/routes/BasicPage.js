@@ -17,11 +17,15 @@ const Container = styled.div`
 function BasicPage() {
   return (
     <Container>
-      <Typography variant="h3">Document Keeper</Typography>
+      <Typography variant="h1" style={{ fontSize: "2.5rem" }}>
+        Document Keeper
+      </Typography>
+      <Typography variant="h2" style={{ fontSize: "2.2rem" }}>
+        Docs
+      </Typography>
       <SearchBox />
-      <Typography variant="h5">Docs</Typography>
-      <DocItem title="Title" author="Author" />
-      <DocItem title="Title" author="Author" />
+      <DocItem title="Title" author="Author" tags={["tech", "css"]} />
+      <DocItem title="Title" author="Author" tags={["tech", "css"]} />
     </Container>
   );
 }

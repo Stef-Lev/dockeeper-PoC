@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import IconButton from "@material-ui/core/IconButton";
-import DescriptionOutlinedIcon from "@material-ui/icons/DescriptionOutlined";
-import EditIcon from "@material-ui/icons/Edit";
 import AddIcon from "@material-ui/icons/Add";
 
 const StyledButton = styled(IconButton)`
@@ -10,8 +8,8 @@ const StyledButton = styled(IconButton)`
   z-index: 1001;
   bottom: 36px;
   right: 36px;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   background-color: #ed4040;
   color: #fff;
   :hover {
@@ -23,7 +21,7 @@ const StyledButton = styled(IconButton)`
 function NewDocButton() {
   return (
     <StyledButton variant="contained">
-      <AddIcon style={{ width: "60px", height: "60px" }} />
+      <AddIcon style={{ width: "50px", height: "50px" }} />
     </StyledButton>
   );
 }

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import IconButton from "@material-ui/core/IconButton";
 import DescriptionOutlinedIcon from "@material-ui/icons/DescriptionOutlined";
 import EditIcon from "@material-ui/icons/Edit";
+import Chip from "@material-ui/core/Chip";
 
 const StyledContainer = styled.div`
   width: 90%;
@@ -22,7 +23,15 @@ const InfoContainer = styled.div`
   align-items: center;
 `;
 
-function DocItem({ title, author }) {
+const TagChip = styled(Chip)`
+  border-radius: 12px;
+  background-color: #ed4040;
+  color: #fff;
+  margin-right: 4px;
+  opacity: 0.8;
+`;
+
+function DocItem({ title, author, tags }) {
   return (
     <StyledContainer>
       <Grid item xs={12}>
@@ -30,11 +39,25 @@ function DocItem({ title, author }) {
           <DataContainer>
             <InfoContainer>
               <DescriptionOutlinedIcon
-                style={{ width: "64px", height: "64px", marginRight: "22px" }}
+                style={{ width: "50px", height: "50px", marginRight: "16px" }}
               />
               <div>
-                <h3>{title}</h3>
-                <h4>{author}</h4>
+                <Typography
+                  variant="h3"
+                  style={{ fontSize: "1.8rem", marginBottom: "4px" }}
+                >
+                  {title}
+                </Typography>
+                <Typography
+                  variant="body1"
+                  color="textSecondary"
+                  style={{ fontSize: "1.2rem", marginBottom: "4px" }}
+                >
+                  {author}
+                </Typography>
+                {tags.map((el) => (
+                  <TagChip size="medium" label={el.toUpperCase()} />
+                ))}
               </div>
             </InfoContainer>
             <IconButton onClick={() => console.log("Works")}>
