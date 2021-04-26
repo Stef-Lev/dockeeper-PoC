@@ -10,6 +10,9 @@ const StyledContainer = styled.div`
   width: 90%;
   text-align: left;
   padding: 10px 16px;
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 const DataContainer = styled.div`
@@ -25,7 +28,7 @@ const InfoContainer = styled.div`
 
 const TagChip = styled(Chip)`
   border-radius: 12px;
-  background-color: #ed4040;
+  background-color: rgba(5, 70, 90, 0.75);
   color: #fff;
   margin-right: 4px;
   opacity: 0.8;
@@ -33,7 +36,12 @@ const TagChip = styled(Chip)`
 
 function DocItem({ title, author, tags }) {
   return (
-    <StyledContainer>
+    <StyledContainer
+      onClick={(e) => {
+        e.preventDefault();
+        console.log("clicked");
+      }}
+    >
       <Grid item xs={12}>
         <Paper elevation={3} style={{ padding: "10px 16px" }}>
           <DataContainer>
