@@ -16,6 +16,9 @@ const Container = styled.div`
   height: 500px;
 `;
 
+// Fetch title
+// Object.values(data._immutable.currentContent.blockMap).find(el => el.type === 'header-one').text
+
 function BasicPage() {
   const history = useHistory();
 

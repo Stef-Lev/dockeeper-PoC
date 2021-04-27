@@ -30,7 +30,7 @@ function DocItem({ title, author }) {
   return (
     <StyledContainer
       onClick={(e) => {
-        e.preventDefault();
+        e.stopPropagation();
         console.log("clicked");
       }}
     >
@@ -57,7 +57,12 @@ function DocItem({ title, author }) {
                 </Typography>
               </div>
             </InfoContainer>
-            <IconButton onClick={() => console.log("Works")}>
+            <IconButton
+              onClick={(e) => {
+                e.stopPropagation();
+                console.log("Works");
+              }}
+            >
               <EditIcon />
             </IconButton>
           </DataContainer>
