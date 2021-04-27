@@ -3,6 +3,8 @@ import { Grid, Paper, Typography, Button } from "@material-ui/core";
 import styled from "styled-components";
 import DocItem from "../components/DocItem";
 import SearchBox from "../components/SearchBox";
+import NewDocButton from "../components/NewDocButton";
+import { useHistory } from "react-router-dom";
 
 const Container = styled.div`
   padding: 32px 16px;
@@ -15,6 +17,8 @@ const Container = styled.div`
 `;
 
 function BasicPage() {
+  const history = useHistory();
+
   return (
     <Container>
       <Typography variant="h1" style={{ fontSize: "2.5rem" }}>
@@ -26,6 +30,7 @@ function BasicPage() {
       <SearchBox />
       <DocItem title="Title" author="Author" tags={["tech", "css"]} />
       <DocItem title="Title" author="Author" tags={["tech", "css"]} />
+      <NewDocButton />
     </Container>
   );
 }
