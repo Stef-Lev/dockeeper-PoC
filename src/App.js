@@ -15,7 +15,7 @@ function App() {
             <BasicPage />
           </Route>
           <Route path="/edit">
-            <AllDocsPage />
+            <EditPage />
           </Route>
         </Container>
         <NewDocButton />
