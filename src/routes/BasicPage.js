@@ -28,8 +28,8 @@ function BasicPage() {
         Docs
       </Typography>
       <SearchBox />
-      <DocItem title="Title" author="Author" tags={["tech", "css"]} />
-      <DocItem title="Title" author="Author" tags={["tech", "css"]} />
+      <DocItem title="Title" author="Author" />
+      <DocItem title="Title" author="Author" />
       <NewDocButton />
     </Container>
   );

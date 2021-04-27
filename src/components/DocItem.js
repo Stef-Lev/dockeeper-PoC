@@ -26,15 +26,7 @@ const InfoContainer = styled.div`
   align-items: center;
 `;
 
-const TagChip = styled(Chip)`
-  border-radius: 12px;
-  background-color: rgba(5, 70, 90, 0.75);
-  color: #fff;
-  margin-right: 4px;
-  opacity: 0.8;
-`;
-
-function DocItem({ title, author, tags }) {
+function DocItem({ title, author }) {
   return (
     <StyledContainer
       onClick={(e) => {
@@ -63,9 +55,6 @@ function DocItem({ title, author, tags }) {
                 >
                   {author}
                 </Typography>
-                {tags.map((el) => (
-                  <TagChip size="medium" label={el.toUpperCase()} />
-                ))}
               </div>
             </InfoContainer>
             <IconButton onClick={() => console.log("Works")}>

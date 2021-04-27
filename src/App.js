@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import BasicPage from "./routes/BasicPage";
 import EditPage from "./routes/EditPage";
 import Container from "@material-ui/core/Container";
-import NewDocButton from "./components/NewDocButton";
 
 function App() {
   return (

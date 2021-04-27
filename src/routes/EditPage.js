@@ -6,6 +6,8 @@ import DOMPurify from "dompurify";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
+import Button from "@material-ui/core/Button";
+import { useHistory } from "react-router-dom";
 
 const Container = styled.div`
   .rich-wrapper {
@@ -26,9 +28,30 @@ const Container = styled.div`
   }
 `;
 
+const SubmitButton = styled(Button)`
+  background-color: rgba(5, 70, 90, 0.75);
+  color: #fff;
+  :hover {
+    background-color: rgba(5, 70, 90, 0.5);
+    color: #fff;
+  }
+`;
+
+// @TODO MODAL NOT SAVED
+const CancelButton = styled(Button)`
+  background-color: rgba(70, 70, 70, 0.5);
+  color: #fff;
+  margin-right: 16px;
+  :hover {
+    background-color: rgba(120, 120, 120, 0.5);
+    color: #fff;
+  }
+`;
+
 function EditPage() {
   // @TODO if ID edit else new
   const { id } = useParams();
+  const history = useHistory();
 
   const [convertedContent, setConvertedContent] = useState(null);
   const [editorState, setEditorState] = useState(() =>
@@ -38,7 +61,7 @@ function EditPage() {
   const onEditorStateChange = (editorState) => {
     setEditorState(editorState);
     convertContentToHTML();
-    console.log(editorState);
+    // console.log(editorState);
   };
 
   const convertContentToHTML = () => {
@@ -51,6 +74,10 @@ function EditPage() {
     return {
       __html: DOMPurify.sanitize(html),
     };
+  };
+
+  const cancelAndReturn = () => {
+    history.push("/");
   };
 
   // @TODO refactor this
@@ -88,7 +115,12 @@ function EditPage() {
         style={{ backgroundColor: "black", color: "white" }}
         dangerouslySetInnerHTML={createMarkup(convertedContent)}
       ></div>
-      <button onClick={handleDocPost}>Click me</button>
+      <CancelButton variant="contained" onClick={cancelAndReturn}>
+        Cancel
+      </CancelButton>
+      <SubmitButton variant="contained" onClick={handleDocPost}>
+        Submit
+      </SubmitButton>
     </Container>
   );
 }
