@@ -21,17 +21,17 @@ const StyledSearch = styled(InputBase)`
   border: 1px solid rgba(0, 0, 0, 0.25);
 `;
 
-const StyledSelect = styled(FormControl)`
-  :focus {
-    border: 3px solid red;
-  }
-`;
+// const StyledSelect = styled(FormControl)`
+//   :focus {
+//     border: 3px solid red;
+//   }
+// `;
 
 function SearchBox() {
   return (
     <Container>
       <StyledSearch placeholder="Search..." fullWidth />
-      <StyledSelect
+      {/* <StyledSelect
         variant="outlined"
         style={{ width: "30%", textAlign: "left" }}
       >
@@ -50,7 +50,7 @@ function SearchBox() {
           <MenuItem value={20}>Twenty</MenuItem>
           <MenuItem value={30}>Thirty</MenuItem>
         </Select>
-      </StyledSelect>
+      </StyledSelect> */}
     </Container>
   );
 }

@@ -4,7 +4,6 @@ import styled from "styled-components";
 import IconButton from "@material-ui/core/IconButton";
 import DescriptionOutlinedIcon from "@material-ui/icons/DescriptionOutlined";
 import EditIcon from "@material-ui/icons/Edit";
-import Chip from "@material-ui/core/Chip";
 
 const StyledContainer = styled.div`
   width: 90%;
@@ -26,7 +25,7 @@ const InfoContainer = styled.div`
   align-items: center;
 `;
 
-function DocItem({ title, author }) {
+function DocItem({ title, preview }) {
   return (
     <StyledContainer
       onClick={(e) => {
@@ -53,7 +52,7 @@ function DocItem({ title, author }) {
                   color="textSecondary"
                   style={{ fontSize: "1.2rem", marginBottom: "4px" }}
                 >
-                  {author}
+                  {`${preview.substring(0, 60)}...`}
                 </Typography>
               </div>
             </InfoContainer>
