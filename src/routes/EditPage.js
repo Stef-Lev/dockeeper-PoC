@@ -92,7 +92,7 @@ function EditPage() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify({ contentData: data }),
     })
       .then((response) => response.json())
       .then((data) => {
