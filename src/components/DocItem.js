@@ -25,12 +25,12 @@ const InfoContainer = styled.div`
   align-items: center;
 `;
 
-function DocItem({ title, preview }) {
+function DocItem({ title, preview, id }) {
   return (
     <StyledContainer
       onClick={(e) => {
         e.stopPropagation();
-        console.log("clicked");
+        console.log("clicked", id);
       }}
     >
       <Grid item xs={12}>

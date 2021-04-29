@@ -1,0 +1,46 @@
+{
+  "tutorials": [
+    {
+      "id": 1001,
+      "title": "How to setup a new computer",
+      "author": "Stefanos Leventis",
+      "body": [
+        {
+          "type": "header",
+          "content": "Chapter one: The hardware"
+        },
+        {
+          "type": "text",
+          "content": "Lorem ipsum mpla mpla mpla mpla mpla. Lorem ipsum mpla mpla mpla mpla mpla. Lorem ipsum mpla mpla mpla mpla mpla."
+        },
+        {
+          "type": "image",
+          "url": "https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+        }
+      ]
+    },
+    {
+      "id": 1002,
+      "title": "How to make a CSS animation",
+      "author": "Stefanos Leventis",
+      "body": [
+        {
+          "type": "header",
+          "content": "Chapter one: CSS Selectors"
+        },
+        {
+          "type": "text",
+          "content": "Lorem ipsum mpla mpla mpla mpla mpla. Lorem ipsum mpla mpla mpla mpla mpla. Lorem ipsum mpla mpla mpla mpla mpla."
+        },
+        {
+          "type": "image",
+          "url": "https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        },
+        {
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=wfaDzSL6ll0"
+        }
+      ]
+    }
+  ]
+}

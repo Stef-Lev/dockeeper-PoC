@@ -1,4 +1,5 @@
 import React, { useState, Component } from "react";
+import { Typography } from "@material-ui/core";
 import { convertToHTML } from "draft-convert";
 import { EditorState } from "draft-js";
 import { Editor } from "react-draft-wysiwyg";
@@ -10,6 +11,8 @@ import Button from "@material-ui/core/Button";
 import { useHistory } from "react-router-dom";
 
 const Container = styled.div`
+  padding: 16px;
+
   .rich-wrapper {
     margin: 22px auto;
   }
@@ -102,6 +105,9 @@ function EditPage() {
 
   return (
     <Container>
+      <Typography variant="h2" style={{ fontSize: "2.2rem" }}>
+        Docs
+      </Typography>
       <Editor
         defaultEditorState={id ? EditorState.createEmpty() : ""}
         editorState={editorState}

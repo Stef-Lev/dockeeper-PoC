@@ -21,7 +21,6 @@ const Container = styled.div`
   justify-content: start;
   align-items: center;
   gap: 16px;
-  height: 500px;
 `;
 
 const Loader = styled(CircularProgress)`
@@ -46,6 +45,7 @@ function BasicPage() {
         .then((res) => res.json())
         .then((result) => {
           mounted && setData(result);
+          console.log(result);
         })
         .catch(console.log("Error"))
         .finally(() => {
@@ -66,20 +66,21 @@ function BasicPage() {
       <Typography variant="h2" style={{ fontSize: "2.2rem" }}>
         Docs
       </Typography>
+      <SearchBox />
       {loading && <Loader style={{ width: "200px", height: "200px" }} />}
-      {!loading && (
-        <>
-          <SearchBox />
+      {!loading &&
+        data.map((el) => (
           <DocItem
-            title="Title"
-            preview="Author yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
+            key={`document_ID${el.id}`}
+            title={
+              Object.values(el._immutable.currentContent.blockMap).find(
+                (el) => el.type === "header-one"
+              ).text
+            }
+            id={el.id}
+            preview="Author"
           />
-          <DocItem
-            title="Title"
-            preview="Author yrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr"
-          />
-        </>
-      )}
+        ))}
       <NewDocButton />
     </Container>
   );
