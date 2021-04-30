@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import BasicPage from "./routes/BasicPage";
 import EditPage from "./routes/EditPage";
 import DocPage from "./routes/DocPage";

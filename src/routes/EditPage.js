@@ -1,7 +1,12 @@
-import React, { useState, Component } from "react";
+import React, { useState, useEffect } from "react";
 import { Typography } from "@material-ui/core";
 import { convertToHTML } from "draft-convert";
-import { EditorState } from "draft-js";
+import {
+  EditorState,
+  convertToRaw,
+  convertFromRaw,
+  ContentState,
+} from "draft-js";
 import { Editor } from "react-draft-wysiwyg";
 import DOMPurify from "dompurify";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
@@ -61,7 +66,15 @@ function EditPage() {
     EditorState.createEmpty()
   );
 
-  const onEditorStateChange = (editorState) => {
+  useEffect(() => {
+    const blocks = convertToRaw(editorState.getCurrentContent()).blocks;
+    const value = blocks
+      .map((block) => (!block.text.trim() && "\n") || block.text)
+      .join("\n");
+    console.log(blocks, value);
+  }, [editorState]);
+
+  const handleChange = (editorState) => {
     setEditorState(editorState);
     convertContentToHTML();
     // console.log(editorState);
@@ -85,14 +98,15 @@ function EditPage() {
 
   // @TODO refactor this
   const handleDocPost = () => {
-    const data = editorState;
+    const contentState = editorState.getCurrentContent();
+    const raw = convertToRaw(contentState);
 
     fetch("http://localhost:3002/tutorials", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ contentData: data }),
+      body: JSON.stringify({ content: raw }, null, 2),
     })
       .then((response) => response.json())
       .then((data) => {
@@ -109,12 +123,11 @@ function EditPage() {
         Docs
       </Typography>
       <Editor
-        defaultEditorState={id ? EditorState.createEmpty() : ""}
         editorState={editorState}
         toolbarClassName="rich-toolbar"
         wrapperClassName="rich-wrapper"
         editorClassName="rich-editor"
-        onEditorStateChange={onEditorStateChange}
+        onEditorStateChange={handleChange}
       />
 
       <div

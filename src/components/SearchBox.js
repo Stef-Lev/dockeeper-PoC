@@ -1,13 +1,6 @@
 import React from "react";
 import InputBase from "@material-ui/core/InputBase";
 import styled from "styled-components";
-import {
-  MenuItem,
-  Grid,
-  FormControl,
-  Select,
-  InputLabel,
-} from "@material-ui/core";
 
 const Container = styled.div`
   display: flex;

@@ -45,7 +45,6 @@ function BasicPage() {
         .then((res) => res.json())
         .then((result) => {
           mounted && setData(result);
-          console.log(result);
         })
         .catch(console.log("Error"))
         .finally(() => {
@@ -58,6 +57,7 @@ function BasicPage() {
     };
   }, []);
 
+  console.log(data);
   return (
     <Container>
       <Typography variant="h1" style={{ fontSize: "2.5rem" }}>
@@ -73,9 +73,7 @@ function BasicPage() {
           <DocItem
             key={`document_ID${el.id}`}
             title={
-              Object.values(el._immutable.currentContent.blockMap).find(
-                (el) => el.type === "header-one"
-              ).text
+              el.content.blocks.find((item) => item.type === "header-one").text
             }
             id={el.id}
             preview="Author"
