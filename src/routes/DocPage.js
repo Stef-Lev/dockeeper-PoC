@@ -3,12 +3,16 @@ import styled from "styled-components";
 import DOMPurify from "dompurify";
 import { Paper, CircularProgress } from "@material-ui/core";
 import { convertToHTML } from "draft-convert";
-import { EditorState } from "draft-js";
+import { Editor } from "react-draft-wysiwyg";
+import { convertFromRaw, convertToRaw, EditorState } from "draft-js";
 
-const DATA_URL = "http://localhost:3002/tutorials/101";
+const DATA_URL = "http://localhost:3002/tutorials/102";
 
 const Container = styled.div`
-  padding: 32px 16px;
+  padding: 32px;
+  img {
+    max-width: 900px;
+  }
 `;
 
 const Loader = styled(CircularProgress)`
@@ -16,9 +20,13 @@ const Loader = styled(CircularProgress)`
 `;
 
 function DocPage() {
-  const [convertedContent, setConvertedContent] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [editorState, setEditorState] = useState(null);
+  const [content, setContent] = useState(null);
+  const [convertedContent, setConvertedContent] = useState(null);
+  const [hideToolbar, setHideToolbar] = useState(true);
+  const [newEditorState, setNewEditorState] = useState(() =>
+    EditorState.createEmpty()
+  );
 
   useEffect(() => {
     let mounted = true;
@@ -29,11 +37,11 @@ function DocPage() {
       fetch(DATA_URL)
         .then((res) => res.json())
         .then((result) => {
-          mounted && setEditorState(result.contentData);
+          setContent(result.content);
         })
         .catch(console.log("Error"))
         .finally(() => {
-          mounted && setLoading(false);
+          setLoading(false);
         });
     }
 
@@ -42,32 +50,19 @@ function DocPage() {
     };
   }, []);
 
-  useEffect(() => {
-    console.log(editorState);
-    EditorState.createWithContent(editorState);
-    convertContentToHTML();
-  }, [editorState]);
-
-  const convertContentToHTML = () => {
-    let currentContentAsHTML = convertToHTML(editorState.getCurrentContent());
-    console.log(currentContentAsHTML);
-    setConvertedContent(currentContentAsHTML);
-  };
-
-  const createMarkup = (html) => {
-    return {
-      __html: DOMPurify.sanitize(html),
-    };
-  };
-
   return (
     <Container>
-      {loading && <Loader style={{ width: "200px", height: "200px" }} />}
-      {!loading && (
-        <Paper elevation={3}>
-          <div dangerouslySetInnerHTML={createMarkup(editorState)}></div>
-        </Paper>
-      )}
+      <Paper elevation={3} style={{ padding: "32px" }}>
+        {loading && <Loader style={{ width: "200px", height: "200px" }} />}
+        {!loading && content && (
+          <Editor
+            toolbarOnFocus={false}
+            toolbarHidden={true}
+            readOnly={true}
+            editorState={EditorState.createWithContent(convertFromRaw(content))}
+          />
+        )}
+      </Paper>
     </Container>
   );
 }
