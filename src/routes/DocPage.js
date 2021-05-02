@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import DOMPurify from "dompurify";
 import { Paper, CircularProgress } from "@material-ui/core";
-import { convertToHTML } from "draft-convert";
 import { Editor } from "react-draft-wysiwyg";
-import { convertFromRaw, convertToRaw, EditorState } from "draft-js";
+import { convertFromRaw, EditorState } from "draft-js";
+import ActionButton from "../components/ActionButton";
 
 const DATA_URL = "http://localhost:3002/tutorials/102";
 
@@ -12,6 +11,7 @@ const Container = styled.div`
   padding: 32px;
   img {
     max-width: 900px;
+    border-radius: 8px;
   }
 `;
 
@@ -22,11 +22,6 @@ const Loader = styled(CircularProgress)`
 function DocPage() {
   const [loading, setLoading] = useState(true);
   const [content, setContent] = useState(null);
-  const [convertedContent, setConvertedContent] = useState(null);
-  const [hideToolbar, setHideToolbar] = useState(true);
-  const [newEditorState, setNewEditorState] = useState(() =>
-    EditorState.createEmpty()
-  );
 
   useEffect(() => {
     let mounted = true;
@@ -63,6 +58,7 @@ function DocPage() {
           />
         )}
       </Paper>
+      <ActionButton type="edit" />
     </Container>
   );
 }

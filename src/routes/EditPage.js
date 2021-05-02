@@ -12,7 +12,7 @@ import DOMPurify from "dompurify";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
-import Button from "@material-ui/core/Button";
+import { Button, Paper } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 
 const Container = styled.div`
@@ -106,7 +106,7 @@ function EditPage() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ content: raw }, null, 2),
+      body: JSON.stringify({ content: raw, createdAt: new Date() }, null, 2),
     })
       .then((response) => response.json())
       .then((data) => {
@@ -122,27 +122,29 @@ function EditPage() {
 
   return (
     <Container>
-      <Typography variant="h2" style={{ fontSize: "2.2rem" }}>
-        Docs
-      </Typography>
-      <Editor
-        editorState={editorState}
-        toolbarClassName="rich-toolbar"
-        wrapperClassName="rich-wrapper"
-        editorClassName="rich-editor"
-        onEditorStateChange={handleChange}
-      />
+      <Paper elevation={3} style={{ padding: "32px" }}>
+        <Typography variant="h2" style={{ fontSize: "2.2rem" }}>
+          Docs
+        </Typography>
+        <Editor
+          editorState={editorState}
+          toolbarClassName="rich-toolbar"
+          wrapperClassName="rich-wrapper"
+          editorClassName="rich-editor"
+          onEditorStateChange={handleChange}
+        />
 
-      <div
-        style={{ backgroundColor: "black", color: "white" }}
-        dangerouslySetInnerHTML={createMarkup(convertedContent)}
-      ></div>
-      <CancelButton variant="contained" onClick={cancelAndReturn}>
-        Cancel
-      </CancelButton>
-      <SubmitButton variant="contained" onClick={handleDocPost}>
-        Submit
-      </SubmitButton>
+        <div
+          style={{ backgroundColor: "black", color: "white" }}
+          dangerouslySetInnerHTML={createMarkup(convertedContent)}
+        ></div>
+        <CancelButton variant="contained" onClick={cancelAndReturn}>
+          Cancel
+        </CancelButton>
+        <SubmitButton variant="contained" onClick={handleDocPost}>
+          Submit
+        </SubmitButton>
+      </Paper>
     </Container>
   );
 }

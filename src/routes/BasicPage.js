@@ -9,7 +9,7 @@ import {
 import styled from "styled-components";
 import DocItem from "../components/DocItem";
 import SearchBox from "../components/SearchBox";
-import NewDocButton from "../components/NewDocButton";
+import ActionButton from "../components/ActionButton";
 import { useHistory } from "react-router-dom";
 
 const DATA_URL = "http://localhost:3002/tutorials";
@@ -79,7 +79,7 @@ function BasicPage() {
             preview="Author"
           />
         ))}
-      <NewDocButton />
+      <ActionButton type="add" />
     </Container>
   );
 }
