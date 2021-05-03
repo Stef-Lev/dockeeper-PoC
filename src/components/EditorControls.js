@@ -46,7 +46,7 @@ function EditorControls({ onSave, onCancel }) {
       <StyledSaveBtn variant="contained" onClick={onSave}>
         <SaveIcon style={buttonStyle} />
       </StyledSaveBtn>
-      <StyledCancelBtn variant="contained" onClick={onSave}>
+      <StyledCancelBtn variant="contained" onClick={onCancel}>
         <CloseIcon style={buttonStyle} />
       </StyledCancelBtn>
     </ControlContainer>
