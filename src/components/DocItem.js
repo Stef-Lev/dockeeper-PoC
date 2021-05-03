@@ -50,6 +50,22 @@ const DeleteButton = styled(IconButton)`
 function DocItem({ title, preview, id }) {
   const history = useHistory();
 
+  const handleDelete = (id) => {
+    fetch(`http://localhost:3002/tutorials/${id}`, {
+      method: "DELETE",
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      })
+      .finally(() => {
+        window.location.reload();
+      });
+  };
+
   return (
     <StyledContainer
       onClick={(e) => {
@@ -92,7 +108,7 @@ function DocItem({ title, preview, id }) {
               <DeleteButton
                 onClick={(e) => {
                   e.stopPropagation();
-                  console.log("Deleted");
+                  handleDelete(id);
                 }}
               >
                 <DeleteIcon />

@@ -66,27 +66,35 @@ function EditPage() {
     EditorState.createEmpty()
   );
 
-  // useEffect(() => {
-  //   let mounted = true;
+  useEffect(() => {
+    let mounted = true;
 
-  //   if (mounted) {
-  //     setLoading(true);
+    if (mounted) {
+      setLoading(true);
 
-  //     fetch(DOC_URL)
-  //       .then((res) => res.json())
-  //       .then((result) => {
-  //         setContent(result.content);
-  //       })
-  //       .catch(console.log("Error"))
-  //       .finally(() => {
-  //         setLoading(false);
-  //       });
-  //   }
+      if (id) {
+        const DOC_URL = `http://localhost:3002/tutorials/${id}`;
 
-  //   return () => {
-  //     mounted = false;
-  //   };
-  // }, []);
+        fetch(DOC_URL)
+          .then((res) => res.json())
+          .then((result) => {
+            setEditorState(
+              EditorState.createWithContent(convertFromRaw(result.content))
+            );
+          })
+          .catch(console.log("Error"))
+          .finally(() => {
+            setLoading(false);
+          });
+      } else {
+        setLoading(false);
+      }
+    }
+
+    return () => {
+      mounted = false;
+    };
+  }, []);
 
   const handleChange = (editorState) => {
     setEditorState(editorState);
@@ -97,24 +105,47 @@ function EditPage() {
   };
 
   // @TODO refactor this
+
   const handleSave = () => {
     const contentState = editorState.getCurrentContent();
     const raw = convertToRaw(contentState);
-
-    fetch("http://localhost:3002/tutorials", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ content: raw, createdAt: new Date() }, null, 2),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Success:", data);
+    if (id) {
+      fetch(`http://localhost:3002/tutorials/${id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ content: raw, createdAt: new Date() }, null, 2),
       })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Success:", data);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        })
+        .finally(() => {
+          history.push(`/`);
+        });
+    } else {
+      fetch("http://localhost:3002/tutorials", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ content: raw, createdAt: new Date() }, null, 2),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Success:", data);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        })
+        .finally(() => {
+          history.push(`/`);
+        });
+    }
   };
 
   return (

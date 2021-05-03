@@ -60,7 +60,7 @@ function DocPage() {
         )}
       </Paper>
       <ActionButton type="home" onClick={() => history.push("/")} />
-      <ActionButton type="edit" />
+      <ActionButton type="edit" onClick={() => history.push(`/edit/${id}`)} />
     </Container>
   );
 }

@@ -50,14 +50,6 @@ function BasicPage() {
     };
   }, []);
 
-  // useEffect(() => {
-  //   effect;
-  //   return () => {
-  //     cleanup;
-  //   };
-  // }, [input]);
-
-  console.log(searchTerm);
   console.log(data);
   return (
     <Paper>
@@ -93,7 +85,7 @@ function BasicPage() {
                 preview="Author"
               />
             ))}
-        <ActionButton type="add" />
+        <ActionButton type="add" onClick={() => history.push(`/edit`)} />
       </Container>
     </Paper>
   );
