@@ -15,6 +15,7 @@ import { useHistory } from "react-router-dom";
 const DATA_URL = "http://localhost:3002/tutorials";
 
 const Container = styled.div`
+  margin-top: 16px;
   padding: 32px 16px;
   display: flex;
   flex-direction: column;
@@ -24,7 +25,7 @@ const Container = styled.div`
 `;
 
 const Loader = styled(CircularProgress)`
-  color: rgba(5, 70, 90, 0.75);
+  color: rgb(5, 70, 90);
 `;
 
 // Fetch title
@@ -34,6 +35,7 @@ function BasicPage() {
   const history = useHistory();
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     let mounted = true;
@@ -57,30 +59,52 @@ function BasicPage() {
     };
   }, []);
 
+  // useEffect(() => {
+  //   effect;
+  //   return () => {
+  //     cleanup;
+  //   };
+  // }, [input]);
+
+  console.log(searchTerm);
   console.log(data);
   return (
-    <Container>
-      <Typography variant="h1" style={{ fontSize: "2.5rem" }}>
-        Document Keeper
-      </Typography>
-      <Typography variant="h2" style={{ fontSize: "2.2rem" }}>
-        Docs
-      </Typography>
-      <SearchBox />
-      {loading && <Loader style={{ width: "200px", height: "200px" }} />}
-      {!loading &&
-        data.map((el) => (
-          <DocItem
-            key={`document_ID${el.id}`}
-            title={
-              el.content.blocks.find((item) => item.type === "header-one").text
-            }
-            id={el.id}
-            preview="Author"
-          />
-        ))}
-      <ActionButton type="add" />
-    </Container>
+    <Paper>
+      <Container>
+        <Typography variant="h1" style={{ fontSize: "2.5rem" }}>
+          Document Keeper
+        </Typography>
+        <Typography variant="h2" style={{ fontSize: "2.2rem" }}>
+          Docs
+        </Typography>
+        <SearchBox
+          onChange={(e) => {
+            setSearchTerm(e.target.value);
+          }}
+        />
+        {loading && <Loader style={{ width: "200px", height: "200px" }} />}
+        {!loading &&
+          data
+            .filter((doc) =>
+              doc.content.blocks
+                .find((item) => item.type === "header-one")
+                .text.toLowerCase()
+                .includes(searchTerm.toLowerCase())
+            )
+            .map((doc) => (
+              <DocItem
+                key={`document_ID${doc.id}`}
+                title={
+                  doc.content.blocks.find((item) => item.type === "header-one")
+                    .text
+                }
+                id={doc.id}
+                preview="Author"
+              />
+            ))}
+        <ActionButton type="add" />
+      </Container>
+    </Paper>
   );
 }
 

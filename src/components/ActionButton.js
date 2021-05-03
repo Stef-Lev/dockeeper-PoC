@@ -11,10 +11,10 @@ const StyledButton = styled(IconButton)`
   right: 36px;
   width: 80px;
   height: 80px;
-  background-color: rgba(5, 70, 90, 0.75);
+  background-color: rgb(5, 70, 90);
   color: #fff;
   :hover {
-    background-color: rgba(5, 70, 90, 0.5);
+    background-color: rgb(45, 110, 130);
     color: #fff;
   }
 `;

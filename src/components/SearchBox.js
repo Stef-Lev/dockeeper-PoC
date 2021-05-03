@@ -20,10 +20,10 @@ const StyledSearch = styled(InputBase)`
 //   }
 // `;
 
-function SearchBox() {
+function SearchBox({ onChange }) {
   return (
     <Container>
-      <StyledSearch placeholder="Search..." fullWidth />
+      <StyledSearch placeholder="Search..." fullWidth onChange={onChange} />
       {/* <StyledSelect
         variant="outlined"
         style={{ width: "30%", textAlign: "left" }}

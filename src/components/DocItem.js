@@ -4,6 +4,7 @@ import styled from "styled-components";
 import IconButton from "@material-ui/core/IconButton";
 import DescriptionOutlinedIcon from "@material-ui/icons/DescriptionOutlined";
 import EditIcon from "@material-ui/icons/Edit";
+import { useHistory } from "react-router-dom";
 
 const StyledContainer = styled.div`
   width: 90%;
@@ -26,11 +27,13 @@ const InfoContainer = styled.div`
 `;
 
 function DocItem({ title, preview, id }) {
+  const history = useHistory();
+
   return (
     <StyledContainer
       onClick={(e) => {
         e.stopPropagation();
-        console.log("clicked", id);
+        history.push(`/document/${id}`);
       }}
     >
       <Grid item xs={12}>
@@ -59,7 +62,7 @@ function DocItem({ title, preview, id }) {
             <IconButton
               onClick={(e) => {
                 e.stopPropagation();
-                console.log("Works");
+                history.push(`/edit/${id}`);
               }}
             >
               <EditIcon />

@@ -4,8 +4,7 @@ import { Paper, CircularProgress } from "@material-ui/core";
 import { Editor } from "react-draft-wysiwyg";
 import { convertFromRaw, EditorState } from "draft-js";
 import ActionButton from "../components/ActionButton";
-
-const DATA_URL = "http://localhost:3002/tutorials/102";
+import { useParams } from "react-router-dom";
 
 const Container = styled.div`
   padding: 32px;
@@ -16,12 +15,15 @@ const Container = styled.div`
 `;
 
 const Loader = styled(CircularProgress)`
-  color: rgba(5, 70, 90, 0.75);
+  color: rgb(5, 70, 90);
 `;
 
 function DocPage() {
   const [loading, setLoading] = useState(true);
   const [content, setContent] = useState(null);
+
+  const { id } = useParams();
+  const DOC_URL = `http://localhost:3002/tutorials/${id}`;
 
   useEffect(() => {
     let mounted = true;
@@ -29,7 +31,7 @@ function DocPage() {
     if (mounted) {
       setLoading(true);
 
-      fetch(DATA_URL)
+      fetch(DOC_URL)
         .then((res) => res.json())
         .then((result) => {
           setContent(result.content);
@@ -58,6 +60,7 @@ function DocPage() {
           />
         )}
       </Paper>
+
       <ActionButton type="edit" />
     </Container>
   );
