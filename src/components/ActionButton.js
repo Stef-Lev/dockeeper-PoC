@@ -3,13 +3,12 @@ import styled from "styled-components";
 import IconButton from "@material-ui/core/IconButton";
 import EditIcon from "@material-ui/icons/Edit";
 import AddIcon from "@material-ui/icons/Add";
+import HomeIcon from "@material-ui/icons/Home";
 import { theme } from "../themeColors";
 
 const StyledButton = styled(IconButton)`
-  position: absolute;
+  position: fixed;
   z-index: 1001;
-  bottom: 36px;
-  right: 36px;
   width: 80px;
   height: 80px;
   background-color: ${theme.actionButton.background};
@@ -21,11 +20,17 @@ const StyledButton = styled(IconButton)`
 `;
 const buttonStyle = { width: "50px", height: "50px" };
 
-function ActionButton({ type }) {
+function ActionButton({ type, onClick }) {
+  const position =
+    type === "home"
+      ? { bottom: "36px", left: "36px" }
+      : { bottom: "36px", right: "36px" };
+
   return (
-    <StyledButton variant="contained">
+    <StyledButton variant="contained" style={position} onClick={onClick}>
       {type === "edit" && <EditIcon style={buttonStyle} />}
       {type === "add" && <AddIcon style={buttonStyle} />}
+      {type === "home" && <HomeIcon style={buttonStyle} />}
     </StyledButton>
   );
 }

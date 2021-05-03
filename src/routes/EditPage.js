@@ -61,26 +61,35 @@ function EditPage() {
   const { id } = useParams();
   const history = useHistory();
 
-  const [convertedContent, setConvertedContent] = useState(null);
+  const [loading, setLoading] = useState(true);
   const [editorState, setEditorState] = useState(() =>
     EditorState.createEmpty()
   );
 
+  // useEffect(() => {
+  //   let mounted = true;
+
+  //   if (mounted) {
+  //     setLoading(true);
+
+  //     fetch(DOC_URL)
+  //       .then((res) => res.json())
+  //       .then((result) => {
+  //         setContent(result.content);
+  //       })
+  //       .catch(console.log("Error"))
+  //       .finally(() => {
+  //         setLoading(false);
+  //       });
+  //   }
+
+  //   return () => {
+  //     mounted = false;
+  //   };
+  // }, []);
+
   const handleChange = (editorState) => {
     setEditorState(editorState);
-    convertContentToHTML();
-  };
-
-  const convertContentToHTML = () => {
-    let currentContentAsHTML = convertToHTML(editorState.getCurrentContent());
-    setConvertedContent(currentContentAsHTML);
-    console.log(currentContentAsHTML);
-  };
-
-  const createMarkup = (html) => {
-    return {
-      __html: DOMPurify.sanitize(html),
-    };
   };
 
   const cancelAndReturn = () => {
@@ -108,9 +117,6 @@ function EditPage() {
       });
   };
 
-  // IMG URL
-  // https://images.unsplash.com/photo-1619694810130-50021400dbb1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80
-
   return (
     <Container>
       <Paper elevation={3} style={{ padding: "32px" }}>
@@ -124,11 +130,6 @@ function EditPage() {
           editorClassName="rich-editor"
           onEditorStateChange={handleChange}
         />
-
-        <div
-          style={{ backgroundColor: "black", color: "white" }}
-          dangerouslySetInnerHTML={createMarkup(convertedContent)}
-        ></div>
         <CancelButton variant="contained" onClick={cancelAndReturn}>
           Cancel
         </CancelButton>

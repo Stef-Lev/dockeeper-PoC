@@ -5,6 +5,8 @@ import { Editor } from "react-draft-wysiwyg";
 import { convertFromRaw, EditorState } from "draft-js";
 import ActionButton from "../components/ActionButton";
 import { useParams } from "react-router-dom";
+import Loader from "../components/Loader";
+import { useHistory } from "react-router-dom";
 
 const Container = styled.div`
   padding: 32px;
@@ -14,15 +16,12 @@ const Container = styled.div`
   }
 `;
 
-const Loader = styled(CircularProgress)`
-  color: rgb(5, 70, 90);
-`;
-
 function DocPage() {
   const [loading, setLoading] = useState(true);
   const [content, setContent] = useState(null);
 
   const { id } = useParams();
+  const history = useHistory();
   const DOC_URL = `http://localhost:3002/tutorials/${id}`;
 
   useEffect(() => {
@@ -50,7 +49,7 @@ function DocPage() {
   return (
     <Container>
       <Paper elevation={3} style={{ padding: "32px" }}>
-        {loading && <Loader style={{ width: "200px", height: "200px" }} />}
+        {loading && <Loader />}
         {!loading && content && (
           <Editor
             toolbarOnFocus={false}
@@ -60,7 +59,7 @@ function DocPage() {
           />
         )}
       </Paper>
-
+      <ActionButton type="home" onClick={() => history.push("/")} />
       <ActionButton type="edit" />
     </Container>
   );

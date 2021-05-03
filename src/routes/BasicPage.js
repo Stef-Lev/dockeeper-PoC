@@ -1,14 +1,9 @@
 import React, { useState, useEffect } from "react";
-import {
-  Grid,
-  Paper,
-  Typography,
-  Button,
-  CircularProgress,
-} from "@material-ui/core";
+import { Grid, Paper, Typography, Button } from "@material-ui/core";
 import styled from "styled-components";
 import DocItem from "../components/DocItem";
 import SearchBox from "../components/SearchBox";
+import Loader from "../components/Loader";
 import ActionButton from "../components/ActionButton";
 import { useHistory } from "react-router-dom";
 
@@ -22,10 +17,6 @@ const Container = styled.div`
   justify-content: start;
   align-items: center;
   gap: 16px;
-`;
-
-const Loader = styled(CircularProgress)`
-  color: rgb(5, 70, 90);
 `;
 
 // Fetch title
@@ -82,7 +73,7 @@ function BasicPage() {
             setSearchTerm(e.target.value);
           }}
         />
-        {loading && <Loader style={{ width: "200px", height: "200px" }} />}
+        {loading && <Loader />}
         {!loading &&
           data
             .filter((doc) =>

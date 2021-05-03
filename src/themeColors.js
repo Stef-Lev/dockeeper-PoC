@@ -4,6 +4,11 @@ export const theme = {
     color: "#FFF",
     hovered: "#2D6E82",
   },
+  actionHomeButton: {
+    background: "#AAAAAA",
+    color: "#FFF",
+    hovered: "#787878",
+  },
   editButton: {
     background: "#AAAAAA",
     color: "#FFF",
@@ -23,5 +28,8 @@ export const theme = {
     background: "#AAAAAA",
     color: "#FFF",
     hovered: "#787878",
+  },
+  loader: {
+    color: "#05465A",
   },
 };
