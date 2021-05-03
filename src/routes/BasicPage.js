@@ -4,13 +4,14 @@ import styled from "styled-components";
 import DocItem from "../components/DocItem";
 import SearchBox from "../components/SearchBox";
 import Loader from "../components/Loader";
+import ErrorMessage from "../components/ErrorMessage";
 import ActionButton from "../components/ActionButton";
 import { useHistory } from "react-router-dom";
 
-const DATA_URL = "http://localhost:3002/tutorials";
+const { REACT_APP_API_URL } = process.env;
 
 const Container = styled.div`
-  margin-top: 16px;
+  margin: 16px auto;
   padding: 32px 16px;
   display: flex;
   flex-direction: column;
@@ -19,12 +20,11 @@ const Container = styled.div`
   gap: 16px;
 `;
 
-// Fetch title
-// Object.values(data._immutable.currentContent.blockMap).find(el => el.type === 'header-one').text
-
 function BasicPage() {
   const history = useHistory();
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
   const [data, setData] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -34,14 +34,17 @@ function BasicPage() {
     if (mounted) {
       setLoading(true);
 
-      fetch(DATA_URL)
+      fetch(REACT_APP_API_URL)
         .then((res) => res.json())
         .then((result) => {
-          mounted && setData(result);
+          setData(result);
         })
-        .catch(console.log("Error"))
+        .catch((err) => {
+          setError(true);
+          setErrorMsg(err.message);
+        })
         .finally(() => {
-          mounted && setLoading(false);
+          setLoading(false);
         });
     }
 
@@ -82,9 +85,10 @@ function BasicPage() {
                     .text
                 }
                 id={doc.id}
-                preview="Author"
+                createdAt={doc.createdAt || null}
               />
             ))}
+        {!loading && error && <ErrorMessage msg={errorMsg} />}
         <ActionButton type="add" onClick={() => history.push(`/edit`)} />
       </Container>
     </Paper>

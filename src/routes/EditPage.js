@@ -14,6 +14,7 @@ import styled from "styled-components";
 import { Button, Paper } from "@material-ui/core";
 import { useHistory, useParams } from "react-router-dom";
 import { theme } from "../themeColors";
+import EditorControls from "../components/EditorControls";
 
 const Container = styled.div`
   padding: 16px;
@@ -32,7 +33,7 @@ const Container = styled.div`
     background-color: #f1f1f1;
     border-radius: 8px;
     margin: 22px auto;
-    padding: 5px 10px;
+    padding: 20px;
   }
 `;
 
@@ -161,12 +162,7 @@ function EditPage() {
           editorClassName="rich-editor"
           onEditorStateChange={handleChange}
         />
-        <CancelButton variant="contained" onClick={cancelAndReturn}>
-          Cancel
-        </CancelButton>
-        <SaveButton variant="contained" onClick={handleSave}>
-          Save
-        </SaveButton>
+        <EditorControls onSave={handleSave} onCancel={cancelAndReturn} />
       </Paper>
     </Container>
   );

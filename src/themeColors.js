@@ -29,6 +29,16 @@ export const theme = {
     color: "#FFF",
     hovered: "#787878",
   },
+  saveControlButton: {
+    background: "#05465A",
+    color: "#FFF",
+    hovered: "#2D6E82",
+  },
+  cancelControlButton: {
+    background: "#FF5050",
+    color: "#FFF",
+    hovered: "#FF2828",
+  },
   loader: {
     color: "#05465A",
   },

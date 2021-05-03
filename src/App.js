@@ -12,11 +12,16 @@ function App() {
         <Container maxWidth="lg">
           <Route exact path="/" component={BasicPage} />
           <Route path="/edit/:id?" component={EditPage} />
-          <Route path="/document/:id?" component={DocPage} />
+          <Route path="/document/:id" component={DocPage} />
         </Container>
       </div>
     </Router>
   );
 }
+// @TODOS
+// error handling modal
+// delete warning modal
+// editor controls
+// handle missing title
 
 export default App;

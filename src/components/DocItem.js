@@ -47,7 +47,7 @@ const DeleteButton = styled(IconButton)`
   transition: all 250ms linear;
 `;
 
-function DocItem({ title, preview, id }) {
+function DocItem({ title, createdAt, id }) {
   const history = useHistory();
 
   const handleDelete = (id) => {
@@ -92,7 +92,7 @@ function DocItem({ title, preview, id }) {
                   color="textSecondary"
                   style={{ fontSize: "1.2rem", marginBottom: "4px" }}
                 >
-                  {`${preview.substring(0, 60)}...`}
+                  {createdAt ? createdAt.toString() : null}
                 </Typography>
               </div>
             </InfoContainer>
