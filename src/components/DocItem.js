@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Paper, Grid, Typography } from "@material-ui/core";
 import styled from "styled-components";
 import IconButton from "@material-ui/core/IconButton";
 import DescriptionOutlinedIcon from "@material-ui/icons/DescriptionOutlined";
 import EditIcon from "@material-ui/icons/Edit";
 import DeleteIcon from "@material-ui/icons/Delete";
+import GenericModal from "../components/GenericModal";
 import { theme } from "../themeColors";
 import { useHistory } from "react-router-dom";
 
@@ -50,6 +51,8 @@ const DeleteButton = styled(IconButton)`
 function DocItem({ title, createdAt, id }) {
   const history = useHistory();
 
+  const [modalOpen, setModalOpen] = useState(false);
+
   const handleDelete = (id) => {
     fetch(`http://localhost:3002/tutorials/${id}`, {
       method: "DELETE",
@@ -67,57 +70,65 @@ function DocItem({ title, createdAt, id }) {
   };
 
   return (
-    <StyledContainer
-      onClick={(e) => {
-        e.stopPropagation();
-        history.push(`/document/${id}`);
-      }}
-    >
-      <Grid item xs={12}>
-        <Paper elevation={3} style={{ padding: "10px 16px" }}>
-          <DataContainer>
-            <InfoContainer>
-              <DescriptionOutlinedIcon
-                style={{ width: "50px", height: "50px", marginRight: "16px" }}
-              />
+    <>
+      <StyledContainer
+        onClick={(e) => {
+          e.stopPropagation();
+          history.push(`/document/${id}`);
+        }}
+      >
+        <Grid item xs={12}>
+          <Paper elevation={3} style={{ padding: "10px 16px" }}>
+            <DataContainer>
+              <InfoContainer>
+                <DescriptionOutlinedIcon
+                  style={{ width: "50px", height: "50px", marginRight: "16px" }}
+                />
+                <div>
+                  <Typography
+                    variant="h3"
+                    style={{ fontSize: "1.8rem", marginBottom: "4px" }}
+                  >
+                    {title}
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    color="textSecondary"
+                    style={{ fontSize: "1.2rem", marginBottom: "4px" }}
+                  >
+                    {createdAt ? createdAt.toString() : null}
+                  </Typography>
+                </div>
+              </InfoContainer>
               <div>
-                <Typography
-                  variant="h3"
-                  style={{ fontSize: "1.8rem", marginBottom: "4px" }}
+                <EditButton
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    history.push(`/edit/${id}`);
+                  }}
                 >
-                  {title}
-                </Typography>
-                <Typography
-                  variant="body1"
-                  color="textSecondary"
-                  style={{ fontSize: "1.2rem", marginBottom: "4px" }}
+                  <EditIcon />
+                </EditButton>
+                <DeleteButton
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setModalOpen(true);
+                  }}
                 >
-                  {createdAt ? createdAt.toString() : null}
-                </Typography>
+                  <DeleteIcon />
+                </DeleteButton>
               </div>
-            </InfoContainer>
-            <div>
-              <EditButton
-                onClick={(e) => {
-                  e.stopPropagation();
-                  history.push(`/edit/${id}`);
-                }}
-              >
-                <EditIcon />
-              </EditButton>
-              <DeleteButton
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handleDelete(id);
-                }}
-              >
-                <DeleteIcon />
-              </DeleteButton>
-            </div>
-          </DataContainer>
-        </Paper>
-      </Grid>
-    </StyledContainer>
+            </DataContainer>
+          </Paper>
+        </Grid>
+      </StyledContainer>
+      <GenericModal
+        shouldOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        type="confirmDelete"
+        callBack={() => handleDelete(id)}
+      />
+    </>
   );
 }
 

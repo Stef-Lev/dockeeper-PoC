@@ -38,18 +38,6 @@ const StyledCancelBtn = styled(IconButton)`
   transition: all 250ms linear;
 `;
 
-// const StyledButton = styled(IconButton)`
-//   position: fixed;
-//   z-index: 1001;
-//   width: 80px;
-//   height: 80px;
-//   background-color: ${theme.actionButton.background};
-//   color: ${theme.actionButton.color};
-//   :hover {
-//     background-color: ${theme.actionButton.hovered};
-//   }
-//   transition: all 250ms linear;
-// `;
 const buttonStyle = { width: "50px", height: "50px" };
 
 function EditorControls({ onSave, onCancel }) {

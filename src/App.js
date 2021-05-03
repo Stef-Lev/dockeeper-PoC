@@ -23,5 +23,6 @@ function App() {
 // delete warning modal
 // editor controls
 // handle missing title
+// Invert hover colors
 
 export default App;
