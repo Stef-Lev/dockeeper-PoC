@@ -5,6 +5,7 @@ import IconButton from "@material-ui/core/IconButton";
 import DescriptionOutlinedIcon from "@material-ui/icons/DescriptionOutlined";
 import EditIcon from "@material-ui/icons/Edit";
 import DeleteIcon from "@material-ui/icons/Delete";
+import { theme } from "../themeColors";
 import { useHistory } from "react-router-dom";
 
 const StyledContainer = styled.div`
@@ -28,22 +29,20 @@ const InfoContainer = styled.div`
 `;
 
 const EditButton = styled(IconButton)`
-  background-color: rgb(170, 170, 170);
-  color: rgb(255, 255, 255);
+  background-color: ${theme.editButton.background};
+  color: ${theme.editButton.color};
   margin-right: 10px;
   :hover {
-    background-color: rgb(120, 120, 120);
-    color: rgb(255, 255, 255);
+    background-color: ${theme.editButton.hovered};
   }
   transition: all 250ms linear;
 `;
 
 const DeleteButton = styled(IconButton)`
-  background-color: rgb(255, 80, 80);
-  color: #fff;
+  background-color: ${theme.deleteButton.background};
+  color: ${theme.deleteButton.color};
   :hover {
-    background-color: rgb(255, 20, 20);
-    color: #fff;
+    background-color: ${theme.deleteButton.hovered};
   }
   transition: all 250ms linear;
 `;
@@ -90,7 +89,12 @@ function DocItem({ title, preview, id }) {
               >
                 <EditIcon />
               </EditButton>
-              <DeleteButton>
+              <DeleteButton
+                onClick={(e) => {
+                  e.stopPropagation();
+                  console.log("Deleted");
+                }}
+              >
                 <DeleteIcon />
               </DeleteButton>
             </div>

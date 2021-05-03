@@ -13,6 +13,7 @@ import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import styled from "styled-components";
 import { Button, Paper } from "@material-ui/core";
 import { useHistory, useParams } from "react-router-dom";
+import { theme } from "../themeColors";
 
 const Container = styled.div`
   padding: 16px;
@@ -36,23 +37,21 @@ const Container = styled.div`
 `;
 
 const SaveButton = styled(Button)`
-  background-color: rgb(5, 70, 90);
-  color: #fff;
+  background-color: ${theme.saveButton.background};
+  color: ${theme.saveButton.color};
   :hover {
-    background-color: rgb(45, 110, 130);
-    color: #fff;
+    background-color: ${theme.saveButton.hovered};
   }
   transition: all 250ms linear;
 `;
 
 // @TODO MODAL NOT SAVED
 const CancelButton = styled(Button)`
-  background-color: rgba(70, 70, 70, 0.5);
-  color: #fff;
+  background-color: ${theme.cancelButton.background};
+  color: ${theme.cancelButton.color};
   margin-right: 16px;
   :hover {
-    background-color: rgba(120, 120, 120, 0.5);
-    color: #fff;
+    background-color: ${theme.cancelButton.hovered};
   }
   transition: all 250ms linear;
 `;

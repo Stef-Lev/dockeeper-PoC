@@ -3,6 +3,7 @@ import styled from "styled-components";
 import IconButton from "@material-ui/core/IconButton";
 import EditIcon from "@material-ui/icons/Edit";
 import AddIcon from "@material-ui/icons/Add";
+import { theme } from "../themeColors";
 
 const StyledButton = styled(IconButton)`
   position: absolute;
@@ -11,11 +12,10 @@ const StyledButton = styled(IconButton)`
   right: 36px;
   width: 80px;
   height: 80px;
-  background-color: rgb(5, 70, 90);
-  color: #fff;
+  background-color: ${theme.actionButton.background};
+  color: ${theme.actionButton.color};
   :hover {
-    background-color: rgb(45, 110, 130);
-    color: #fff;
+    background-color: ${theme.actionButton.hovered};
   }
   transition: all 250ms linear;
 `;
