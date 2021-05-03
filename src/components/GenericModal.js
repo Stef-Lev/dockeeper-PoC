@@ -7,6 +7,7 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import HighlightOffOutlinedIcon from "@material-ui/icons/HighlightOffOutlined";
+import CheckCircleOutlineOutlinedIcon from "@material-ui/icons/CheckCircleOutlineOutlined";
 import { theme } from "../themeColors";
 
 const Modal = styled(Dialog)`
@@ -32,6 +33,12 @@ const ActionsContainer = styled(DialogActions)`
 
 const DeleteIcon = styled(HighlightOffOutlinedIcon)`
   color: ${theme.cancelControlButton.background};
+  width: 60px;
+  height: 60px;
+`;
+
+const SuccessIcon = styled(CheckCircleOutlineOutlinedIcon)`
+  color: ${theme.successIcon.color};
   width: 60px;
   height: 60px;
 `;
@@ -89,19 +96,16 @@ function GenericModal({ shouldOpen, onClose, type, ...props }) {
         return (
           <>
             <IconContainer>
-              <DeleteIcon />
+              <SuccessIcon />
             </IconContainer>
-            <DialogTitle id="alert-dialog-title">Are you sure?</DialogTitle>
+            <DialogTitle id="alert-dialog-title">Success!</DialogTitle>
             <DialogContent>
               <DialogContentText id="alert-dialog-description">
-                Do you want to delete this file?
+                File saved succesfully!
               </DialogContentText>
             </DialogContent>
             <ActionsContainer>
-              <SecondaryActionBtn onClick={onClose}>Cancel</SecondaryActionBtn>
-              <PrimaryActionBtn onClick={props.callBack}>
-                Delete
-              </PrimaryActionBtn>
+              <PrimaryActionBtn onClick={onClose}>OK</PrimaryActionBtn>
             </ActionsContainer>
           </>
         );

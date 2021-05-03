@@ -42,4 +42,7 @@ export const theme = {
   loader: {
     color: "#05465A",
   },
+  successIcon: {
+    color: "#3CB371",
+  },
 };

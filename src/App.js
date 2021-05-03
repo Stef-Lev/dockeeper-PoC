@@ -24,5 +24,6 @@ function App() {
 // editor controls
 // handle missing title
 // Invert hover colors
+// Group theme colors
 
 export default App;
