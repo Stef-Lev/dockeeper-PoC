@@ -4,6 +4,7 @@ import styled from "styled-components";
 import IconButton from "@material-ui/core/IconButton";
 import DescriptionOutlinedIcon from "@material-ui/icons/DescriptionOutlined";
 import EditIcon from "@material-ui/icons/Edit";
+import DeleteIcon from "@material-ui/icons/Delete";
 import { useHistory } from "react-router-dom";
 
 const StyledContainer = styled.div`
@@ -24,6 +25,27 @@ const DataContainer = styled.div`
 const InfoContainer = styled.div`
   display: flex;
   align-items: center;
+`;
+
+const EditButton = styled(IconButton)`
+  background-color: rgb(170, 170, 170);
+  color: rgb(255, 255, 255);
+  margin-right: 10px;
+  :hover {
+    background-color: rgb(120, 120, 120);
+    color: rgb(255, 255, 255);
+  }
+  transition: all 250ms linear;
+`;
+
+const DeleteButton = styled(IconButton)`
+  background-color: rgb(255, 80, 80);
+  color: #fff;
+  :hover {
+    background-color: rgb(255, 20, 20);
+    color: #fff;
+  }
+  transition: all 250ms linear;
 `;
 
 function DocItem({ title, preview, id }) {
@@ -59,14 +81,19 @@ function DocItem({ title, preview, id }) {
                 </Typography>
               </div>
             </InfoContainer>
-            <IconButton
-              onClick={(e) => {
-                e.stopPropagation();
-                history.push(`/edit/${id}`);
-              }}
-            >
-              <EditIcon />
-            </IconButton>
+            <div>
+              <EditButton
+                onClick={(e) => {
+                  e.stopPropagation();
+                  history.push(`/edit/${id}`);
+                }}
+              >
+                <EditIcon />
+              </EditButton>
+              <DeleteButton>
+                <DeleteIcon />
+              </DeleteButton>
+            </div>
           </DataContainer>
         </Paper>
       </Grid>

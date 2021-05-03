@@ -11,9 +11,8 @@ import { Editor } from "react-draft-wysiwyg";
 import DOMPurify from "dompurify";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import styled from "styled-components";
-import { useParams } from "react-router-dom";
 import { Button, Paper } from "@material-ui/core";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 
 const Container = styled.div`
   padding: 16px;
@@ -36,13 +35,14 @@ const Container = styled.div`
   }
 `;
 
-const SubmitButton = styled(Button)`
+const SaveButton = styled(Button)`
   background-color: rgb(5, 70, 90);
   color: #fff;
   :hover {
     background-color: rgb(45, 110, 130);
     color: #fff;
   }
+  transition: all 250ms linear;
 `;
 
 // @TODO MODAL NOT SAVED
@@ -54,6 +54,7 @@ const CancelButton = styled(Button)`
     background-color: rgba(120, 120, 120, 0.5);
     color: #fff;
   }
+  transition: all 250ms linear;
 `;
 
 function EditPage() {
@@ -66,18 +67,9 @@ function EditPage() {
     EditorState.createEmpty()
   );
 
-  useEffect(() => {
-    const blocks = convertToRaw(editorState.getCurrentContent()).blocks;
-    const value = blocks
-      .map((block) => (!block.text.trim() && "\n") || block.text)
-      .join("\n");
-    console.log(blocks, value);
-  }, [editorState]);
-
   const handleChange = (editorState) => {
     setEditorState(editorState);
     convertContentToHTML();
-    // console.log(editorState);
   };
 
   const convertContentToHTML = () => {
@@ -97,7 +89,7 @@ function EditPage() {
   };
 
   // @TODO refactor this
-  const handleDocPost = () => {
+  const handleSave = () => {
     const contentState = editorState.getCurrentContent();
     const raw = convertToRaw(contentState);
 
@@ -141,9 +133,9 @@ function EditPage() {
         <CancelButton variant="contained" onClick={cancelAndReturn}>
           Cancel
         </CancelButton>
-        <SubmitButton variant="contained" onClick={handleDocPost}>
-          Submit
-        </SubmitButton>
+        <SaveButton variant="contained" onClick={handleSave}>
+          Save
+        </SaveButton>
       </Paper>
     </Container>
   );
