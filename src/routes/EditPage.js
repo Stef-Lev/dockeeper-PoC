@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Typography } from "@material-ui/core";
 import { convertToHTML } from "draft-convert";
-import {
-  EditorState,
-  convertToRaw,
-  convertFromRaw,
-  ContentState,
-} from "draft-js";
+import { EditorState, convertToRaw, convertFromRaw } from "draft-js";
 import { Editor } from "react-draft-wysiwyg";
 import DOMPurify from "dompurify";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
@@ -15,10 +10,19 @@ import { Button, Paper } from "@material-ui/core";
 import { useHistory, useParams } from "react-router-dom";
 import { theme } from "../themeColors";
 import EditorControls from "../components/EditorControls";
+import Loader from "../components/Loader";
+import ActionButton from "../components/ActionButton";
+import GenericModal from "../components/GenericModal";
 
 const Container = styled.div`
   padding: 16px;
 
+  .rich-toolbar {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+  }
   .rich-wrapper {
     margin: 22px auto;
   }
@@ -37,32 +41,14 @@ const Container = styled.div`
   }
 `;
 
-const SaveButton = styled(Button)`
-  background-color: ${theme.saveButton.background};
-  color: ${theme.saveButton.color};
-  :hover {
-    background-color: ${theme.saveButton.hovered};
-  }
-  transition: all 250ms linear;
-`;
-
 // @TODO MODAL NOT SAVED
-const CancelButton = styled(Button)`
-  background-color: ${theme.cancelButton.background};
-  color: ${theme.cancelButton.color};
-  margin-right: 16px;
-  :hover {
-    background-color: ${theme.cancelButton.hovered};
-  }
-  transition: all 250ms linear;
-`;
 
 function EditPage() {
-  // @TODO if ID edit else new
   const { id } = useParams();
   const history = useHistory();
 
   const [loading, setLoading] = useState(true);
+  const [modalOpen, setModalOpen] = useState(false);
   const [editorState, setEditorState] = useState(() =>
     EditorState.createEmpty()
   );
@@ -105,8 +91,6 @@ function EditPage() {
     history.push("/");
   };
 
-  // @TODO refactor this
-
   const handleSave = () => {
     const contentState = editorState.getCurrentContent();
     const raw = convertToRaw(contentState);
@@ -126,7 +110,7 @@ function EditPage() {
           console.error("Error:", error);
         })
         .finally(() => {
-          history.push(`/`);
+          setModalOpen(true);
         });
     } else {
       fetch("http://localhost:3002/tutorials", {
@@ -144,7 +128,7 @@ function EditPage() {
           console.error("Error:", error);
         })
         .finally(() => {
-          history.push(`/`);
+          setModalOpen(true);
         });
     }
   };
@@ -152,17 +136,31 @@ function EditPage() {
   return (
     <Container>
       <Paper elevation={3} style={{ padding: "32px" }}>
-        <Typography variant="h2" style={{ fontSize: "2.2rem" }}>
-          Docs
-        </Typography>
-        <Editor
-          editorState={editorState}
-          toolbarClassName="rich-toolbar"
-          wrapperClassName="rich-wrapper"
-          editorClassName="rich-editor"
-          onEditorStateChange={handleChange}
+        {loading && <Loader />}
+        {!loading && (
+          <>
+            <Typography variant="h2" style={{ fontSize: "2.2rem" }}>
+              Docs
+            </Typography>
+            <Editor
+              editorState={editorState}
+              toolbarClassName="rich-toolbar"
+              wrapperClassName="rich-wrapper"
+              editorClassName="rich-editor"
+              onEditorStateChange={handleChange}
+            />
+            <EditorControls onSave={handleSave} onCancel={cancelAndReturn} />
+          </>
+        )}
+        <GenericModal
+          shouldOpen={modalOpen}
+          onClose={() => {
+            setModalOpen(false);
+            history.push(`/`);
+          }}
+          type="saveSuccess"
         />
-        <EditorControls onSave={handleSave} onCancel={cancelAndReturn} />
+        <ActionButton type="back" onClick={() => history.push("/")} />
       </Paper>
     </Container>
   );

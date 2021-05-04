@@ -72,46 +72,29 @@ const DeleteActionBtn = styled(Button)`
 `;
 
 function GenericModal({ shouldOpen, onClose, type, ...props }) {
-  const renderModalType = () => {
-    switch (type) {
-      case "confirmDelete":
-        return (
-          <>
-            <IconContainer>
-              <DeleteIcon />
-            </IconContainer>
-            <DialogTitle id="alert-dialog-title">Are you sure?</DialogTitle>
-            <DialogContent>
-              <DialogContentText id="alert-dialog-description">
-                Do you want to delete this file?
-              </DialogContentText>
-            </DialogContent>
-            <ActionsContainer>
-              <SecondaryActionBtn onClick={onClose}>Cancel</SecondaryActionBtn>
-              <DeleteActionBtn onClick={props.callBack}>Delete</DeleteActionBtn>
-            </ActionsContainer>
-          </>
-        );
-      case "saveSuccess":
-        return (
-          <>
-            <IconContainer>
-              <SuccessIcon />
-            </IconContainer>
-            <DialogTitle id="alert-dialog-title">Success!</DialogTitle>
-            <DialogContent>
-              <DialogContentText id="alert-dialog-description">
-                File saved succesfully!
-              </DialogContentText>
-            </DialogContent>
-            <ActionsContainer>
-              <PrimaryActionBtn onClick={onClose}>OK</PrimaryActionBtn>
-            </ActionsContainer>
-          </>
-        );
+  const modalTypes = {
+    confirmDelete: {
+      icon: <DeleteIcon />,
+      title: "Are you sure?",
+      text: "Do you want to delete this file?",
+      buttons: [
+        <SecondaryActionBtn onClick={onClose}>Cancel</SecondaryActionBtn>,
+        <DeleteActionBtn onClick={props.callBack}>Delete</DeleteActionBtn>,
+      ],
+    },
+    saveSuccess: {
+      icon: <SuccessIcon />,
+      title: "Success!",
+      text: "File saved succesfully!",
+      buttons: [<PrimaryActionBtn onClick={onClose}>OK</PrimaryActionBtn>],
+    },
+  };
 
-      default:
-        break;
+  const renderModalContent = (piece) => {
+    if (piece === "buttons") {
+      return modalTypes[type][piece].map((item) => item);
+    } else {
+      return modalTypes[type][piece];
     }
   };
 
@@ -123,7 +106,18 @@ function GenericModal({ shouldOpen, onClose, type, ...props }) {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        {renderModalType()}
+        <IconContainer>{renderModalContent("icon")}</IconContainer>
+        <DialogTitle id="alert-dialog-title">
+          {renderModalContent("title")}
+        </DialogTitle>
+
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            {renderModalContent("text")}
+          </DialogContentText>
+        </DialogContent>
+
+        <ActionsContainer>{renderModalContent("buttons")}</ActionsContainer>
       </Modal>
     </>
   );
