@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { Paper, CircularProgress } from "@material-ui/core";
+import { Paper } from "@material-ui/core";
 import { Editor } from "react-draft-wysiwyg";
 import { convertFromRaw, EditorState } from "draft-js";
-import ActionButton from "../components/ActionButton";
 import { useParams } from "react-router-dom";
 import Loader from "../components/Loader";
 import { useHistory } from "react-router-dom";
+import ActionButton from "../components/ActionButton";
+import ActionButtonsContainer from "../components/ActionButtonsContainer";
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+import { theme } from "../themeColors";
+import EditIcon from "@material-ui/icons/Edit";
 
 const Container = styled.div`
   padding: 32px;
@@ -59,8 +63,24 @@ function DocPage() {
           />
         )}
       </Paper>
-      <ActionButton type="back" onClick={() => history.push("/")} />
-      <ActionButton type="edit" onClick={() => history.push(`/edit/${id}`)} />
+      <ActionButtonsContainer position="left">
+        <ActionButton
+          onClick={() => history.push("/")}
+          color={theme.actionButton.color}
+          backgroundColor={theme.actionButton.background}
+          hoverColor={theme.actionButton.hovered}
+          icon={<ArrowBackIcon style={{ width: "50px", height: "50px" }} />}
+        />
+      </ActionButtonsContainer>
+      <ActionButtonsContainer position="right">
+        <ActionButton
+          onClick={() => history.push(`/edit/${id}`)}
+          color={theme.actionButton.color}
+          backgroundColor={theme.actionButton.background}
+          hoverColor={theme.actionButton.hovered}
+          icon={<EditIcon style={{ width: "50px", height: "50px" }} />}
+        />
+      </ActionButtonsContainer>
     </Container>
   );
 }

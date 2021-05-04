@@ -6,32 +6,27 @@ import AddIcon from "@material-ui/icons/Add";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import { theme } from "../themeColors";
 
-const StyledButton = styled(IconButton)`
-  position: fixed;
-  z-index: 1001;
+const StyledIconButton = styled(IconButton)`
   width: 80px;
   height: 80px;
-  background-color: ${theme.actionButton.background};
-  color: ${theme.actionButton.color};
+  background-color: ${(props) => props.backgroundColor};
+  color: ${(props) => props.color};
   :hover {
-    background-color: ${theme.actionButton.hovered};
+    background-color: ${(props) => props.hoverColor};
   }
   transition: all 250ms linear;
 `;
-const buttonStyle = { width: "50px", height: "50px" };
 
-function ActionButton({ type, onClick }) {
-  const position =
-    type === "back"
-      ? { bottom: "36px", left: "36px" }
-      : { bottom: "36px", right: "36px" };
-
+function ActionButton({ icon, backgroundColor, color, hoverColor, onClick }) {
   return (
-    <StyledButton variant="contained" style={position} onClick={onClick}>
-      {type === "edit" && <EditIcon style={buttonStyle} />}
-      {type === "add" && <AddIcon style={buttonStyle} />}
-      {type === "back" && <ArrowBackIcon style={buttonStyle} />}
-    </StyledButton>
+    <StyledIconButton
+      onClick={onClick}
+      backgroundColor={backgroundColor}
+      color={color}
+      hoverColor={hoverColor}
+    >
+      {icon}
+    </StyledIconButton>
   );
 }
 

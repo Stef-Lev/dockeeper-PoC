@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { Typography } from "@material-ui/core";
-import { convertToHTML } from "draft-convert";
 import { EditorState, convertToRaw, convertFromRaw } from "draft-js";
 import { Editor } from "react-draft-wysiwyg";
-import DOMPurify from "dompurify";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import styled from "styled-components";
-import { Button, Paper } from "@material-ui/core";
+import { Paper } from "@material-ui/core";
 import { useHistory, useParams } from "react-router-dom";
 import { theme } from "../themeColors";
-import EditorControls from "../components/EditorControls";
 import Loader from "../components/Loader";
-import ActionButton from "../components/ActionButton";
 import GenericModal from "../components/GenericModal";
+import DeleteIcon from "@material-ui/icons/Delete";
+import SaveIcon from "@material-ui/icons/Save";
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+import ActionButton from "../components/ActionButton";
+import ActionButtonsContainer from "../components/ActionButtonsContainer";
 
 const Container = styled.div`
   padding: 16px;
@@ -149,11 +150,6 @@ function EditPage() {
               editorClassName="rich-editor"
               onEditorStateChange={handleChange}
             />
-            <EditorControls
-              onSave={handleSave}
-              onDelete={deleteCurrent}
-              withDelete={!!id}
-            />
           </>
         )}
         <GenericModal
@@ -164,7 +160,33 @@ function EditPage() {
           }}
           type="saveSuccess"
         />
-        <ActionButton type="back" onClick={() => history.push("/")} />
+        <ActionButtonsContainer position="left">
+          <ActionButton
+            onClick={() => history.push("/")}
+            color={theme.actionButton.color}
+            backgroundColor={theme.actionButton.background}
+            hoverColor={theme.actionButton.hovered}
+            icon={<ArrowBackIcon style={{ width: "50px", height: "50px" }} />}
+          />
+        </ActionButtonsContainer>
+        <ActionButtonsContainer position="right">
+          <ActionButton
+            onClick={handleSave}
+            color={theme.actionButton.color}
+            backgroundColor={theme.actionButton.background}
+            hoverColor={theme.actionButton.hovered}
+            icon={<SaveIcon style={{ width: "50px", height: "50px" }} />}
+          />
+          {id && (
+            <ActionButton
+              onClick={deleteCurrent}
+              color={theme.deleteButton.color}
+              backgroundColor={theme.deleteButton.background}
+              hoverColor={theme.deleteButton.hovered}
+              icon={<DeleteIcon style={{ width: "50px", height: "50px" }} />}
+            />
+          )}
+        </ActionButtonsContainer>
       </Paper>
     </Container>
   );

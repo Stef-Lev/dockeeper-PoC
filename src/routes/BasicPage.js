@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { Grid, Paper, Typography, Button } from "@material-ui/core";
+import { Paper, Typography } from "@material-ui/core";
 import styled from "styled-components";
 import DocItem from "../components/DocItem";
 import SearchBox from "../components/SearchBox";
 import Loader from "../components/Loader";
 import ErrorMessage from "../components/ErrorMessage";
 import ActionButton from "../components/ActionButton";
+import ActionButtonsContainer from "../components/ActionButtonsContainer";
+import { theme } from "../themeColors";
+import AddIcon from "@material-ui/icons/Add";
+
 import { useHistory } from "react-router-dom";
 
 const { REACT_APP_API_URL } = process.env;
@@ -89,8 +93,16 @@ function BasicPage() {
               />
             ))}
         {!loading && error && <ErrorMessage msg={errorMsg} />}
-        <ActionButton type="add" onClick={() => history.push(`/edit`)} />
       </Container>
+      <ActionButtonsContainer position="right">
+        <ActionButton
+          onClick={() => history.push(`/edit`)}
+          color={theme.actionButton.color}
+          backgroundColor={theme.actionButton.background}
+          hoverColor={theme.actionButton.hovered}
+          icon={<AddIcon style={{ width: "50px", height: "50px" }} />}
+        />
+      </ActionButtonsContainer>
     </Paper>
   );
 }
