@@ -55,7 +55,7 @@ function BasicPage() {
 
   console.log(data);
   return (
-    <Paper>
+    <Paper elevation={3}>
       <Container>
         <Typography variant="h1" style={{ fontSize: "2.5rem" }}>
           Document Keeper
