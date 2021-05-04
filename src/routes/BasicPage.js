@@ -97,9 +97,9 @@ function BasicPage() {
       <ActionButtonsContainer position="right">
         <ActionButton
           onClick={() => history.push(`/edit`)}
-          color={theme.actionButton.color}
-          backgroundColor={theme.actionButton.background}
-          hoverColor={theme.actionButton.hovered}
+          color={theme.buttonIcon}
+          backgroundColor={theme.primary.base}
+          hoverColor={theme.primary.hovered}
           icon={<AddIcon style={{ width: "50px", height: "50px" }} />}
         />
       </ActionButtonsContainer>

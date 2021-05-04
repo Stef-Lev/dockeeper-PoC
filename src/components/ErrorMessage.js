@@ -13,7 +13,7 @@ const ErrorContainer = styled.div`
 `;
 
 const WarningIcon = styled(ReportProblemOutlinedIcon)`
-  color: ${theme.cancelControlButton.background};
+  color: ${theme.warning.base};
   width: 80px;
   height: 80px;
 `;

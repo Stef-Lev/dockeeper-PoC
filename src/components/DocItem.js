@@ -30,20 +30,20 @@ const InfoContainer = styled.div`
 `;
 
 const EditButton = styled(IconButton)`
-  background-color: ${theme.editButton.background};
-  color: ${theme.editButton.color};
+  background-color: ${theme.secondary.base};
+  color: ${theme.buttonIcon};
   margin-right: 10px;
   :hover {
-    background-color: ${theme.editButton.hovered};
+    background-color: ${theme.secondary.hovered};
   }
   transition: all 250ms linear;
 `;
 
 const DeleteButton = styled(IconButton)`
-  background-color: ${theme.deleteButton.background};
-  color: ${theme.deleteButton.color};
+  background-color: ${theme.warning.base};
+  color: ${theme.buttonIcon};
   :hover {
-    background-color: ${theme.deleteButton.hovered};
+    background-color: ${theme.warning.hovered};
   }
   transition: all 250ms linear;
 `;

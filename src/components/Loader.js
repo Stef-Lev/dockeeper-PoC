@@ -4,7 +4,7 @@ import { CircularProgress } from "@material-ui/core";
 import { theme } from "../themeColors";
 
 const LoadingCircle = styled(CircularProgress)`
-  color: ${theme.loader.color};
+  color: ${theme.primary.base};
 `;
 
 function Loader() {

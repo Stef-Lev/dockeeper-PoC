@@ -32,41 +32,41 @@ const ActionsContainer = styled(DialogActions)`
 `;
 
 const DeleteIcon = styled(HighlightOffOutlinedIcon)`
-  color: ${theme.cancelControlButton.background};
+  color: ${theme.warning.base};
   width: 60px;
   height: 60px;
 `;
 
 const SuccessIcon = styled(CheckCircleOutlineOutlinedIcon)`
-  color: ${theme.successIcon.color};
+  color: ${theme.success.base};
   width: 60px;
   height: 60px;
 `;
 
 const PrimaryActionBtn = styled(Button)`
-  background-color: ${theme.actionButton.background};
-  color: ${theme.actionButton.color};
+  background-color: ${theme.primary.base};
+  color: ${theme.buttonIcon};
   :hover {
-    background-color: ${theme.actionButton.hovered};
+    background-color: ${theme.primary.hovered};
   }
   transition: all 250ms linear;
 `;
 
 const SecondaryActionBtn = styled(Button)`
-  background-color: ${theme.cancelButton.background};
-  color: ${theme.cancelButton.color};
+  background-color: ${theme.secondary.base};
+  color: ${theme.buttonIcon};
   margin-right: 16px;
   :hover {
-    background-color: ${theme.cancelButton.hovered};
+    background-color: ${theme.secondary.hovered};
   }
   transition: all 250ms linear;
 `;
 
 const DeleteActionBtn = styled(Button)`
-  background-color: ${theme.deleteButton.background};
-  color: ${theme.deleteButton.color};
+  background-color: ${theme.warning.base};
+  color: ${theme.buttonIcon};
   :hover {
-    background-color: ${theme.deleteButton.hovered};
+    background-color: ${theme.warning.hovered};
   }
   transition: all 250ms linear;
 `;

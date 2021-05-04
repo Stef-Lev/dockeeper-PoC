@@ -1,10 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import ActionButton from "../components/ActionButton";
-import IconButton from "@material-ui/core/IconButton";
-import DeleteIcon from "@material-ui/icons/Delete";
-import SaveIcon from "@material-ui/icons/Save";
-import { theme } from "../themeColors";
 
 const ActionsContainer = styled.div`
   position: fixed;

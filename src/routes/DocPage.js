@@ -66,18 +66,18 @@ function DocPage() {
       <ActionButtonsContainer position="left">
         <ActionButton
           onClick={() => history.push("/")}
-          color={theme.actionButton.color}
-          backgroundColor={theme.actionButton.background}
-          hoverColor={theme.actionButton.hovered}
+          color={theme.buttonIcon}
+          backgroundColor={theme.primary.base}
+          hoverColor={theme.primary.hovered}
           icon={<ArrowBackIcon style={{ width: "50px", height: "50px" }} />}
         />
       </ActionButtonsContainer>
       <ActionButtonsContainer position="right">
         <ActionButton
           onClick={() => history.push(`/edit/${id}`)}
-          color={theme.actionButton.color}
-          backgroundColor={theme.actionButton.background}
-          hoverColor={theme.actionButton.hovered}
+          color={theme.buttonIcon}
+          backgroundColor={theme.primary.base}
+          hoverColor={theme.primary.hovered}
           icon={<EditIcon style={{ width: "50px", height: "50px" }} />}
         />
       </ActionButtonsContainer>

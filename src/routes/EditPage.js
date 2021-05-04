@@ -163,26 +163,26 @@ function EditPage() {
         <ActionButtonsContainer position="left">
           <ActionButton
             onClick={() => history.push("/")}
-            color={theme.actionButton.color}
-            backgroundColor={theme.actionButton.background}
-            hoverColor={theme.actionButton.hovered}
+            color={theme.buttonIcon}
+            backgroundColor={theme.primary.base}
+            hoverColor={theme.primary.hovered}
             icon={<ArrowBackIcon style={{ width: "50px", height: "50px" }} />}
           />
         </ActionButtonsContainer>
         <ActionButtonsContainer position="right">
           <ActionButton
             onClick={handleSave}
-            color={theme.actionButton.color}
-            backgroundColor={theme.actionButton.background}
-            hoverColor={theme.actionButton.hovered}
+            color={theme.buttonIcon}
+            backgroundColor={theme.primary.base}
+            hoverColor={theme.primary.hovered}
             icon={<SaveIcon style={{ width: "50px", height: "50px" }} />}
           />
           {id && (
             <ActionButton
               onClick={deleteCurrent}
-              color={theme.deleteButton.color}
-              backgroundColor={theme.deleteButton.background}
-              hoverColor={theme.deleteButton.hovered}
+              color={theme.buttonIcon}
+              backgroundColor={theme.warning.base}
+              hoverColor={theme.warning.hovered}
               icon={<DeleteIcon style={{ width: "50px", height: "50px" }} />}
             />
           )}
