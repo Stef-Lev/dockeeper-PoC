@@ -49,7 +49,8 @@ function EditPage() {
   const history = useHistory();
 
   const [loading, setLoading] = useState(true);
-  const [modalOpen, setModalOpen] = useState(false);
+  const [saveModalOpen, setSaveModalOpen] = useState(false);
+  const [deleteModalOpen, setDeleteModalOpen] = useState(false);
   const [editorState, setEditorState] = useState(() =>
     EditorState.createEmpty()
   );
@@ -88,8 +89,20 @@ function EditPage() {
     setEditorState(editorState);
   };
 
-  const deleteCurrent = () => {
-    history.push("/");
+  const handleDelete = (id) => {
+    fetch(`http://localhost:3002/tutorials/${id}`, {
+      method: "DELETE",
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      })
+      .finally(() => {
+        history.push(`/`);
+      });
   };
 
   const handleSave = () => {
@@ -111,7 +124,7 @@ function EditPage() {
           console.error("Error:", error);
         })
         .finally(() => {
-          setModalOpen(true);
+          setSaveModalOpen(true);
         });
     } else {
       fetch("http://localhost:3002/tutorials", {
@@ -129,7 +142,7 @@ function EditPage() {
           console.error("Error:", error);
         })
         .finally(() => {
-          setModalOpen(true);
+          setSaveModalOpen(true);
         });
     }
   };
@@ -153,12 +166,18 @@ function EditPage() {
           </>
         )}
         <GenericModal
-          shouldOpen={modalOpen}
+          shouldOpen={saveModalOpen}
           onClose={() => {
-            setModalOpen(false);
+            setSaveModalOpen(false);
             history.push(`/`);
           }}
           type="saveSuccess"
+        />
+        <GenericModal
+          shouldOpen={deleteModalOpen}
+          onClose={() => setDeleteModalOpen(false)}
+          type="confirmDelete"
+          callBack={() => handleDelete(id)}
         />
         <ActionButtonsContainer position="left">
           <ActionButton
@@ -179,7 +198,7 @@ function EditPage() {
           />
           {id && (
             <ActionButton
-              onClick={deleteCurrent}
+              onClick={() => setDeleteModalOpen(true)}
               color={theme.buttonIcon}
               backgroundColor={theme.warning.base}
               hoverColor={theme.warning.hovered}

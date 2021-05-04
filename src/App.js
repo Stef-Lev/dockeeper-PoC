@@ -32,4 +32,5 @@ function App() {
 // Wrong url handling
 // Date formatting
 // Refactor editorcontrols
+// Create services for fetching
 export default App;
