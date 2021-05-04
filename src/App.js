@@ -25,6 +25,6 @@ function App() {
 // handle missing title
 // Invert hover colors
 // Group theme colors
-// Bug when returning from new doc
-
+// Wrong url handling
+// Date formatting
 export default App;

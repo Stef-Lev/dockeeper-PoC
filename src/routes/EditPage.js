@@ -87,7 +87,7 @@ function EditPage() {
     setEditorState(editorState);
   };
 
-  const cancelAndReturn = () => {
+  const deleteCurrent = () => {
     history.push("/");
   };
 
@@ -149,7 +149,7 @@ function EditPage() {
               editorClassName="rich-editor"
               onEditorStateChange={handleChange}
             />
-            <EditorControls onSave={handleSave} onCancel={cancelAndReturn} />
+            <EditorControls onSave={handleSave} onDelete={deleteCurrent} />
           </>
         )}
         <GenericModal

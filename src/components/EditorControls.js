@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import IconButton from "@material-ui/core/IconButton";
-import CloseIcon from "@material-ui/icons/Close";
+import DeleteIcon from "@material-ui/icons/Delete";
 import SaveIcon from "@material-ui/icons/Save";
 import { theme } from "../themeColors";
 
@@ -27,7 +27,7 @@ const StyledSaveBtn = styled(IconButton)`
   transition: all 250ms linear;
 `;
 
-const StyledCancelBtn = styled(IconButton)`
+const StyledDeletelBtn = styled(IconButton)`
   width: 80px;
   height: 80px;
   background-color: ${theme.cancelControlButton.background};
@@ -40,15 +40,15 @@ const StyledCancelBtn = styled(IconButton)`
 
 const buttonStyle = { width: "50px", height: "50px" };
 
-function EditorControls({ onSave, onCancel }) {
+function EditorControls({ onSave, onDelete }) {
   return (
     <ControlContainer>
       <StyledSaveBtn variant="contained" onClick={onSave}>
         <SaveIcon style={buttonStyle} />
       </StyledSaveBtn>
-      <StyledCancelBtn variant="contained" onClick={onCancel}>
-        <CloseIcon style={buttonStyle} />
-      </StyledCancelBtn>
+      <StyledDeletelBtn variant="contained" onClick={onDelete}>
+        <DeleteIcon style={buttonStyle} />
+      </StyledDeletelBtn>
     </ControlContainer>
   );
 }
