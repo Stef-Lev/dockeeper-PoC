@@ -40,15 +40,17 @@ const StyledDeletelBtn = styled(IconButton)`
 
 const buttonStyle = { width: "50px", height: "50px" };
 
-function EditorControls({ onSave, onDelete }) {
+function EditorControls({ onSave, onDelete, withDelete }) {
   return (
     <ControlContainer>
       <StyledSaveBtn variant="contained" onClick={onSave}>
         <SaveIcon style={buttonStyle} />
       </StyledSaveBtn>
-      <StyledDeletelBtn variant="contained" onClick={onDelete}>
-        <DeleteIcon style={buttonStyle} />
-      </StyledDeletelBtn>
+      {withDelete && (
+        <StyledDeletelBtn variant="contained" onClick={onDelete}>
+          <DeleteIcon style={buttonStyle} />
+        </StyledDeletelBtn>
+      )}
     </ControlContainer>
   );
 }

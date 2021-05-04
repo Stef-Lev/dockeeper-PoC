@@ -149,7 +149,11 @@ function EditPage() {
               editorClassName="rich-editor"
               onEditorStateChange={handleChange}
             />
-            <EditorControls onSave={handleSave} onDelete={deleteCurrent} />
+            <EditorControls
+              onSave={handleSave}
+              onDelete={deleteCurrent}
+              withDelete={!!id}
+            />
           </>
         )}
         <GenericModal
