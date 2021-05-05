@@ -54,16 +54,6 @@ function EditPage() {
   const [changedState, setChangedState] = useState(false);
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
 
-  // const usePrevious = (value) => {
-  //   const ref = useRef();
-  //   useEffect(() => {
-  //     ref.current = value;
-  //   });
-  //   return ref.current;
-  // };
-
-  // const prevEditorState = usePrevious(editorState);
-
   useEffect(() => {
     let mounted = true;
 
@@ -93,23 +83,6 @@ function EditPage() {
       mounted = false;
     };
   }, []);
-
-  // useEffect(() => {
-  //   const currentState = editorState?.getCurrentContent();
-  //   const previousState = prevEditorState?.getCurrentContent();
-
-  //   if (previousState && previousState !== currentState) {
-  //     setChangedState(true);
-  //     console.log("changed state");
-  //   }
-  //   console.log(
-  //     prevEditorState
-  //       ? prevEditorState.getCurrentContent() ===
-  //           editorState.getCurrentContent()
-  //       : null,
-  //     "RESULT"
-  //   );
-  // }, [editorState]);
 
   const handleChange = (newEditorState) => {
     const currentContent = editorState.getCurrentContent();
@@ -179,15 +152,6 @@ function EditPage() {
         });
     }
   };
-
-  // console.log(prevEditorState?.getCurrentContent(), "PREVIOUS");
-  // console.log(editorState?.getCurrentContent(), "NEXT");
-  // console.log(
-  //   prevEditorState
-  //     ? prevEditorState.getCurrentContent() === editorState.getCurrentContent()
-  //     : null,
-  //   "RESULT"
-  // );
 
   return (
     <Container>

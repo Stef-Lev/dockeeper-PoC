@@ -8,6 +8,7 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import HighlightOffOutlinedIcon from "@material-ui/icons/HighlightOffOutlined";
 import CheckCircleOutlineOutlinedIcon from "@material-ui/icons/CheckCircleOutlineOutlined";
+import ModalButton from "./ModalButton";
 import { theme } from "../themeColors";
 
 const Modal = styled(Dialog)`
@@ -27,9 +28,14 @@ const IconContainer = styled.div`
   align-items: center;
 `;
 
-const ActionsContainer = styled(DialogActions)`
+const ButtonsContainer = styled(DialogActions)`
+  display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 20px;
 `;
+
+const iconDimension = { width: "60px", height: "60px" };
 
 const DeleteIcon = styled(HighlightOffOutlinedIcon)`
   color: ${theme.warning.base};
@@ -117,7 +123,7 @@ function GenericModal({ shouldOpen, onClose, type, ...props }) {
           </DialogContentText>
         </DialogContent>
 
-        <ActionsContainer>{renderModalContent("buttons")}</ActionsContainer>
+        <ButtonsContainer>{renderModalContent("buttons")}</ButtonsContainer>
       </Modal>
     </>
   );
