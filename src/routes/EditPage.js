@@ -54,15 +54,15 @@ function EditPage() {
   const [changedState, setChangedState] = useState(false);
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
 
-  const usePrevious = (value) => {
-    const ref = useRef();
-    useEffect(() => {
-      ref.current = value;
-    });
-    return ref.current;
-  };
+  // const usePrevious = (value) => {
+  //   const ref = useRef();
+  //   useEffect(() => {
+  //     ref.current = value;
+  //   });
+  //   return ref.current;
+  // };
 
-  const prevEditorState = usePrevious(editorState);
+  // const prevEditorState = usePrevious(editorState);
 
   useEffect(() => {
     let mounted = true;
@@ -94,25 +94,32 @@ function EditPage() {
     };
   }, []);
 
-  useEffect(() => {
-    const currentState = editorState?.getCurrentContent();
-    const previousState = prevEditorState?.getCurrentContent();
+  // useEffect(() => {
+  //   const currentState = editorState?.getCurrentContent();
+  //   const previousState = prevEditorState?.getCurrentContent();
 
-    if (previousState && previousState !== currentState) {
+  //   if (previousState && previousState !== currentState) {
+  //     setChangedState(true);
+  //     console.log("changed state");
+  //   }
+  //   console.log(
+  //     prevEditorState
+  //       ? prevEditorState.getCurrentContent() ===
+  //           editorState.getCurrentContent()
+  //       : null,
+  //     "RESULT"
+  //   );
+  // }, [editorState]);
+
+  const handleChange = (newEditorState) => {
+    const currentContent = editorState.getCurrentContent();
+    const newContent = newEditorState.getCurrentContent();
+
+    setEditorState(newEditorState);
+
+    if (currentContent !== newContent) {
       setChangedState(true);
-      console.log("changed state");
     }
-    console.log(
-      prevEditorState
-        ? prevEditorState.getCurrentContent() ===
-            editorState.getCurrentContent()
-        : null,
-      "RESULT"
-    );
-  }, [editorState]);
-
-  const handleChange = (editorState) => {
-    setEditorState(editorState);
   };
 
   const handleDelete = (id) => {
