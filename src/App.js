@@ -28,4 +28,5 @@ function App() {
 // Wrong url handling
 // Date formatting
 // Create services for fetching
+// Refactor docs fetching to get title from raw
 export default App;

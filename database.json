@@ -172,7 +172,7 @@
           },
           {
             "key": "etfnv",
-            "text": "This is an ass",
+            "text": "This is an ass, a good one",
             "type": "unstyled",
             "depth": 0,
             "inlineStyleRanges": [],
@@ -225,6 +225,7 @@
           }
         }
       },
+      "createdAt": "2021-05-06T20:58:23.610Z",
       "id": 104
     },
     {

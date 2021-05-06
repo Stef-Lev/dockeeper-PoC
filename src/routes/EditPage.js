@@ -156,44 +156,60 @@ function EditPage() {
   const handleSave = () => {
     const contentState = editorState.getCurrentContent();
     const raw = convertToRaw(contentState);
-    if (id) {
-      fetch(`http://localhost:3002/tutorials/${id}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ content: raw, createdAt: new Date() }, null, 2),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log("Success:", data);
-        })
-        .catch((error) => {
-          console.error("Error:", error);
-        })
-        .finally(() => {
-          setSaveModalOpen(true);
-        });
+    if (!raw.blocks.map((it) => it.type).includes("header-one")) {
+      //@TODO Open modal to provide title
+      console.log("No title");
     } else {
-      fetch("http://localhost:3002/tutorials", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ content: raw, createdAt: new Date() }, null, 2),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log("Success:", data);
+      if (id) {
+        fetch(`http://localhost:3002/tutorials/${id}`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(
+            { content: raw, createdAt: new Date() },
+            null,
+            2
+          ),
         })
-        .catch((error) => {
-          console.error("Error:", error);
+          .then((response) => response.json())
+          .then((data) => {
+            console.log("Success:", data);
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          })
+          .finally(() => {
+            setSaveModalOpen(true);
+          });
+      } else {
+        fetch("http://localhost:3002/tutorials", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(
+            { content: raw, createdAt: new Date() },
+            null,
+            2
+          ),
         })
-        .finally(() => {
-          setSaveModalOpen(true);
-        });
+          .then((response) => response.json())
+          .then((data) => {
+            console.log("Success:", data);
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          })
+          .finally(() => {
+            setSaveModalOpen(true);
+          });
+      }
     }
   };
+
+  console.log(convertToRaw(editorState.getCurrentContent()));
+  window.theState = convertToRaw(editorState.getCurrentContent());
 
   return (
     <Container>

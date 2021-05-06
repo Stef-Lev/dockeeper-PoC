@@ -86,7 +86,7 @@ function GenericModal({ shouldOpen, onClose, icon, title, text, buttons }) {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        {icon && <IconContainer>{icon}</IconContainer>}
+        <IconContainer>{icon}</IconContainer>
         <DialogTitle id="alert-dialog-title">{title}</DialogTitle>
 
         <DialogContent>
