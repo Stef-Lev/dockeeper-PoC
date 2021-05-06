@@ -10,9 +10,7 @@ import ActionButtonsContainer from "../components/ActionButtonsContainer";
 import { theme } from "../themeColors";
 import AddIcon from "@material-ui/icons/Add";
 import Switch from "@material-ui/core/Switch";
-import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
-import FormControl from "@material-ui/core/FormControl";
 
 import { useHistory } from "react-router-dom";
 
@@ -161,7 +159,7 @@ function BasicPage() {
               }}
             />
           }
-          label="Show buttons"
+          label="Show controls"
           labelPlacement="top"
         />
       </ActionButtonsContainer>

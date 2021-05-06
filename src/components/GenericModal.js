@@ -77,33 +77,7 @@ const DeleteActionBtn = styled(Button)`
   transition: all 250ms linear;
 `;
 
-function GenericModal({ shouldOpen, onClose, type, ...props }) {
-  const modalTypes = {
-    confirmDelete: {
-      icon: <DeleteIcon />,
-      title: "Are you sure?",
-      text: "Do you want to delete this file?",
-      buttons: [
-        <SecondaryActionBtn onClick={onClose}>Cancel</SecondaryActionBtn>,
-        <DeleteActionBtn onClick={props.callBack}>Delete</DeleteActionBtn>,
-      ],
-    },
-    saveSuccess: {
-      icon: <SuccessIcon />,
-      title: "Success!",
-      text: "File saved succesfully!",
-      buttons: [<PrimaryActionBtn onClick={onClose}>OK</PrimaryActionBtn>],
-    },
-  };
-
-  const renderModalContent = (piece) => {
-    if (piece === "buttons") {
-      return modalTypes[type][piece].map((item) => item);
-    } else {
-      return modalTypes[type][piece];
-    }
-  };
-
+function GenericModal({ shouldOpen, onClose, icon, title, text, buttons }) {
   return (
     <>
       <Modal
@@ -112,18 +86,18 @@ function GenericModal({ shouldOpen, onClose, type, ...props }) {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <IconContainer>{renderModalContent("icon")}</IconContainer>
-        <DialogTitle id="alert-dialog-title">
-          {renderModalContent("title")}
-        </DialogTitle>
+        {icon && <IconContainer>{icon}</IconContainer>}
+        <DialogTitle id="alert-dialog-title">{title}</DialogTitle>
 
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            {renderModalContent("text")}
+            {text}
           </DialogContentText>
         </DialogContent>
 
-        <ButtonsContainer>{renderModalContent("buttons")}</ButtonsContainer>
+        <ButtonsContainer>
+          {buttons && buttons.map((btn) => btn)}
+        </ButtonsContainer>
       </Modal>
     </>
   );

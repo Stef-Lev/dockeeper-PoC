@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Typography } from "@material-ui/core";
+import { Typography, Button } from "@material-ui/core";
 import { EditorState, convertToRaw, convertFromRaw } from "draft-js";
 import { Editor } from "react-draft-wysiwyg";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
@@ -14,6 +14,8 @@ import SaveIcon from "@material-ui/icons/Save";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import ActionButton from "../components/ActionButton";
 import ActionButtonsContainer from "../components/ActionButtonsContainer";
+import HighlightOffOutlinedIcon from "@material-ui/icons/HighlightOffOutlined";
+import CheckCircleOutlineOutlinedIcon from "@material-ui/icons/CheckCircleOutlineOutlined";
 
 const Container = styled.div`
   padding: 16px;
@@ -40,6 +42,46 @@ const Container = styled.div`
     margin: 22px auto;
     padding: 20px;
   }
+`;
+
+const DeleteModalIcon = styled(HighlightOffOutlinedIcon)`
+  color: ${theme.warning.base};
+  width: 60px;
+  height: 60px;
+`;
+
+const SecondaryActionBtn = styled(Button)`
+  background-color: ${theme.secondary.base};
+  color: ${theme.buttonIcon};
+  margin-right: 16px;
+  :hover {
+    background-color: ${theme.secondary.hovered};
+  }
+  transition: all 250ms linear;
+`;
+
+const DeleteActionBtn = styled(Button)`
+  background-color: ${theme.warning.base};
+  color: ${theme.buttonIcon};
+  :hover {
+    background-color: ${theme.warning.hovered};
+  }
+  transition: all 250ms linear;
+`;
+
+const SuccessIcon = styled(CheckCircleOutlineOutlinedIcon)`
+  color: ${theme.success.base};
+  width: 60px;
+  height: 60px;
+`;
+
+const PrimaryActionBtn = styled(Button)`
+  background-color: ${theme.primary.base};
+  color: ${theme.buttonIcon};
+  :hover {
+    background-color: ${theme.primary.hovered};
+  }
+  transition: all 250ms linear;
 `;
 
 // @TODO MODAL NOT SAVED
@@ -177,13 +219,34 @@ function EditPage() {
             setSaveModalOpen(false);
             history.push(`/`);
           }}
-          type="saveSuccess"
+          icon={<SuccessIcon />}
+          title={"Success!"}
+          text={"File saved succesfully!"}
+          buttons={[
+            <PrimaryActionBtn
+              onClick={() => {
+                setSaveModalOpen(false);
+                history.push(`/`);
+              }}
+            >
+              OK
+            </PrimaryActionBtn>,
+          ]}
         />
         <GenericModal
           shouldOpen={deleteModalOpen}
           onClose={() => setDeleteModalOpen(false)}
-          type="confirmDelete"
-          callBack={() => handleDelete(id)}
+          icon={<DeleteModalIcon />}
+          title="Are you sure?"
+          text="Do you want to delete this file?"
+          buttons={[
+            <SecondaryActionBtn onClick={() => setDeleteModalOpen(false)}>
+              Cancel
+            </SecondaryActionBtn>,
+            <DeleteActionBtn onClick={() => handleDelete(id)}>
+              Delete
+            </DeleteActionBtn>,
+          ]}
         />
         <ActionButtonsContainer position="left">
           <ActionButton

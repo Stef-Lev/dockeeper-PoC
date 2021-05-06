@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Paper, Grid, Typography } from "@material-ui/core";
+import { Paper, Grid, Typography, Button } from "@material-ui/core";
 import styled from "styled-components";
 import IconButton from "@material-ui/core/IconButton";
 import DescriptionOutlinedIcon from "@material-ui/icons/DescriptionOutlined";
@@ -8,6 +8,7 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import GenericModal from "../components/GenericModal";
 import { theme } from "../themeColors";
 import { useHistory } from "react-router-dom";
+import HighlightOffOutlinedIcon from "@material-ui/icons/HighlightOffOutlined";
 
 const StyledContainer = styled.div`
   width: 90%;
@@ -44,6 +45,31 @@ const EditButton = styled(IconButton)`
 `;
 
 const DeleteButton = styled(IconButton)`
+  background-color: ${theme.warning.base};
+  color: ${theme.buttonIcon};
+  :hover {
+    background-color: ${theme.warning.hovered};
+  }
+  transition: all 250ms linear;
+`;
+
+const DeleteModalIcon = styled(HighlightOffOutlinedIcon)`
+  color: ${theme.warning.base};
+  width: 60px;
+  height: 60px;
+`;
+
+const SecondaryActionBtn = styled(Button)`
+  background-color: ${theme.secondary.base};
+  color: ${theme.buttonIcon};
+  margin-right: 16px;
+  :hover {
+    background-color: ${theme.secondary.hovered};
+  }
+  transition: all 250ms linear;
+`;
+
+const DeleteActionBtn = styled(Button)`
   background-color: ${theme.warning.base};
   color: ${theme.buttonIcon};
   :hover {
@@ -131,8 +157,17 @@ function DocItem({ title, createdAt, id, withControls }) {
       <GenericModal
         shouldOpen={modalOpen}
         onClose={() => setModalOpen(false)}
-        type="confirmDelete"
-        callBack={() => handleDelete(id)}
+        icon={<DeleteModalIcon />}
+        title="Are you sure?"
+        text="Do you want to delete this file?"
+        buttons={[
+          <SecondaryActionBtn onClick={() => setModalOpen(false)}>
+            Cancel
+          </SecondaryActionBtn>,
+          <DeleteActionBtn onClick={() => handleDelete(id)}>
+            Delete
+          </DeleteActionBtn>,
+        ]}
       />
     </>
   );

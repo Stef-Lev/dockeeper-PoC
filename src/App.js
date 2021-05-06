@@ -24,13 +24,8 @@ function App() {
 }
 // @TODOS
 // error handling modal
-// delete warning modal
-// editor controls
 // handle missing title
-// Invert hover colors
-// Group theme colors
 // Wrong url handling
 // Date formatting
-// Refactor editorcontrols
 // Create services for fetching
 export default App;
