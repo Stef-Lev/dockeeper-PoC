@@ -29,6 +29,10 @@ const InfoContainer = styled.div`
   align-items: center;
 `;
 
+const ControlsContainer = styled.div`
+  transition: all 150 ease-in;
+`;
+
 const EditButton = styled(IconButton)`
   background-color: ${theme.secondary.base};
   color: ${theme.buttonIcon};
@@ -48,7 +52,7 @@ const DeleteButton = styled(IconButton)`
   transition: all 250ms linear;
 `;
 
-function DocItem({ title, createdAt, id }) {
+function DocItem({ title, createdAt, id, withControls }) {
   const history = useHistory();
 
   const [modalOpen, setModalOpen] = useState(false);
@@ -100,24 +104,26 @@ function DocItem({ title, createdAt, id }) {
                   </Typography>
                 </div>
               </InfoContainer>
-              <div>
-                <EditButton
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    history.push(`/edit/${id}`);
-                  }}
-                >
-                  <EditIcon />
-                </EditButton>
-                <DeleteButton
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setModalOpen(true);
-                  }}
-                >
-                  <DeleteIcon />
-                </DeleteButton>
-              </div>
+              {withControls && (
+                <ControlsContainer>
+                  <EditButton
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      history.push(`/edit/${id}`);
+                    }}
+                  >
+                    <EditIcon />
+                  </EditButton>
+                  <DeleteButton
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setModalOpen(true);
+                    }}
+                  >
+                    <DeleteIcon />
+                  </DeleteButton>
+                </ControlsContainer>
+              )}
             </DataContainer>
           </Paper>
         </Grid>

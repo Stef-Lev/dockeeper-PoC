@@ -9,6 +9,10 @@ import ActionButton from "../components/ActionButton";
 import ActionButtonsContainer from "../components/ActionButtonsContainer";
 import { theme } from "../themeColors";
 import AddIcon from "@material-ui/icons/Add";
+import Switch from "@material-ui/core/Switch";
+import FormGroup from "@material-ui/core/FormGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import FormControl from "@material-ui/core/FormControl";
 
 import { useHistory } from "react-router-dom";
 
@@ -24,13 +28,52 @@ const Container = styled.div`
   gap: 16px;
 `;
 
+const StyledSwitch = styled(FormControlLabel)`
+  background-color: ${theme.primary.base};
+  color: #fff;
+  font-weight: bold;
+  padding: 9px;
+  border-radius: 8px;
+  .MuiSwitch-switchBase {
+    color: #00a2ed;
+  }
+  .MuiSwitch-colorPrimary.Mui-checked {
+    color: white;
+  }
+  .MuiSwitch-track {
+    color: black;
+    opacity: 0.5;
+  }
+  .MuiSwitch-colorPrimary.Mui-checked + .MuiSwitch-track {
+    background-color: white;
+  }
+`;
+
 function BasicPage() {
   const history = useHistory();
+  const [withControls, setWithControls] = useState(true);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
   const [data, setData] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
+
+  const storeControlsState = (state) => {
+    window.localStorage.setItem("showControls", state);
+  };
+
+  const getControlsState = () => {
+    let value = window.localStorage.getItem("showControls");
+    if (value === "true" || !value) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  useEffect(() => {
+    setWithControls(getControlsState());
+  }, []);
 
   useEffect(() => {
     let mounted = true;
@@ -74,6 +117,7 @@ function BasicPage() {
         />
         {loading && <Loader />}
         {!loading &&
+          data &&
           data
             .filter((doc) =>
               doc.content.blocks
@@ -90,6 +134,7 @@ function BasicPage() {
                 }
                 id={doc.id}
                 createdAt={doc.createdAt || null}
+                withControls={withControls}
               />
             ))}
         {!loading && error && <ErrorMessage msg={errorMsg} />}
@@ -101,6 +146,23 @@ function BasicPage() {
           backgroundColor={theme.primary.base}
           hoverColor={theme.primary.hovered}
           icon={<AddIcon style={{ width: "50px", height: "50px" }} />}
+        />
+      </ActionButtonsContainer>
+      <ActionButtonsContainer position="left">
+        <StyledSwitch
+          value="top"
+          control={
+            <Switch
+              color="primary"
+              checked={withControls}
+              onChange={(e) => {
+                setWithControls(e.target.checked);
+                storeControlsState(e.target.checked);
+              }}
+            />
+          }
+          label="Show buttons"
+          labelPlacement="top"
         />
       </ActionButtonsContainer>
     </Paper>
