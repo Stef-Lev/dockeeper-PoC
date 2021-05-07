@@ -83,9 +83,9 @@ function BasicPage() {
         .then((result) => {
           setData(result);
         })
-        .catch((err) => {
+        .catch((error) => {
           setError(true);
-          setErrorMsg(err.message);
+          setErrorMsg(error.message);
         })
         .finally(() => {
           setLoading(false);

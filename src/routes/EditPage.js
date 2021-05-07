@@ -15,6 +15,7 @@ import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import HighlightOffOutlinedIcon from "@material-ui/icons/HighlightOffOutlined";
 import CheckCircleOutlineOutlinedIcon from "@material-ui/icons/CheckCircleOutlineOutlined";
 import { theme } from "../themeColors";
+import ErrorOutlineIcon from "@material-ui/icons/ErrorOutline";
 
 const Container = styled.div`
   padding: 16px;
@@ -81,8 +82,11 @@ const PrimaryActionBtn = styled(Button)`
   }
   transition: all 250ms linear;
 `;
-
-// @TODO MODAL NOT SAVED
+const FailureIcon = styled(ErrorOutlineIcon)`
+  color: ${theme.warning.base};
+  width: 60px;
+  height: 60px;
+`;
 
 function EditPage() {
   const { id } = useParams();
@@ -93,6 +97,8 @@ function EditPage() {
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
   const [changedState, setChangedState] = useState(false);
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
+  const [error, setError] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
   useEffect(() => {
     let mounted = true;
@@ -109,10 +115,13 @@ function EditPage() {
             setEditorState(
               EditorState.createWithContent(convertFromRaw(result.content))
             );
-          })
-          .catch(console.log("Error"))
-          .finally(() => {
             setLoading(false);
+          })
+          .catch((error) => {
+            console.log("Error");
+            setLoading(false);
+            setError(true);
+            setErrorMsg(error.message);
           });
       } else {
         setLoading(false);
@@ -142,12 +151,13 @@ function EditPage() {
       .then((response) => response.json())
       .then((data) => {
         console.log("Success:", data);
+        history.push(`/`);
       })
       .catch((error) => {
         console.error("Error:", error);
-      })
-      .finally(() => {
-        history.push(`/`);
+        setDeleteModalOpen(false);
+        setError(true);
+        setErrorMsg(error.message);
       });
   };
 
@@ -177,6 +187,9 @@ function EditPage() {
           })
           .catch((error) => {
             console.error("Error:", error);
+            setLoading(false);
+            setError(true);
+            setErrorMsg(error.message);
           });
       } else {
         fetch("http://localhost:3002/tutorials", {
@@ -193,12 +206,13 @@ function EditPage() {
           .then((response) => response.json())
           .then((data) => {
             console.log("Success:", data);
+            setSaveModalOpen(true);
           })
           .catch((error) => {
             console.error("Error:", error);
-          })
-          .finally(() => {
-            setSaveModalOpen(true);
+            setLoading(false);
+            setError(true);
+            setErrorMsg(error.message);
           });
       }
     }
@@ -292,6 +306,27 @@ function EditPage() {
           )}
         </ActionButtonsContainer>
       </Paper>
+      <GenericModal
+        shouldOpen={error}
+        onClose={() => {
+          setError(false);
+          history.push(`/`);
+        }}
+        icon={<FailureIcon />}
+        title={"Something went wrong!"}
+        text={errorMsg}
+        buttons={[
+          <PrimaryActionBtn
+            onClick={() => {
+              setError(false);
+              history.push(`/`);
+            }}
+            key="failure_btn"
+          >
+            OK
+          </PrimaryActionBtn>,
+        ]}
+      />
     </Container>
   );
 }
