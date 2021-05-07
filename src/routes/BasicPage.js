@@ -23,7 +23,6 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  gap: 16px;
 `;
 
 const StyledSwitch = styled(FormControlLabel)`

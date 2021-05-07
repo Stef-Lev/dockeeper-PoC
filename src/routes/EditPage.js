@@ -1,21 +1,20 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Typography, Button } from "@material-ui/core";
-import { EditorState, convertToRaw, convertFromRaw } from "draft-js";
-import { Editor } from "react-draft-wysiwyg";
-import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-import styled from "styled-components";
-import { Paper } from "@material-ui/core";
+import React, { useState, useEffect } from "react";
 import { useHistory, useParams } from "react-router-dom";
-import { theme } from "../themeColors";
-import Loader from "../components/Loader";
 import GenericModal from "../components/GenericModal";
+import ActionButtonsContainer from "../components/ActionButtonsContainer";
+import ActionButton from "../components/ActionButton";
+import Loader from "../components/Loader";
+import { Typography, Button, Paper } from "@material-ui/core";
+import { Editor } from "react-draft-wysiwyg";
+import styled from "styled-components";
+import { EditorState, convertToRaw, convertFromRaw } from "draft-js";
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import DeleteIcon from "@material-ui/icons/Delete";
 import SaveIcon from "@material-ui/icons/Save";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
-import ActionButton from "../components/ActionButton";
-import ActionButtonsContainer from "../components/ActionButtonsContainer";
 import HighlightOffOutlinedIcon from "@material-ui/icons/HighlightOffOutlined";
 import CheckCircleOutlineOutlinedIcon from "@material-ui/icons/CheckCircleOutlineOutlined";
+import { theme } from "../themeColors";
 
 const Container = styled.div`
   padding: 16px;

@@ -13,7 +13,7 @@ import HighlightOffOutlinedIcon from "@material-ui/icons/HighlightOffOutlined";
 const StyledContainer = styled.div`
   width: 90%;
   text-align: left;
-  padding: 10px 16px;
+  padding: 12px;
   :hover {
     cursor: pointer;
   }
