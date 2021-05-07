@@ -95,6 +95,8 @@ function EditPage() {
   const [loading, setLoading] = useState(true);
   const [saveModalOpen, setSaveModalOpen] = useState(false);
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
+  const [exitModalOpen, setExitModalOpen] = useState(false);
+  const [noTitleModalOpen, setNoTitleModalOpen] = useState(false);
   const [changedState, setChangedState] = useState(false);
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
   const [error, setError] = useState(false);
@@ -165,8 +167,7 @@ function EditPage() {
     const contentState = editorState.getCurrentContent();
     const raw = convertToRaw(contentState);
     if (!raw.blocks.map((it) => it.type).includes("header-one")) {
-      //@TODO Open modal to provide title
-      console.log("No title");
+      setNoTitleModalOpen(true);
     } else {
       if (id) {
         fetch(`http://localhost:3002/tutorials/${id}`, {
@@ -187,7 +188,6 @@ function EditPage() {
           })
           .catch((error) => {
             console.error("Error:", error);
-            setLoading(false);
             setError(true);
             setErrorMsg(error.message);
           });
@@ -210,7 +210,6 @@ function EditPage() {
           })
           .catch((error) => {
             console.error("Error:", error);
-            setLoading(false);
             setError(true);
             setErrorMsg(error.message);
           });
@@ -218,8 +217,13 @@ function EditPage() {
     }
   };
 
-  console.log(convertToRaw(editorState.getCurrentContent()));
-  window.theState = convertToRaw(editorState.getCurrentContent());
+  const handleGoBack = () => {
+    if (changedState) {
+      setExitModalOpen(true);
+    } else {
+      history.push("/");
+    }
+  };
 
   return (
     <Container>
@@ -278,9 +282,85 @@ function EditPage() {
             </DeleteActionBtn>,
           ]}
         />
+        <GenericModal
+          shouldOpen={exitModalOpen}
+          onClose={() => {
+            setExitModalOpen(false);
+          }}
+          icon={<FailureIcon />}
+          title={"Save changes?"}
+          text={"There are unsaved changes. Do you want to save the document?"}
+          buttons={[
+            <PrimaryActionBtn
+              onClick={() => {
+                setExitModalOpen(false);
+                handleSave();
+              }}
+              key="save_btn"
+            >
+              Save
+            </PrimaryActionBtn>,
+            <SecondaryActionBtn
+              onClick={() => {
+                history.push(`/`);
+              }}
+              key="dontsave_btn"
+            >
+              Don't save
+            </SecondaryActionBtn>,
+            <SecondaryActionBtn
+              onClick={() => {
+                setExitModalOpen(false);
+              }}
+              key="cancel_btn"
+            >
+              Cancel
+            </SecondaryActionBtn>,
+          ]}
+        />
+        <GenericModal
+          shouldOpen={error}
+          onClose={() => {
+            setError(false);
+            history.push(`/`);
+          }}
+          icon={<FailureIcon />}
+          title={"Something went wrong!"}
+          text={errorMsg}
+          buttons={[
+            <PrimaryActionBtn
+              onClick={() => {
+                setError(false);
+                history.push(`/`);
+              }}
+              key="failure_btn"
+            >
+              OK
+            </PrimaryActionBtn>,
+          ]}
+        />
+        <GenericModal
+          shouldOpen={noTitleModalOpen}
+          onClose={() => {
+            setNoTitleModalOpen(false);
+          }}
+          icon={<FailureIcon />}
+          title={"Please provide a title!"}
+          text={"Every document must have a title (H1 element)"}
+          buttons={[
+            <PrimaryActionBtn
+              onClick={() => {
+                setNoTitleModalOpen(false);
+              }}
+              key="failure_btn"
+            >
+              OK
+            </PrimaryActionBtn>,
+          ]}
+        />
         <ActionButtonsContainer position="left">
           <ActionButton
-            onClick={() => history.push("/")}
+            onClick={handleGoBack}
             color={theme.buttonIcon}
             backgroundColor={theme.primary.base}
             hoverColor={theme.primary.hovered}
@@ -306,27 +386,6 @@ function EditPage() {
           )}
         </ActionButtonsContainer>
       </Paper>
-      <GenericModal
-        shouldOpen={error}
-        onClose={() => {
-          setError(false);
-          history.push(`/`);
-        }}
-        icon={<FailureIcon />}
-        title={"Something went wrong!"}
-        text={errorMsg}
-        buttons={[
-          <PrimaryActionBtn
-            onClick={() => {
-              setError(false);
-              history.push(`/`);
-            }}
-            key="failure_btn"
-          >
-            OK
-          </PrimaryActionBtn>,
-        ]}
-      />
     </Container>
   );
 }

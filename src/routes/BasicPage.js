@@ -82,6 +82,7 @@ function BasicPage() {
         .then((res) => res.json())
         .then((result) => {
           setData(result);
+          console.log(result);
         })
         .catch((error) => {
           setError(true);
@@ -97,7 +98,6 @@ function BasicPage() {
     };
   }, []);
 
-  console.log(data);
   return (
     <Paper elevation={3}>
       <Container>
