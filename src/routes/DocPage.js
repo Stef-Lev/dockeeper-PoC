@@ -11,6 +11,9 @@ import ActionButtonsContainer from "../components/ActionButtonsContainer";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import { theme } from "../themeColors";
 import EditIcon from "@material-ui/icons/Edit";
+import GenericModal from "../components/GenericModal";
+import ErrorOutlineIcon from "@material-ui/icons/ErrorOutline";
+import { Button } from "@material-ui/core";
 
 const Container = styled.div`
   padding: 32px;
@@ -20,9 +23,26 @@ const Container = styled.div`
   }
 `;
 
+const FailureIcon = styled(ErrorOutlineIcon)`
+  color: ${theme.warning.base};
+  width: 60px;
+  height: 60px;
+`;
+
+const PrimaryActionBtn = styled(Button)`
+  background-color: ${theme.primary.base};
+  color: ${theme.buttonIcon};
+  :hover {
+    background-color: ${theme.primary.hovered};
+  }
+  transition: all 250ms linear;
+`;
+
 function DocPage() {
   const [loading, setLoading] = useState(true);
   const [content, setContent] = useState(null);
+  const [error, setError] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
   const { id } = useParams();
   const history = useHistory();
@@ -38,17 +58,20 @@ function DocPage() {
         .then((res) => res.json())
         .then((result) => {
           setContent(result.content);
-        })
-        .catch(console.log("Error"))
-        .finally(() => {
           setLoading(false);
+        })
+        .catch((error) => {
+          console.log("Error");
+          setLoading(false);
+          setError(true);
+          setErrorMsg(error.message);
         });
     }
 
     return () => {
       mounted = false;
     };
-  }, []);
+  }, [DOC_URL]);
 
   return (
     <Container>
@@ -81,6 +104,27 @@ function DocPage() {
           icon={<EditIcon style={{ width: "50px", height: "50px" }} />}
         />
       </ActionButtonsContainer>
+      <GenericModal
+        shouldOpen={error}
+        onClose={() => {
+          setError(false);
+          history.push(`/`);
+        }}
+        icon={<FailureIcon />}
+        title={"Something went wrong!"}
+        text={errorMsg}
+        buttons={[
+          <PrimaryActionBtn
+            onClick={() => {
+              setError(false);
+              history.push(`/`);
+            }}
+            key="failure_btn"
+          >
+            OK
+          </PrimaryActionBtn>,
+        ]}
+      />
     </Container>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Grid, Paper, Typography, Button } from "@material-ui/core";
+import { Paper, Typography } from "@material-ui/core";
 import SentimentVeryDissatisfiedIcon from "@material-ui/icons/SentimentVeryDissatisfied";
 
 const Container = styled.div`

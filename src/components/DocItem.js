@@ -9,11 +9,12 @@ import GenericModal from "../components/GenericModal";
 import { theme } from "../themeColors";
 import { useHistory } from "react-router-dom";
 import HighlightOffOutlinedIcon from "@material-ui/icons/HighlightOffOutlined";
+import ErrorOutlineIcon from "@material-ui/icons/ErrorOutline";
 
 const StyledContainer = styled.div`
   width: 90%;
   text-align: left;
-  padding: 12px;
+  padding: 10px;
   :hover {
     cursor: pointer;
   }
@@ -77,10 +78,27 @@ const DeleteActionBtn = styled(Button)`
   transition: all 250ms linear;
 `;
 
+const FailureIcon = styled(ErrorOutlineIcon)`
+  color: ${theme.warning.base};
+  width: 60px;
+  height: 60px;
+`;
+
+const PrimaryActionBtn = styled(Button)`
+  background-color: ${theme.primary.base};
+  color: ${theme.buttonIcon};
+  :hover {
+    background-color: ${theme.primary.hovered};
+  }
+  transition: all 250ms linear;
+`;
+
 function DocItem({ title, createdAt, id, withControls }) {
   const history = useHistory();
 
   const [modalOpen, setModalOpen] = useState(false);
+  const [error, setError] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
   const handleDelete = (id) => {
     fetch(`http://localhost:3002/tutorials/${id}`, {
@@ -89,12 +107,13 @@ function DocItem({ title, createdAt, id, withControls }) {
       .then((response) => response.json())
       .then((data) => {
         console.log("Success:", data);
+        window.location.reload();
       })
       .catch((error) => {
         console.error("Error:", error);
-      })
-      .finally(() => {
-        window.location.reload();
+        setModalOpen(false);
+        setError(true);
+        setErrorMsg("File was not deleted");
       });
   };
 
@@ -107,7 +126,7 @@ function DocItem({ title, createdAt, id, withControls }) {
         }}
       >
         <Grid item xs={12}>
-          <Paper elevation={3} style={{ padding: "10px 16px" }}>
+          <Paper elevation={3} style={{ padding: "16px" }}>
             <DataContainer>
               <InfoContainer>
                 <DescriptionOutlinedIcon
@@ -160,12 +179,36 @@ function DocItem({ title, createdAt, id, withControls }) {
         title="Are you sure?"
         text="Do you want to delete this file?"
         buttons={[
-          <SecondaryActionBtn onClick={() => setModalOpen(false)}>
+          <SecondaryActionBtn
+            onClick={() => setModalOpen(false)}
+            key="cancel_btn"
+          >
             Cancel
           </SecondaryActionBtn>,
-          <DeleteActionBtn onClick={() => handleDelete(id)}>
+          <DeleteActionBtn onClick={() => handleDelete(id)} key="delete_btn">
             Delete
           </DeleteActionBtn>,
+        ]}
+      />
+      <GenericModal
+        shouldOpen={error}
+        onClose={() => {
+          setError(false);
+          history.push(`/`);
+        }}
+        icon={<FailureIcon />}
+        title={"Something went wrong!"}
+        text={errorMsg}
+        buttons={[
+          <PrimaryActionBtn
+            onClick={() => {
+              setError(false);
+              history.push(`/`);
+            }}
+            key="failure_btn"
+          >
+            OK
+          </PrimaryActionBtn>,
         ]}
       />
     </>

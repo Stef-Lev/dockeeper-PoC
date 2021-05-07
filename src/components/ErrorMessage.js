@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Typography } from "@material-ui/core";
 import ReportProblemOutlinedIcon from "@material-ui/icons/ReportProblemOutlined";

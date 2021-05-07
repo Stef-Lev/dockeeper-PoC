@@ -122,7 +122,7 @@ function EditPage() {
     return () => {
       mounted = false;
     };
-  }, []);
+  }, [id]);
 
   const handleChange = (newEditorState) => {
     const currentContent = editorState.getCurrentContent();
@@ -173,12 +173,10 @@ function EditPage() {
           .then((response) => response.json())
           .then((data) => {
             console.log("Success:", data);
+            setSaveModalOpen(true);
           })
           .catch((error) => {
             console.error("Error:", error);
-          })
-          .finally(() => {
-            setSaveModalOpen(true);
           });
       } else {
         fetch("http://localhost:3002/tutorials", {
@@ -242,6 +240,7 @@ function EditPage() {
                 setSaveModalOpen(false);
                 history.push(`/`);
               }}
+              key="success_btn"
             >
               OK
             </PrimaryActionBtn>,
@@ -254,10 +253,13 @@ function EditPage() {
           title="Are you sure?"
           text="Do you want to delete this file?"
           buttons={[
-            <SecondaryActionBtn onClick={() => setDeleteModalOpen(false)}>
+            <SecondaryActionBtn
+              onClick={() => setDeleteModalOpen(false)}
+              key="cancel_btn"
+            >
               Cancel
             </SecondaryActionBtn>,
-            <DeleteActionBtn onClick={() => handleDelete(id)}>
+            <DeleteActionBtn onClick={() => handleDelete(id)} key="delete_btn">
               Delete
             </DeleteActionBtn>,
           ]}
