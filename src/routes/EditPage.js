@@ -109,7 +109,7 @@ function EditPage() {
       setLoading(true);
 
       if (id) {
-        const DOC_URL = `http://localhost:3002/tutorials/${id}`;
+        const DOC_URL = `http://localhost:3002/documents/${id}`;
 
         fetch(DOC_URL)
           .then((res) => res.json())
@@ -147,7 +147,7 @@ function EditPage() {
   };
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:3002/tutorials/${id}`, {
+    fetch(`http://localhost:3002/documents/${id}`, {
       method: "DELETE",
     })
       .then((response) => response.json())
@@ -170,7 +170,7 @@ function EditPage() {
       setNoTitleModalOpen(true);
     } else {
       if (id) {
-        fetch(`http://localhost:3002/tutorials/${id}`, {
+        fetch(`http://localhost:3002/documents/${id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -192,7 +192,7 @@ function EditPage() {
             setErrorMsg(error.message);
           });
       } else {
-        fetch("http://localhost:3002/tutorials", {
+        fetch("http://localhost:3002/documents", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

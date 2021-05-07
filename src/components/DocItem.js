@@ -101,7 +101,7 @@ function DocItem({ title, createdAt, id, withControls }) {
   const [errorMsg, setErrorMsg] = useState("");
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:3002/tutorials/${id}`, {
+    fetch(`http://localhost:3002/documents/${id}`, {
       method: "DELETE",
     })
       .then((response) => response.json())

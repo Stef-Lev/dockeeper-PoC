@@ -101,11 +101,11 @@ function BasicPage() {
   return (
     <Paper elevation={3}>
       <Container>
-        <Typography variant="h1" style={{ fontSize: "2.5rem" }}>
+        <Typography
+          variant="h1"
+          style={{ fontSize: "2.5rem", marginBottom: "16px" }}
+        >
           Document Keeper
-        </Typography>
-        <Typography variant="h2" style={{ fontSize: "2.2rem" }}>
-          Docs
         </Typography>
         <SearchBox
           onChange={(e) => {

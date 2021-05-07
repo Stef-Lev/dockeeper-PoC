@@ -46,7 +46,7 @@ function DocPage() {
 
   const { id } = useParams();
   const history = useHistory();
-  const DOC_URL = `http://localhost:3002/tutorials/${id}`;
+  const DOC_URL = `http://localhost:3002/documents/${id}`;
 
   useEffect(() => {
     let mounted = true;

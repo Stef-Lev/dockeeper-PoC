@@ -1,11 +1,11 @@
 {
-  "tutorials": [
+  "documents": [
     {
       "content": {
         "blocks": [
           {
-            "key": "83eoj",
-            "text": "Sport fm",
+            "key": "98k58",
+            "text": "Why care about CSS Custom Properties?",
             "type": "header-one",
             "depth": 0,
             "inlineStyleRanges": [],
@@ -13,8 +13,8 @@
             "data": {}
           },
           {
-            "key": "444og",
-            "text": "3rd test, we are close",
+            "key": "4mmfh",
+            "text": "They help DRY up your CSS. That is “Don’t Repeat Yourself.” Custom properties can make code easier to maintain because you can update one value and have it reflected in multiple places. Careful though, overdoing abstraction can make have the opposite effect and make code less understandable.",
             "type": "unstyled",
             "depth": 0,
             "inlineStyleRanges": [],
@@ -22,8 +22,8 @@
             "data": {}
           },
           {
-            "key": "3999e",
-            "text": "Here is the sport fm logo",
+            "key": "a5qja",
+            "text": "They are particularly helpful for things like creating color themes on a website.",
             "type": "unstyled",
             "depth": 0,
             "inlineStyleRanges": [],
@@ -31,8 +31,8 @@
             "data": {}
           },
           {
-            "key": "60rlf",
-            "text": "One more diff",
+            "key": "b4aq4",
+            "text": "They unlock interesting possibilities in CSS. In no small part because they cascade.",
             "type": "unstyled",
             "depth": 0,
             "inlineStyleRanges": [],
@@ -40,46 +40,25 @@
             "data": {}
           },
           {
-            "key": "f2a93",
-            "text": "One more diff ",
+            "key": "859nr",
+            "text": "The fact that they can be updated in JavaScript opens up even more interesting possibilities.",
             "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [
-              {
-                "offset": 0,
-                "length": 13,
-                "style": "color-rgba(0,0,0,0.87)"
-              },
-              {
-                "offset": 0,
-                "length": 13,
-                "style": "bgcolor-rgb(241,241,241)"
-              },
-              {
-                "offset": 0,
-                "length": 13,
-                "style": "fontsize-medium"
-              },
-              {
-                "offset": 0,
-                "length": 13,
-                "style": "fontfamily-Roboto, sans-serif"
-              }
-            ],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "1iad8",
-            "text": "Don't save",
-            "type": "header-two",
             "depth": 0,
             "inlineStyleRanges": [],
             "entityRanges": [],
             "data": {}
           },
           {
-            "key": "42oa3",
+            "key": "jocn",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "9at8j",
             "text": " ",
             "type": "atomic",
             "depth": 0,
@@ -94,53 +73,7 @@
             "data": {}
           },
           {
-            "key": "7mn3i",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          }
-        ],
-        "entityMap": {
-          "0": {
-            "type": "IMAGE",
-            "mutability": "MUTABLE",
-            "data": {
-              "src": "http://www.e-tetradio.gr/img/path/13315462_10157048100800790_8819592684132029074_n14649781231513354263.png",
-              "height": "auto",
-              "width": "auto"
-            }
-          }
-        }
-      },
-      "createdAt": "2021-05-07T19:10:03.906Z",
-      "id": 101
-    },
-    {
-      "content": {
-        "blocks": [
-          {
-            "key": "bchju",
-            "text": "Test with an image",
-            "type": "header-one",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "dovve",
-            "text": "Lets try saving an image too",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "dcgfl",
+            "key": "66cob",
             "text": "",
             "type": "unstyled",
             "depth": 0,
@@ -149,68 +82,7 @@
             "data": {}
           },
           {
-            "key": "15q2d",
-            "text": " ",
-            "type": "atomic",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [
-              {
-                "offset": 0,
-                "length": 1,
-                "key": 0
-              }
-            ],
-            "data": {}
-          },
-          {
-            "key": "3nlu9",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          }
-        ],
-        "entityMap": {
-          "0": {
-            "type": "IMAGE",
-            "mutability": "MUTABLE",
-            "data": {
-              "src": "https://images.unsplash.com/photo-1619783534073-26b2249b867f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1333&q=80",
-              "height": "auto",
-              "width": "auto"
-            }
-          }
-        }
-      },
-      "createdAt": "2021-05-04T19:47:56.698Z",
-      "id": 102
-    },
-    {
-      "content": {
-        "blocks": [
-          {
-            "key": "1dqsv",
-            "text": "Check out the image upload",
-            "type": "header-one",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "etfnv",
-            "text": "This is an ass, a good one",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "ef31b",
+            "key": "51sgc",
             "text": "",
             "type": "unstyled",
             "depth": 0,
@@ -219,186 +91,7 @@
             "data": {}
           },
           {
-            "key": "4g8dn",
-            "text": " ",
-            "type": "atomic",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [
-              {
-                "offset": 0,
-                "length": 1,
-                "key": 0
-              }
-            ],
-            "data": {}
-          },
-          {
-            "key": "9o7j2",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          }
-        ],
-        "entityMap": {
-          "0": {
-            "type": "IMAGE",
-            "mutability": "MUTABLE",
-            "data": {
-              "src": "https://images.unsplash.com/photo-1619694810130-50021400dbb1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
-              "height": "auto",
-              "width": "auto"
-            }
-          }
-        }
-      },
-      "createdAt": "2021-05-06T20:58:23.610Z",
-      "id": 104
-    },
-    {
-      "content": {
-        "blocks": [
-          {
-            "key": "ae17o",
-            "text": "Fetched",
-            "type": "header-one",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "40lu3",
-            "text": "new data",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "5l2gd",
-            "text": "mplamplampla",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "airbr",
-            "text": " ",
-            "type": "atomic",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [
-              {
-                "offset": 0,
-                "length": 1,
-                "key": 0
-              }
-            ],
-            "data": {}
-          },
-          {
-            "key": "rkns",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          }
-        ],
-        "entityMap": {
-          "0": {
-            "type": "IMAGE",
-            "mutability": "MUTABLE",
-            "data": {
-              "src": "https://images.unsplash.com/photo-1619640879184-9e19945e2a92?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-              "height": "auto",
-              "width": "auto"
-            }
-          }
-        }
-      },
-      "createdAt": "2021-05-07T19:11:02.278Z",
-      "id": 105
-    },
-    {
-      "content": {
-        "blocks": [
-          {
-            "key": "dmoec",
-            "text": "Scrolling Test",
-            "type": "header-one",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {
-              "text-align": "center"
-            }
-          },
-          {
-            "key": "d5l3t",
-            "text": "trying scrolling and 2 images layout",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {
-              "text-align": "center"
-            }
-          },
-          {
-            "key": "77d37",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "6c5cv",
-            "text": " ",
-            "type": "atomic",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [
-              {
-                "offset": 0,
-                "length": 1,
-                "key": 0
-              }
-            ],
-            "data": {}
-          },
-          {
-            "key": "6s3nt",
-            "text": "on more image here would be enough",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {
-              "text-align": "center"
-            }
-          },
-          {
-            "key": "5s1jg",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "64g78",
+            "key": "4sr6j",
             "text": " ",
             "type": "atomic",
             "depth": 0,
@@ -413,7 +106,7 @@
             "data": {}
           },
           {
-            "key": "f1mgr",
+            "key": "8egdc",
             "text": "",
             "type": "unstyled",
             "depth": 0,
@@ -422,7 +115,31 @@
             "data": {}
           },
           {
-            "key": "134tm",
+            "key": "fb9jj",
+            "text": " ",
+            "type": "atomic",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [
+              {
+                "offset": 0,
+                "length": 1,
+                "key": 2
+              }
+            ],
+            "data": {}
+          },
+          {
+            "key": "621cc",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "41nen",
             "text": "",
             "type": "unstyled",
             "depth": 0,
@@ -436,272 +153,2005 @@
             "type": "IMAGE",
             "mutability": "MUTABLE",
             "data": {
-              "src": "https://images.unsplash.com/photo-1568819317551-31051b37f69f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8c2V4eXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+              "src": "https://miro.medium.com/max/4000/1*OkasBr8SDeRPWhLGIGlqnw.png",
               "height": "auto",
-              "width": "600px"
+              "width": "auto"
             }
           },
           "1": {
             "type": "IMAGE",
             "mutability": "MUTABLE",
             "data": {
-              "src": "https://images.pexels.com/photos/2237665/pexels-photo-2237665.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+              "src": "data:image/png;base64,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",
               "height": "auto",
-              "width": "600px"
-            }
-          }
-        }
-      },
-      "createdAt": "2021-05-07T18:52:34.752Z",
-      "id": 108
-    },
-    {
-      "content": {
-        "blocks": [
-          {
-            "key": "34rvl",
-            "text": "Kitana",
-            "type": "header-one",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {
-              "text-align": "center"
+              "width": "auto"
             }
           },
-          {
-            "key": "evb42",
-            "text": "Wears a blue uniform",
-            "type": "header-two",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {
-              "text-align": "center"
-            }
-          },
-          {
-            "key": "ed36j",
-            "text": "Woman character in Mortal Kombat",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {
-              "text-align": "center"
-            }
-          },
-          {
-            "key": "u4es",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "dsmv9",
-            "text": " ",
-            "type": "atomic",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [
-              {
-                "offset": 0,
-                "length": 1,
-                "key": 0
-              }
-            ],
-            "data": {}
-          },
-          {
-            "key": "5poga",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "20tha",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          }
-        ],
-        "entityMap": {
-          "0": {
+          "2": {
             "type": "IMAGE",
             "mutability": "MUTABLE",
             "data": {
-              "src": "https://pbs.twimg.com/media/D-cdGErXUAANJ2R.jpg",
+              "src": "data:image/jpeg;base64,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",
               "height": "auto",
-              "width": "800px"
+              "width": "auto"
             }
           }
         }
       },
-      "createdAt": "2021-05-03T14:10:32.995Z",
-      "id": 109
+      "createdAt": "2021-05-07T19:48:09.826Z",
+      "id": 1
     },
     {
       "content": {
         "blocks": [
           {
-            "key": "arfij",
-            "text": "Mileena",
+            "key": "4mmqa",
+            "text": "Six Reasons to Use Material-UI for React",
             "type": "header-one",
             "depth": 0,
             "inlineStyleRanges": [],
             "entityRanges": [],
-            "data": {
-              "text-align": "center"
-            }
-          },
-          {
-            "key": "e20bs",
-            "text": "Wears a green uniform",
-            "type": "header-two",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {
-              "text-align": "center"
-            }
-          },
-          {
-            "key": "6v6n7",
-            "text": "Woman character in MK",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {
-              "text-align": "center"
-            }
-          },
-          {
-            "key": "ckioa",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
             "data": {}
           },
           {
-            "key": "1me2s",
-            "text": " ",
-            "type": "atomic",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [
-              {
-                "offset": 0,
-                "length": 1,
-                "key": 0
-              }
-            ],
-            "data": {}
-          },
-          {
-            "key": "38rfq",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          }
-        ],
-        "entityMap": {
-          "0": {
-            "type": "IMAGE",
-            "mutability": "MUTABLE",
-            "data": {
-              "src": "https://i.pinimg.com/originals/e8/35/8f/e8358fe8ce30bdb0dd009f380090a870.jpg",
-              "height": "auto",
-              "width": "800px"
-            }
-          }
-        }
-      },
-      "createdAt": "2021-05-03T14:10:56.214Z",
-      "id": 110
-    },
-    {
-      "content": {
-        "blocks": [
-          {
-            "key": "3ji2r",
-            "text": "Jade",
-            "type": "header-one",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {
-              "text-align": "center"
-            }
-          },
-          {
-            "key": "6ou95",
-            "text": "Wears a purple uniform",
-            "type": "header-two",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {
-              "text-align": "center"
-            }
-          },
-          {
-            "key": "892i",
-            "text": "Woman character in MK ",
+            "key": "a523a",
+            "text": "I have worked with Material-UI for a few years now and it has been a huge help in many ways. Here's six reasons why I think you will love it!",
             "type": "unstyled",
             "depth": 0,
             "inlineStyleRanges": [
               {
                 "offset": 0,
-                "length": 21,
-                "style": "color-rgba(0,0,0,0.87)"
+                "length": 141,
+                "style": "color-rgb(8,9,10)"
               },
               {
                 "offset": 0,
-                "length": 21,
+                "length": 141,
                 "style": "bgcolor-rgb(255,255,255)"
               },
               {
                 "offset": 0,
+                "length": 141,
+                "style": "fontsize-20"
+              },
+              {
+                "offset": 0,
+                "length": 141,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "etraj",
+            "text": "1️⃣ Start off with a large library of components",
+            "type": "header-two",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 48,
+                "style": "color-rgb(8,9,10)"
+              },
+              {
+                "offset": 0,
+                "length": 48,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 48,
+                "style": "fontsize-1.75em"
+              },
+              {
+                "offset": 0,
+                "length": 48,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "asor",
+            "text": "This reason alone has me recommending Material-UI to those looking to start a new React project. This is especially helpful if you're working under a strict time constraint and can't spend time building each component from the ground up. Having the ability to install the package and then have access to usable components from an App Bar to Drawers without any effort makes this library incredibly powerful. There have been many times I have come up with a high level design concept and quickly used Material-UI to throw together a working prototype in little time which to me is a huge selling point.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 601,
+                "style": "color-rgb(8,9,10)"
+              },
+              {
+                "offset": 0,
+                "length": 601,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 601,
+                "style": "fontsize-20"
+              },
+              {
+                "offset": 0,
+                "length": 601,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "7imc3",
+            "text": "2️⃣ Aligns with Material Design by Google",
+            "type": "header-two",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 15,
+                "style": "color-rgb(8,9,10)"
+              },
+              {
+                "offset": 16,
+                "length": 15,
+                "style": "color-rgb(8,9,10)"
+              },
+              {
+                "offset": 32,
+                "length": 9,
+                "style": "color-rgb(8,9,10)"
+              },
+              {
+                "offset": 0,
+                "length": 15,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 16,
+                "length": 15,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 32,
+                "length": 9,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 15,
+                "style": "fontsize-1.75em"
+              },
+              {
+                "offset": 16,
+                "length": 15,
+                "style": "fontsize-1.75em"
+              },
+              {
+                "offset": 32,
+                "length": 9,
+                "style": "fontsize-1.75em"
+              },
+              {
+                "offset": 0,
+                "length": 15,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol"
+              },
+              {
+                "offset": 16,
+                "length": 15,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol"
+              },
+              {
+                "offset": 32,
+                "length": 9,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol"
+              },
+              {
+                "offset": 16,
+                "length": 15,
+                "style": "color-var(--accent-brand)"
+              },
+              {
+                "offset": 16,
+                "length": 15,
+                "style": "UNDERLINE"
+              }
+            ],
+            "entityRanges": [
+              {
+                "offset": 16,
+                "length": 15,
+                "key": 0
+              }
+            ],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "cui2d",
+            "text": "As the name suggests, Material-UI aligns with Material Design by Google out of the box. Because of this, you are given a library of components that will probably look and feel familiar to your user base. This allows you to get started working with the library quickly while spending minimal time styling components and tinkering with CSS. With Material Design, you're given a full design system that describes the intent of the many available components and examples for how they should be utilized throughout your design.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 522,
+                "style": "color-rgb(8,9,10)"
+              },
+              {
+                "offset": 0,
+                "length": 522,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 522,
+                "style": "fontsize-20"
+              },
+              {
+                "offset": 0,
+                "length": 522,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "3elqn",
+            "text": "Not only are you given a library already aligning with Material Design, but you're given access to the Material Icons as well. This means a uniform set of icons to choose from that match the design system being used. Additionally, there's support for a growing collection of even more Material Design icons in a separate package called Material Design Icons!",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 335,
+                "style": "color-rgb(8,9,10)"
+              },
+              {
+                "offset": 336,
+                "length": 22,
+                "style": "color-rgb(8,9,10)"
+              },
+              {
+                "offset": 0,
+                "length": 335,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 336,
+                "length": 22,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 335,
+                "style": "fontsize-20"
+              },
+              {
+                "offset": 336,
+                "length": 22,
+                "style": "fontsize-20"
+              },
+              {
+                "offset": 0,
+                "length": 335,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol"
+              },
+              {
+                "offset": 336,
+                "length": 22,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol"
+              },
+              {
+                "offset": 336,
+                "length": 21,
+                "style": "color-var(--accent-brand)"
+              },
+              {
+                "offset": 336,
+                "length": 21,
+                "style": "UNDERLINE"
+              }
+            ],
+            "entityRanges": [
+              {
+                "offset": 336,
+                "length": 21,
+                "key": 1
+              }
+            ],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "beg3s",
+            "text": "3️⃣ Access to a fully customizable theme",
+            "type": "header-two",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 40,
+                "style": "color-rgb(8,9,10)"
+              },
+              {
+                "offset": 0,
+                "length": 40,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 40,
+                "style": "fontsize-1.75em"
+              },
+              {
+                "offset": 0,
+                "length": 40,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "9ufii",
+            "text": "The nice thing about using a fully connected component library? You are given a customizable theme that can be accessed globally throughout your components. The theme gives you access to specify the color of components, surface properties (such as elevation and light/dark mode), palette information, etc.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 305,
+                "style": "color-rgb(8,9,10)"
+              },
+              {
+                "offset": 0,
+                "length": 305,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 305,
+                "style": "fontsize-20"
+              },
+              {
+                "offset": 0,
+                "length": 305,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "es7vt",
+            "text": "All of this means that you can provide greater consistency among the many components you use throughout your design. The possibilities of how you style components and the interface really is endless. There's a TON to unpack here, so I suggest checking out their theming page!",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 261,
+                "style": "color-rgb(8,9,10)"
+              },
+              {
+                "offset": 262,
+                "length": 13,
+                "style": "color-rgb(8,9,10)"
+              },
+              {
+                "offset": 0,
+                "length": 261,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 262,
+                "length": 13,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 261,
+                "style": "fontsize-20"
+              },
+              {
+                "offset": 262,
+                "length": 13,
+                "style": "fontsize-20"
+              },
+              {
+                "offset": 0,
+                "length": 261,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol"
+              },
+              {
+                "offset": 262,
+                "length": 13,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol"
+              },
+              {
+                "offset": 262,
+                "length": 12,
+                "style": "color-var(--accent-brand)"
+              },
+              {
+                "offset": 262,
+                "length": 12,
+                "style": "UNDERLINE"
+              }
+            ],
+            "entityRanges": [
+              {
+                "offset": 262,
+                "length": 12,
+                "key": 2
+              }
+            ],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "4djgg",
+            "text": "4️⃣ Extensive support for issues and bugs",
+            "type": "header-two",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 41,
+                "style": "color-rgb(8,9,10)"
+              },
+              {
+                "offset": 0,
+                "length": 41,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 41,
+                "style": "fontsize-1.75em"
+              },
+              {
+                "offset": 0,
+                "length": 41,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "o4qt",
+            "text": "This is one point that I have really enjoyed about using Material-UI. The library is regularly updated with bug fixes and additional features. Since my introduction to using the library, the team has released new major versions once per calendar year packed with new features and components. Additionally, throughout the year there are minor releases packed with bug fixes and additional features for their component libraries. Their releases are all well documented and the history of the releases is available on their site. This means that you don't have to worry about being left behind if you opt to wait on updating your packages.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 636,
+                "style": "color-rgb(8,9,10)"
+              },
+              {
+                "offset": 0,
+                "length": 636,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 636,
+                "style": "fontsize-20"
+              },
+              {
+                "offset": 0,
+                "length": 636,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "1837i",
+            "text": "Another cool aspect of working with Material-UI is the \"lab\". The lab is a separate package where the Material-UI team can release new components for developers to use and test out without breaking the core package. This allows developers to use the new components and provide feedback to the maintainers.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 54,
+                "style": "color-rgb(8,9,10)"
+              },
+              {
+                "offset": 55,
+                "length": 250,
+                "style": "color-rgb(8,9,10)"
+              },
+              {
+                "offset": 0,
+                "length": 54,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 55,
+                "length": 250,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 54,
+                "style": "fontsize-20"
+              },
+              {
+                "offset": 55,
+                "length": 250,
+                "style": "fontsize-20"
+              },
+              {
+                "offset": 0,
+                "length": 54,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol"
+              },
+              {
+                "offset": 55,
+                "length": 250,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol"
+              },
+              {
+                "offset": 55,
+                "length": 5,
+                "style": "color-var(--accent-brand)"
+              },
+              {
+                "offset": 55,
+                "length": 5,
+                "style": "UNDERLINE"
+              }
+            ],
+            "entityRanges": [
+              {
+                "offset": 55,
+                "length": 5,
+                "key": 3
+              }
+            ],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "1pvs",
+            "text": "5️⃣ Regularly updated library",
+            "type": "header-two",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 29,
+                "style": "color-rgb(8,9,10)"
+              },
+              {
+                "offset": 0,
+                "length": 29,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 29,
+                "style": "fontsize-1.75em"
+              },
+              {
+                "offset": 0,
+                "length": 29,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "l9u0",
+            "text": "With the regularly updated library comes great support for issues and bugs from the Material-UI team. The team responds quickly to any issues and provides fixes in minor releases. This has been a huge plus for me while using the library.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 237,
+                "style": "color-rgb(8,9,10)"
+              },
+              {
+                "offset": 0,
+                "length": 237,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 237,
+                "style": "fontsize-20"
+              },
+              {
+                "offset": 0,
+                "length": 237,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "e1loh",
+            "text": "Additionally, as a user you have influence on what could be introduced next to the library. On Twitter, the main account @MaterialUI asks for feedback on what users would like to be added to the library. Also, there is a yearly developer survey that is used to provide feedback to the maintainers on how users use the library and what could be improved!",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 120,
+                "style": "color-rgb(8,9,10)"
+              },
+              {
+                "offset": 121,
+                "length": 11,
+                "style": "color-rgb(8,9,10)"
+              },
+              {
+                "offset": 133,
+                "length": 87,
+                "style": "color-rgb(8,9,10)"
+              },
+              {
+                "offset": 221,
+                "length": 23,
+                "style": "color-rgb(8,9,10)"
+              },
+              {
+                "offset": 245,
+                "length": 108,
+                "style": "color-rgb(8,9,10)"
+              },
+              {
+                "offset": 0,
+                "length": 120,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 121,
+                "length": 11,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 133,
+                "length": 87,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 221,
+                "length": 23,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 245,
+                "length": 108,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 120,
+                "style": "fontsize-20"
+              },
+              {
+                "offset": 121,
+                "length": 11,
+                "style": "fontsize-20"
+              },
+              {
+                "offset": 133,
+                "length": 87,
+                "style": "fontsize-20"
+              },
+              {
+                "offset": 221,
+                "length": 23,
+                "style": "fontsize-20"
+              },
+              {
+                "offset": 245,
+                "length": 108,
+                "style": "fontsize-20"
+              },
+              {
+                "offset": 0,
+                "length": 120,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol"
+              },
+              {
+                "offset": 121,
+                "length": 11,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol"
+              },
+              {
+                "offset": 133,
+                "length": 87,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol"
+              },
+              {
+                "offset": 221,
+                "length": 23,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol"
+              },
+              {
+                "offset": 245,
+                "length": 108,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol"
+              },
+              {
+                "offset": 121,
+                "length": 11,
+                "style": "color-var(--accent-brand)"
+              },
+              {
+                "offset": 221,
+                "length": 23,
+                "style": "color-var(--accent-brand)"
+              },
+              {
+                "offset": 121,
+                "length": 11,
+                "style": "UNDERLINE"
+              },
+              {
+                "offset": 221,
+                "length": 23,
+                "style": "UNDERLINE"
+              }
+            ],
+            "entityRanges": [
+              {
+                "offset": 121,
+                "length": 11,
+                "key": 4
+              },
+              {
+                "offset": 221,
+                "length": 23,
+                "key": 5
+              }
+            ],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "ac1kg",
+            "text": "6️⃣ Large community of users providing external support and examples",
+            "type": "header-two",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 68,
+                "style": "color-rgb(8,9,10)"
+              },
+              {
+                "offset": 0,
+                "length": 68,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 68,
+                "style": "fontsize-1.75em"
+              },
+              {
+                "offset": 0,
+                "length": 68,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "9t8jf",
+            "text": "Another benefit of using Material-UI is that there is a large user base that provide additional support and examples. One of my favorite sites to visit for Material-UI inspiration is MUI Treasury. @siriwatknp has put together his own ecosystem of usable Material-UI components. This is super helpful for any inspiration you might have when trying to come up with a unique way to utilize Material-UI. ",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 182,
+                "style": "color-rgb(8,9,10)"
+              },
+              {
+                "offset": 183,
+                "length": 13,
+                "style": "color-rgb(8,9,10)"
+              },
+              {
+                "offset": 197,
+                "length": 11,
+                "style": "color-rgb(8,9,10)"
+              },
+              {
+                "offset": 209,
+                "length": 190,
+                "style": "color-rgb(8,9,10)"
+              },
+              {
+                "offset": 0,
+                "length": 182,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 183,
+                "length": 13,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 197,
+                "length": 11,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 209,
+                "length": 190,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 182,
+                "style": "fontsize-20"
+              },
+              {
+                "offset": 183,
+                "length": 13,
+                "style": "fontsize-20"
+              },
+              {
+                "offset": 197,
+                "length": 11,
+                "style": "fontsize-20"
+              },
+              {
+                "offset": 209,
+                "length": 190,
+                "style": "fontsize-20"
+              },
+              {
+                "offset": 0,
+                "length": 182,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol"
+              },
+              {
+                "offset": 183,
+                "length": 13,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol"
+              },
+              {
+                "offset": 197,
+                "length": 11,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol"
+              },
+              {
+                "offset": 209,
+                "length": 190,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol"
+              },
+              {
+                "offset": 183,
+                "length": 12,
+                "style": "color-var(--accent-brand)"
+              },
+              {
+                "offset": 197,
+                "length": 11,
+                "style": "color-var(--accent-brand)"
+              },
+              {
+                "offset": 183,
+                "length": 12,
+                "style": "UNDERLINE"
+              },
+              {
+                "offset": 197,
+                "length": 11,
+                "style": "UNDERLINE"
+              }
+            ],
+            "entityRanges": [
+              {
+                "offset": 183,
+                "length": 12,
+                "key": 6
+              },
+              {
+                "offset": 197,
+                "length": 11,
+                "key": 7
+              }
+            ],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "agff2",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "bo6de",
+            "text": " ",
+            "type": "atomic",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [
+              {
+                "offset": 0,
+                "length": 1,
+                "key": 8
+              }
+            ],
+            "data": {}
+          },
+          {
+            "key": "2g7vt",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "5i1hg",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          }
+        ],
+        "entityMap": {
+          "0": {
+            "type": "LINK",
+            "mutability": "MUTABLE",
+            "data": {
+              "url": "https://material.io/",
+              "title": "Material Design",
+              "targetOption": "",
+              "_map": {
+                "type": "LINK",
+                "mutability": "MUTABLE",
+                "data": {
+                  "url": "https://material.io/",
+                  "title": "Material Design",
+                  "targetOption": ""
+                }
+              }
+            }
+          },
+          "1": {
+            "type": "LINK",
+            "mutability": "MUTABLE",
+            "data": {
+              "url": "https://materialdesignicons.com/",
+              "title": "Material Design Icons",
+              "targetOption": "",
+              "_map": {
+                "type": "LINK",
+                "mutability": "MUTABLE",
+                "data": {
+                  "url": "https://materialdesignicons.com/",
+                  "title": "Material Design Icons",
+                  "targetOption": ""
+                }
+              }
+            }
+          },
+          "2": {
+            "type": "LINK",
+            "mutability": "MUTABLE",
+            "data": {
+              "url": "https://material-ui.com/customization/default-theme/",
+              "title": "theming page",
+              "targetOption": "",
+              "_map": {
+                "type": "LINK",
+                "mutability": "MUTABLE",
+                "data": {
+                  "url": "https://material-ui.com/customization/default-theme/",
+                  "title": "theming page",
+                  "targetOption": ""
+                }
+              }
+            }
+          },
+          "3": {
+            "type": "LINK",
+            "mutability": "MUTABLE",
+            "data": {
+              "url": "https://material-ui.com/components/about-the-lab/",
+              "title": "\"lab\"",
+              "targetOption": "",
+              "_map": {
+                "type": "LINK",
+                "mutability": "MUTABLE",
+                "data": {
+                  "url": "https://material-ui.com/components/about-the-lab/",
+                  "title": "\"lab\"",
+                  "targetOption": ""
+                }
+              }
+            }
+          },
+          "4": {
+            "type": "LINK",
+            "mutability": "MUTABLE",
+            "data": {
+              "url": "https://twitter.com/MaterialUI",
+              "title": "@MaterialUI",
+              "targetOption": "",
+              "_map": {
+                "type": "LINK",
+                "mutability": "MUTABLE",
+                "data": {
+                  "url": "https://twitter.com/MaterialUI",
+                  "title": "@MaterialUI",
+                  "targetOption": ""
+                }
+              }
+            }
+          },
+          "5": {
+            "type": "LINK",
+            "mutability": "MUTABLE",
+            "data": {
+              "url": "https://medium.com/material-ui/2020-material-ui-developer-survey-results-7565085580a8",
+              "title": "yearly developer survey",
+              "targetOption": "",
+              "_map": {
+                "type": "LINK",
+                "mutability": "MUTABLE",
+                "data": {
+                  "url": "https://medium.com/material-ui/2020-material-ui-developer-survey-results-7565085580a8",
+                  "title": "yearly developer survey",
+                  "targetOption": ""
+                }
+              }
+            }
+          },
+          "6": {
+            "type": "LINK",
+            "mutability": "MUTABLE",
+            "data": {
+              "url": "https://mui-treasury.com/",
+              "title": "MUI Treasury",
+              "targetOption": "",
+              "_map": {
+                "type": "LINK",
+                "mutability": "MUTABLE",
+                "data": {
+                  "url": "https://mui-treasury.com/",
+                  "title": "MUI Treasury",
+                  "targetOption": ""
+                }
+              }
+            }
+          },
+          "7": {
+            "type": "LINK",
+            "mutability": "MUTABLE",
+            "data": {
+              "url": "https://twitter.com/siriwatknp",
+              "title": "@siriwatknp",
+              "targetOption": "",
+              "_map": {
+                "type": "LINK",
+                "mutability": "MUTABLE",
+                "data": {
+                  "url": "https://twitter.com/siriwatknp",
+                  "title": "@siriwatknp",
+                  "targetOption": ""
+                }
+              }
+            }
+          },
+          "8": {
+            "type": "IMAGE",
+            "mutability": "MUTABLE",
+            "data": {
+              "src": "https://www.section.io/engineering-education/how-to-implement-material-ui-in-react/hero.png",
+              "height": "auto",
+              "width": "auto"
+            }
+          }
+        }
+      },
+      "createdAt": "2021-05-07T20:03:18.509Z",
+      "id": 2
+    },
+    {
+      "content": {
+        "blocks": [
+          {
+            "key": "5h6ev",
+            "text": "React. A JavaScript library for building user interfaces",
+            "type": "header-one",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "a6061",
+            "text": "Before We Start the Tutorial",
+            "type": "header-two",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 28,
+                "style": "color-rgb(0,0,0)"
+              },
+              {
+                "offset": 0,
+                "length": 28,
+                "style": "fontsize-35"
+              },
+              {
+                "offset": 0,
+                "length": 28,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "4om6q",
+            "text": "We will build a small game during this tutorial. You might be tempted to skip it because you’re not building games — but give it a chance. The techniques you’ll learn in the tutorial are fundamental to building any React app, and mastering it will give you a deep understanding of React.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 48,
+                "style": "color-rgb(0,0,0)"
+              },
+              {
+                "offset": 49,
+                "length": 89,
+                "style": "color-rgb(0,0,0)"
+              },
+              {
+                "offset": 139,
+                "length": 148,
+                "style": "color-rgb(0,0,0)"
+              },
+              {
+                "offset": 0,
+                "length": 48,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 49,
+                "length": 89,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 139,
+                "length": 148,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 0,
+                "length": 48,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              },
+              {
+                "offset": 49,
+                "length": 89,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              },
+              {
+                "offset": 139,
+                "length": 148,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              },
+              {
+                "offset": 49,
+                "length": 89,
+                "style": "BOLD"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "1lehu",
+            "text": "",
+            "type": "blockquote",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "2q93s",
+            "text": "Tip",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 3,
+                "style": "color-rgb(0,0,0)"
+              },
+              {
+                "offset": 0,
+                "length": 3,
+                "style": "bgcolor-rgba(255,229,100,0.3)"
+              },
+              {
+                "offset": 0,
+                "length": 3,
+                "style": "fontsize-medium"
+              },
+              {
+                "offset": 0,
+                "length": 3,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              },
+              {
+                "offset": 0,
+                "length": 3,
+                "style": "fontsize-17"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "margin-left": "0px"
+            }
+          },
+          {
+            "key": "pn1a",
+            "text": "This tutorial is designed for people who prefer to learn by doing. If you prefer learning concepts from the ground up, check out our step-by-step guide. You might find this tutorial and the guide complementary to each other.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 50,
+                "style": "color-rgb(0,0,0)"
+              },
+              {
+                "offset": 51,
+                "length": 81,
+                "style": "color-rgb(0,0,0)"
+              },
+              {
+                "offset": 133,
+                "length": 91,
+                "style": "color-rgb(0,0,0)"
+              },
+              {
+                "offset": 0,
+                "length": 50,
+                "style": "bgcolor-rgba(255,229,100,0.3)"
+              },
+              {
+                "offset": 51,
+                "length": 81,
+                "style": "bgcolor-rgba(255,229,100,0.3)"
+              },
+              {
+                "offset": 133,
+                "length": 91,
+                "style": "bgcolor-rgba(255,229,100,0.3)"
+              },
+              {
+                "offset": 0,
+                "length": 50,
+                "style": "fontsize-medium"
+              },
+              {
+                "offset": 51,
+                "length": 81,
+                "style": "fontsize-medium"
+              },
+              {
+                "offset": 133,
+                "length": 91,
+                "style": "fontsize-medium"
+              },
+              {
+                "offset": 0,
+                "length": 50,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              },
+              {
+                "offset": 51,
+                "length": 81,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              },
+              {
+                "offset": 133,
+                "length": 91,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              },
+              {
+                "offset": 0,
+                "length": 50,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 51,
+                "length": 81,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 133,
+                "length": 91,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 51,
+                "length": 14,
+                "style": "BOLD"
+              },
+              {
+                "offset": 133,
+                "length": 18,
+                "style": "color-rgb(26,26,26)"
+              },
+              {
+                "offset": 133,
+                "length": 18,
+                "style": "bgcolor-rgba(187,239,253,0.3)"
+              }
+            ],
+            "entityRanges": [
+              {
+                "offset": 133,
+                "length": 18,
+                "key": 0
+              }
+            ],
+            "data": {
+              "margin-left": "0px"
+            }
+          },
+          {
+            "key": "fd8cd",
+            "text": "The tutorial is divided into several sections:",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 46,
+                "style": "color-rgb(0,0,0)"
+              },
+              {
+                "offset": 0,
+                "length": 46,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 0,
+                "length": 46,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "3pev5",
+            "text": "Setup for the Tutorial will give you a starting point to follow the tutorial.",
+            "type": "unordered-list-item",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 22,
+                "style": "color-rgb(26,26,26)"
+              },
+              {
+                "offset": 23,
+                "length": 13,
+                "style": "color-rgb(26,26,26)"
+              },
+              {
+                "offset": 37,
+                "length": 16,
+                "style": "color-rgb(26,26,26)"
+              },
+              {
+                "offset": 54,
+                "length": 23,
+                "style": "color-rgb(26,26,26)"
+              },
+              {
+                "offset": 0,
+                "length": 22,
+                "style": "fontsize-medium"
+              },
+              {
+                "offset": 23,
+                "length": 13,
+                "style": "fontsize-medium"
+              },
+              {
+                "offset": 37,
+                "length": 16,
+                "style": "fontsize-medium"
+              },
+              {
+                "offset": 54,
+                "length": 23,
+                "style": "fontsize-medium"
+              },
+              {
+                "offset": 0,
+                "length": 22,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              },
+              {
+                "offset": 23,
+                "length": 13,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              },
+              {
+                "offset": 37,
+                "length": 16,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              },
+              {
+                "offset": 54,
+                "length": 23,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              },
+              {
+                "offset": 0,
+                "length": 22,
+                "style": "bgcolor-rgba(187,239,253,0.3)"
+              },
+              {
+                "offset": 37,
+                "length": 16,
+                "style": "BOLD"
+              }
+            ],
+            "entityRanges": [
+              {
+                "offset": 0,
+                "length": 22,
+                "key": 1
+              }
+            ],
+            "data": {
+              "margin-left": "0px"
+            }
+          },
+          {
+            "key": "1kh8d",
+            "text": "Overview will teach you the fundamentals of React: components, props, and state.",
+            "type": "unordered-list-item",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 8,
+                "style": "color-rgb(26,26,26)"
+              },
+              {
+                "offset": 9,
+                "length": 14,
+                "style": "color-rgb(26,26,26)"
+              },
+              {
+                "offset": 24,
+                "length": 16,
+                "style": "color-rgb(26,26,26)"
+              },
+              {
+                "offset": 41,
+                "length": 39,
+                "style": "color-rgb(26,26,26)"
+              },
+              {
+                "offset": 0,
+                "length": 8,
+                "style": "fontsize-medium"
+              },
+              {
+                "offset": 9,
+                "length": 14,
+                "style": "fontsize-medium"
+              },
+              {
+                "offset": 24,
+                "length": 16,
+                "style": "fontsize-medium"
+              },
+              {
+                "offset": 41,
+                "length": 39,
+                "style": "fontsize-medium"
+              },
+              {
+                "offset": 0,
+                "length": 8,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              },
+              {
+                "offset": 9,
+                "length": 14,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              },
+              {
+                "offset": 24,
+                "length": 16,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              },
+              {
+                "offset": 41,
+                "length": 39,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              },
+              {
+                "offset": 0,
+                "length": 8,
+                "style": "bgcolor-rgba(187,239,253,0.3)"
+              },
+              {
+                "offset": 24,
+                "length": 16,
+                "style": "BOLD"
+              }
+            ],
+            "entityRanges": [
+              {
+                "offset": 0,
+                "length": 8,
+                "key": 2
+              }
+            ],
+            "data": {
+              "margin-left": "0px"
+            }
+          },
+          {
+            "key": "2dorg",
+            "text": "Completing the Game will teach you the most common techniques in React development.",
+            "type": "unordered-list-item",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 19,
+                "style": "color-rgb(26,26,26)"
+              },
+              {
+                "offset": 20,
+                "length": 14,
+                "style": "color-rgb(26,26,26)"
+              },
+              {
+                "offset": 35,
+                "length": 26,
+                "style": "color-rgb(26,26,26)"
+              },
+              {
+                "offset": 62,
+                "length": 21,
+                "style": "color-rgb(26,26,26)"
+              },
+              {
+                "offset": 0,
+                "length": 19,
+                "style": "fontsize-medium"
+              },
+              {
+                "offset": 20,
+                "length": 14,
+                "style": "fontsize-medium"
+              },
+              {
+                "offset": 35,
+                "length": 26,
+                "style": "fontsize-medium"
+              },
+              {
+                "offset": 62,
                 "length": 21,
                 "style": "fontsize-medium"
               },
               {
                 "offset": 0,
+                "length": 19,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              },
+              {
+                "offset": 20,
+                "length": 14,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              },
+              {
+                "offset": 35,
+                "length": 26,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              },
+              {
+                "offset": 62,
                 "length": 21,
-                "style": "fontfamily-Roboto, sans-serif"
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              },
+              {
+                "offset": 0,
+                "length": 19,
+                "style": "bgcolor-rgba(187,239,253,0.3)"
+              },
+              {
+                "offset": 35,
+                "length": 26,
+                "style": "BOLD"
+              }
+            ],
+            "entityRanges": [
+              {
+                "offset": 0,
+                "length": 19,
+                "key": 3
+              }
+            ],
+            "data": {
+              "margin-left": "0px"
+            }
+          },
+          {
+            "key": "6l0po",
+            "text": "Adding Time Travel will give you a deeper insight into the unique strengths of React.",
+            "type": "unordered-list-item",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 18,
+                "style": "color-rgb(26,26,26)"
+              },
+              {
+                "offset": 19,
+                "length": 13,
+                "style": "color-rgb(26,26,26)"
+              },
+              {
+                "offset": 33,
+                "length": 16,
+                "style": "color-rgb(26,26,26)"
+              },
+              {
+                "offset": 50,
+                "length": 35,
+                "style": "color-rgb(26,26,26)"
+              },
+              {
+                "offset": 0,
+                "length": 18,
+                "style": "fontsize-medium"
+              },
+              {
+                "offset": 19,
+                "length": 13,
+                "style": "fontsize-medium"
+              },
+              {
+                "offset": 33,
+                "length": 16,
+                "style": "fontsize-medium"
+              },
+              {
+                "offset": 50,
+                "length": 35,
+                "style": "fontsize-medium"
+              },
+              {
+                "offset": 0,
+                "length": 18,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              },
+              {
+                "offset": 19,
+                "length": 13,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              },
+              {
+                "offset": 33,
+                "length": 16,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              },
+              {
+                "offset": 50,
+                "length": 35,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              },
+              {
+                "offset": 0,
+                "length": 18,
+                "style": "bgcolor-rgba(187,239,253,0.3)"
+              },
+              {
+                "offset": 33,
+                "length": 16,
+                "style": "BOLD"
+              }
+            ],
+            "entityRanges": [
+              {
+                "offset": 0,
+                "length": 18,
+                "key": 4
+              }
+            ],
+            "data": {
+              "margin-left": "0px"
+            }
+          },
+          {
+            "key": "5ggvo",
+            "text": "You don’t have to complete all of the sections at once to get the value out of this tutorial. Try to get as far as you can — even if it’s one or two sections.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 158,
+                "style": "color-rgb(0,0,0)"
+              },
+              {
+                "offset": 0,
+                "length": 158,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 0,
+                "length": 158,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
               }
             ],
             "entityRanges": [],
             "data": {
-              "text-align": "center"
+              "text-align": "start"
             }
           },
           {
-            "key": "97k7g",
-            "text": "",
+            "key": "fmf0n",
+            "text": "What Are We Building?",
+            "type": "header-three",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 21,
+                "style": "color-rgb(0,0,0)"
+              },
+              {
+                "offset": 0,
+                "length": 21,
+                "style": "fontsize-25"
+              },
+              {
+                "offset": 0,
+                "length": 21,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "falna",
+            "text": "In this tutorial, we’ll show how to build an interactive tic-tac-toe game with React.",
             "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 85,
+                "style": "color-rgb(0,0,0)"
+              },
+              {
+                "offset": 0,
+                "length": 85,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 0,
+                "length": 85,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "399lg",
+            "text": "You can see what we’ll be building here: Final Result. If the code doesn’t make sense to you, or if you are unfamiliar with the code’s syntax, don’t worry! The goal of this tutorial is to help you understand React and its syntax.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 40,
+                "style": "color-rgb(0,0,0)"
+              },
+              {
+                "offset": 41,
+                "length": 188,
+                "style": "color-rgb(0,0,0)"
+              },
+              {
+                "offset": 0,
+                "length": 40,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 41,
+                "length": 188,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 0,
+                "length": 40,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              },
+              {
+                "offset": 41,
+                "length": 188,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              },
+              {
+                "offset": 41,
+                "length": 12,
+                "style": "BOLD"
+              },
+              {
+                "offset": 41,
+                "length": 12,
+                "style": "color-rgb(26,26,26)"
+              },
+              {
+                "offset": 41,
+                "length": 12,
+                "style": "bgcolor-rgba(187,239,253,0.3)"
+              }
+            ],
+            "entityRanges": [
+              {
+                "offset": 41,
+                "length": 12,
+                "key": 5
+              }
+            ],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "2atdp",
+            "text": "We recommend that you check out the tic-tac-toe game before continuing with the tutorial. One of the features that you’ll notice is that there is a numbered list to the right of the game’s board. This list gives you a history of all of the moves that have occurred in the game, and it is updated as the game progresses.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 319,
+                "style": "color-rgb(0,0,0)"
+              },
+              {
+                "offset": 0,
+                "length": 319,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 0,
+                "length": 319,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "7imd8",
+            "text": "You can close the tic-tac-toe game once you’re familiar with it. We’ll be starting from a simpler template in this tutorial. Our next step is to set you up so that you can start building the game.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 196,
+                "style": "color-rgb(0,0,0)"
+              },
+              {
+                "offset": 0,
+                "length": 196,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 0,
+                "length": 196,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "6fdp4",
+            "text": "\n ",
+            "type": "header-three",
             "depth": 0,
             "inlineStyleRanges": [],
             "entityRanges": [],
-            "data": {}
+            "data": {
+              "text-align": "start"
+            }
           },
           {
-            "key": "82rpf",
+            "key": "bo59c",
             "text": " ",
             "type": "atomic",
             "depth": 0,
@@ -710,22 +2160,13 @@
               {
                 "offset": 0,
                 "length": 1,
-                "key": 0
+                "key": 6
               }
             ],
             "data": {}
           },
           {
-            "key": "8f4lk",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "895b1",
+            "key": "d3v64",
             "text": "",
             "type": "unstyled",
             "depth": 0,
@@ -736,755 +2177,164 @@
         ],
         "entityMap": {
           "0": {
-            "type": "IMAGE",
+            "type": "LINK",
             "mutability": "MUTABLE",
             "data": {
-              "src": "http://digitalcracknetwork.com/wp-content/uploads/2017/04/Mileena-cosplay-from-Mortal-Kombat-1400x1600.jpg",
-              "height": "auto",
-              "width": "600px"
-            }
-          }
-        }
-      },
-      "createdAt": "2021-05-03T14:12:05.786Z",
-      "id": 111
-    },
-    {
-      "content": {
-        "blocks": [
-          {
-            "key": "ca2qj",
-            "text": "Food 01 Hamburger",
-            "type": "header-one",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "1dfrd",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "crdck",
-            "text": " ",
-            "type": "atomic",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [
-              {
-                "offset": 0,
-                "length": 1,
-                "key": 0
+              "url": "https://reactjs.org/docs/hello-world.html",
+              "title": "step-by-step guide",
+              "targetOption": "",
+              "_map": {
+                "type": "LINK",
+                "mutability": "MUTABLE",
+                "data": {
+                  "url": "https://reactjs.org/docs/hello-world.html",
+                  "title": "step-by-step guide",
+                  "targetOption": ""
+                }
               }
-            ],
-            "data": {}
-          },
-          {
-            "key": "9pn3v",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          }
-        ],
-        "entityMap": {
-          "0": {
-            "type": "IMAGE",
-            "mutability": "MUTABLE",
-            "data": {
-              "src": "https://media.oneman.gr/onm-images/burger-38.jpg",
-              "height": "auto",
-              "width": "600px"
-            }
-          }
-        }
-      },
-      "createdAt": "2021-05-03T14:43:06.897Z",
-      "id": 113
-    },
-    {
-      "content": {
-        "blocks": [
-          {
-            "key": "c1am8",
-            "text": "Food 02 Pizza",
-            "type": "header-one",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "349q1",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "crev2",
-            "text": " ",
-            "type": "atomic",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [
-              {
-                "offset": 0,
-                "length": 1,
-                "key": 0
-              }
-            ],
-            "data": {}
-          },
-          {
-            "key": "3c2k6",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          }
-        ],
-        "entityMap": {
-          "0": {
-            "type": "IMAGE",
-            "mutability": "MUTABLE",
-            "data": {
-              "src": "https://cdn.britannica.com/08/177308-050-94D9D6BE/Food-Pizza-Basil-Tomato.jpg",
-              "height": "auto",
-              "width": "800px"
-            }
-          }
-        }
-      },
-      "createdAt": "2021-05-03T14:43:56.505Z",
-      "id": 114
-    },
-    {
-      "content": {
-        "blocks": [
-          {
-            "key": "2998j",
-            "text": "Lorem ipsum ",
-            "type": "header-one",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "9sjvl",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "akret",
-            "text": "⦁\tLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac faucibus odio. ",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "5nci0",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "ah3eq",
-            "text": "Vestibulum neque massa, scelerisque sit amet ligula eu, congue molestie mi. Praesent ut varius sem. Nullam at porttitor arcu, nec lacinia nisi. Ut ac dolor vitae odio interdum condimentum. Vivamus dapibus sodales ex, vitae malesuada ipsum cursus convallis. Maecenas sed egestas nulla, ac condimentum orci. Mauris diam felis, vulputate ac suscipit et, iaculis non est. Curabitur semper arcu ac ligula semper, nec luctus nisl blandit. Integer lacinia ante ac libero lobortis imperdiet. Nullam mollis convallis ipsum, ac accumsan nunc vehicula vitae. Nulla eget justo in felis tristique fringilla. Morbi sit amet tortor quis risus auctor condimentum. Morbi in ullamcorper elit. Nulla iaculis tellus sit amet mauris tempus fringilla.",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "3rp3",
-            "text": "Maecenas mauris lectus, lobortis et purus mattis, blandit dictum tellus.",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "523mf",
-            "text": "⦁\tMaecenas non lorem quis tellus placerat varius. ",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "bj6h3",
-            "text": "⦁\tNulla facilisi. ",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "epok8",
-            "text": "⦁\tAenean congue fringilla justo ut aliquam. ",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "23m5g",
-            "text": "Mauris id ex erat. Nunc vulputate neque vitae justo facilisis, non condimentum ante sagittis. ",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "9k6rk",
-            "text": "⦁\tMorbi viverra semper lorem nec molestie. ",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "8uj4c",
-            "text": "⦁\tMaecenas tincidunt est efficitur ligula euismod, sit amet ornare est vulputate.",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "86gmf",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "54o5c",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "67e0f",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "2qjes",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "9unp7",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "40b8v",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "7gjr1",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "d5ae3",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "fhlm8",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "a4qrr",
-            "text": "In non mauris justo. Duis vehicula mi vel mi pretium, a viverra erat efficitur. Cras aliquam est ac eros varius, id iaculis dui auctor. Duis pretium neque ligula, et pulvinar mi placerat et. Nulla nec nunc sit amet nunc posuere vestibulum. Ut id neque eget tortor mattis tristique. Donec ante est, blandit sit amet tristique vel, lacinia pulvinar arcu. Pellentesque scelerisque fermentum erat, id posuere justo pulvinar ut. Cras id eros sed enim aliquam lobortis. Sed lobortis nisl ut eros efficitur tincidunt. Cras justo mi, porttitor quis mattis vel, ultricies ut purus. Ut facilisis et lacus eu cursus.",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "245au",
-            "text": "In eleifend velit vitae libero sollicitudin euismod. Fusce vitae vestibulum velit. Pellentesque vulputate lectus quis pellentesque commodo. Aliquam erat volutpat. Vestibulum in egestas velit. Pellentesque fermentum nisl vitae fringilla venenatis. Etiam id mauris vitae orci maximus ultricies. ",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "8dtuu",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "3sa9p",
-            "text": "⦁\tCras fringilla ipsum magna, in fringilla dui commodo a.",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "apa0q",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "a65tu",
-            "text": "\tLorem ipsum\tLorem ipsum\tLorem ipsum",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "1vhqe",
-            "text": "1\tIn eleifend velit vitae libero sollicitudin euismod.\tLorem\t",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "6gll",
-            "text": "2\tCras fringilla ipsum magna, in fringilla dui commodo a.\tIpsum\t",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "1rj2i",
-            "text": "3\tAliquam erat volutpat. \tLorem\t",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "b0q4h",
-            "text": "4\tFusce vitae vestibulum velit. \tLorem\t",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "7d7nh",
-            "text": "5\tEtiam vehicula luctus fermentum.\tIpsum\t",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "6lf3",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "2f576",
-            "text": "Etiam vehicula luctus fermentum. In vel metus congue, pulvinar lectus vel, fermentum dui. Maecenas ante orci, egestas ut aliquet sit amet, sagittis a magna. Aliquam ante quam, pellentesque ut dignissim quis, laoreet eget est. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut ullamcorper justo sapien, in cursus libero viverra eget. Vivamus auctor imperdiet urna, at pulvinar leo posuere laoreet. Suspendisse neque nisl, fringilla at iaculis scelerisque, ornare vel dolor. Ut et pulvinar nunc. Pellentesque fringilla mollis efficitur. Nullam venenatis commodo imperdiet. Morbi velit neque, semper quis lorem quis, efficitur dignissim ipsum. Ut ac lorem sed turpis imperdiet eleifend sit amet id sapien.",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "4krk",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "8cfc1",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "brkj2",
-            "text": "⦁\tLorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "fmc4t",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "6r2sm",
-            "text": "Nunc ac faucibus odio. Vestibulum neque massa, scelerisque sit amet ligula eu, congue molestie mi. Praesent ut varius sem. Nullam at porttitor arcu, nec lacinia nisi. Ut ac dolor vitae odio interdum condimentum. Vivamus dapibus sodales ex, vitae malesuada ipsum cursus convallis. Maecenas sed egestas nulla, ac condimentum orci. Mauris diam felis, vulputate ac suscipit et, iaculis non est. Curabitur semper arcu ac ligula semper, nec luctus nisl blandit. Integer lacinia ante ac libero lobortis imperdiet. Nullam mollis convallis ipsum, ac accumsan nunc vehicula vitae. Nulla eget justo in felis tristique fringilla. Morbi sit amet tortor quis risus auctor condimentum. Morbi in ullamcorper elit. Nulla iaculis tellus sit amet mauris tempus fringilla.",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "4rmbv",
-            "text": "⦁\tMaecenas mauris lectus, lobortis et purus mattis, blandit dictum tellus. ",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "97l8l",
-            "text": "Maecenas non lorem quis tellus placerat varius. Nulla facilisi. Aenean congue fringilla justo ut aliquam. Mauris id ex erat. Nunc vulputate neque vitae justo facilisis, non condimentum ante sagittis. Morbi viverra semper lorem nec molestie. Maecenas tincidunt est efficitur ligula euismod, sit amet ornare est vulputate.",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "dmn88",
-            "text": "In non mauris justo. Duis vehicula mi vel mi pretium, a viverra erat efficitur. Cras aliquam est ac eros varius, id iaculis dui auctor. Duis pretium neque ligula, et pulvinar mi placerat et. Nulla nec nunc sit amet nunc posuere vestibulum. Ut id neque eget tortor mattis tristique. Donec ante est, blandit sit amet tristique vel, lacinia pulvinar arcu. Pellentesque scelerisque fermentum erat, id posuere justo pulvinar ut. Cras id eros sed enim aliquam lobortis. Sed lobortis nisl ut eros efficitur tincidunt. Cras justo mi, porttitor quis mattis vel, ultricies ut purus. Ut facilisis et lacus eu cursus.",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "i5hu",
-            "text": "⦁\tIn eleifend velit vitae libero sollicitudin euismod. ",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "12a9p",
-            "text": "Fusce vitae vestibulum velit. Pellentesque vulputate lectus quis pellentesque commodo. Aliquam erat volutpat. Vestibulum in egestas velit. Pellentesque fermentum nisl vitae fringilla venenatis. Etiam id mauris vitae orci maximus ultricies. Cras fringilla ipsum magna, in fringilla dui commodo a.",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "17nea",
-            "text": "Etiam vehicula luctus fermentum. In vel metus congue, pulvinar lectus vel, fermentum dui. Maecenas ante orci, egestas ut aliquet sit amet, sagittis a magna. Aliquam ante quam, pellentesque ut dignissim quis, laoreet eget est. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut ullamcorper justo sapien, in cursus libero viverra eget. Vivamus auctor imperdiet urna, at pulvinar leo posuere laoreet. Suspendisse neque nisl, fringilla at iaculis scelerisque, ornare vel dolor. Ut et pulvinar nunc. Pellentesque fringilla mollis efficitur. Nullam venenatis commodo imperdiet. Morbi velit neque, semper quis lorem quis, efficitur dignissim ipsum. Ut ac lorem sed turpis imperdiet eleifend sit amet id sapien.",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "ba1qn",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "8gque",
-            "text": " ",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          }
-        ],
-        "entityMap": {}
-      },
-      "createdAt": "2021-05-03T15:38:00.949Z",
-      "id": 115
-    },
-    {
-      "content": {
-        "blocks": [
-          {
-            "key": "7kjbm",
-            "text": "Black Cat",
-            "type": "header-one",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "f0a8q",
-            "text": "Bad Luck",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "848vq",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "622m9",
-            "text": " ",
-            "type": "atomic",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [
-              {
-                "offset": 0,
-                "length": 1,
-                "key": 0
-              }
-            ],
-            "data": {}
-          },
-          {
-            "key": "au9k1",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          }
-        ],
-        "entityMap": {
-          "0": {
-            "type": "IMAGE",
-            "mutability": "MUTABLE",
-            "data": {
-              "src": "https://www.picclickimg.com/d/l400/pict/174705895735_/Sexy-Black-Cat-Cleavage-Cosplay-8x10-photograph-HOT.jpg",
-              "height": "auto",
-              "width": "700px"
-            }
-          }
-        }
-      },
-      "createdAt": "2021-05-04T09:07:43.355Z",
-      "id": 116
-    },
-    {
-      "content": {
-        "blocks": [
-          {
-            "key": "d6tia",
-            "text": "Lindsey Pelas",
-            "type": "header-one",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {
-              "text-align": "center"
-            }
-          },
-          {
-            "key": "f2k76",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "370eo",
-            "text": " ",
-            "type": "atomic",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [
-              {
-                "offset": 0,
-                "length": 1,
-                "key": 0
-              }
-            ],
-            "data": {}
-          },
-          {
-            "key": "a7a98",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "6sbqo",
-            "text": " ",
-            "type": "atomic",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [
-              {
-                "offset": 0,
-                "length": 1,
-                "key": 1
-              }
-            ],
-            "data": {}
-          },
-          {
-            "key": "ajikp",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          }
-        ],
-        "entityMap": {
-          "0": {
-            "type": "IMAGE",
-            "mutability": "MUTABLE",
-            "data": {
-              "src": "https://perpetual.gr/wp-content/uploads/2018/12/lindsey-pelas-wet-1.jpg",
-              "height": "auto",
-              "width": "auto"
             }
           },
           "1": {
+            "type": "LINK",
+            "mutability": "MUTABLE",
+            "data": {
+              "url": "https://reactjs.org/tutorial/tutorial.html#setup-for-the-tutorial",
+              "title": "Setup for the Tutorial",
+              "targetOption": "",
+              "_map": {
+                "type": "LINK",
+                "mutability": "MUTABLE",
+                "data": {
+                  "url": "https://reactjs.org/tutorial/tutorial.html#setup-for-the-tutorial",
+                  "title": "Setup for the Tutorial",
+                  "targetOption": ""
+                }
+              }
+            }
+          },
+          "2": {
+            "type": "LINK",
+            "mutability": "MUTABLE",
+            "data": {
+              "url": "https://reactjs.org/tutorial/tutorial.html#overview",
+              "title": "Overview",
+              "targetOption": "",
+              "_map": {
+                "type": "LINK",
+                "mutability": "MUTABLE",
+                "data": {
+                  "url": "https://reactjs.org/tutorial/tutorial.html#overview",
+                  "title": "Overview",
+                  "targetOption": ""
+                }
+              }
+            }
+          },
+          "3": {
+            "type": "LINK",
+            "mutability": "MUTABLE",
+            "data": {
+              "url": "https://reactjs.org/tutorial/tutorial.html#completing-the-game",
+              "title": "Completing the Game",
+              "targetOption": "",
+              "_map": {
+                "type": "LINK",
+                "mutability": "MUTABLE",
+                "data": {
+                  "url": "https://reactjs.org/tutorial/tutorial.html#completing-the-game",
+                  "title": "Completing the Game",
+                  "targetOption": ""
+                }
+              }
+            }
+          },
+          "4": {
+            "type": "LINK",
+            "mutability": "MUTABLE",
+            "data": {
+              "url": "https://reactjs.org/tutorial/tutorial.html#adding-time-travel",
+              "title": "Adding Time Travel",
+              "targetOption": "",
+              "_map": {
+                "type": "LINK",
+                "mutability": "MUTABLE",
+                "data": {
+                  "url": "https://reactjs.org/tutorial/tutorial.html#adding-time-travel",
+                  "title": "Adding Time Travel",
+                  "targetOption": ""
+                }
+              }
+            }
+          },
+          "5": {
+            "type": "LINK",
+            "mutability": "MUTABLE",
+            "data": {
+              "url": "https://codepen.io/gaearon/pen/gWWZgR?editors=0010",
+              "title": "Final Result",
+              "targetOption": "_blank",
+              "_map": {
+                "type": "LINK",
+                "mutability": "MUTABLE",
+                "data": {
+                  "url": "https://codepen.io/gaearon/pen/gWWZgR?editors=0010",
+                  "title": "Final Result",
+                  "targetOption": "_blank"
+                }
+              }
+            }
+          },
+          "6": {
             "type": "IMAGE",
             "mutability": "MUTABLE",
             "data": {
-              "src": "https://celeb-stalker.com/wp-content/uploads/2020/07/lindsey_pelas_nude.jpg",
+              "src": "https://res.cloudinary.com/practicaldev/image/fetch/s--MCEcEwVN--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/s1i3j6powyg7tclhwj5x.jpg",
               "height": "auto",
               "width": "auto"
             }
           }
         }
       },
-      "createdAt": "2021-05-04T09:13:03.234Z",
-      "id": 117
+      "createdAt": "2021-05-07T20:05:01.570Z",
+      "id": 3
     },
     {
       "content": {
         "blocks": [
           {
-            "key": "f5hb3",
-            "text": "Multiple images",
+            "key": "4gk1i",
+            "text": "JavaScript For Dummies Cheat Sheet ",
             "type": "header-one",
             "depth": 0,
-            "inlineStyleRanges": [],
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 34,
+                "style": "color-rgb(0,0,0)"
+              },
+              {
+                "offset": 0,
+                "length": 34,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 34,
+                "style": "fontsize-36"
+              },
+              {
+                "offset": 0,
+                "length": 34,
+                "style": "fontfamily-open-sans, sans-serif"
+              }
+            ],
             "entityRanges": [],
             "data": {
-              "text-align": "center"
+              "text-align": "start"
             }
           },
           {
-            "key": "3m9kl",
+            "key": "er5ms",
             "text": "",
             "type": "unstyled",
             "depth": 0,
@@ -1493,22 +2343,29 @@
             "data": {}
           },
           {
-            "key": "aqpf7",
-            "text": " ",
-            "type": "atomic",
+            "key": "ev0tu",
+            "text": "JavaScript opens up Web pages to you so that you can add interactive features and those user-friendly touches. Of course, you have to know how to fit JavaScript into existing code and what to input to get the effects you want. And, when things aren’t working well, you may need a little help troubleshooting the problem to get back on track.",
+            "type": "unstyled",
             "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [
+            "inlineStyleRanges": [
               {
                 "offset": 0,
-                "length": 1,
-                "key": 0
+                "length": 341,
+                "style": "color-rgb(112,112,112)"
+              },
+              {
+                "offset": 0,
+                "length": 341,
+                "style": "fontsize-14"
               }
             ],
-            "data": {}
+            "entityRanges": [],
+            "data": {
+              "margin-left": "0px"
+            }
           },
           {
-            "key": "2qop4",
+            "key": "74l6j",
             "text": "",
             "type": "unstyled",
             "depth": 0,
@@ -1517,22 +2374,447 @@
             "data": {}
           },
           {
-            "key": "b2v9i",
-            "text": " ",
-            "type": "atomic",
+            "key": "a51tn",
+            "text": "JavaScript Object Terms",
+            "type": "header-two",
             "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [
+            "inlineStyleRanges": [
               {
                 "offset": 0,
-                "length": 1,
+                "length": 23,
+                "style": "color-rgb(112,112,112)"
+              },
+              {
+                "offset": 0,
+                "length": 23,
+                "style": "fontsize-14"
+              },
+              {
+                "offset": 0,
+                "length": 23,
+                "style": "fontfamily-open-sans, sans-serif"
+              },
+              {
+                "offset": 0,
+                "length": 23,
+                "style": "BOLD"
+              }
+            ],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "1n1bl",
+            "text": "JavaScript is an object-based language. To understand how to interact with the document object model you work with in JavaScript, you need to understand some basic object-related terms. The following table shows the ones you’re likely to find most useful:TermJavaScript exampleAn object is a thing (noun).A button is an object.You can describe an object with adjectives\n(properties).A button object has a name and a type.An object can do things (methods).A button object can click().An object can respond to events (event handlers).A button can recognize when it’s been clicked\n(onClick).",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 279,
+                "style": "color-rgb(112,112,112)"
+              },
+              {
+                "offset": 280,
+                "length": 6,
+                "style": "color-rgb(112,112,112)"
+              },
+              {
+                "offset": 287,
+                "length": 82,
+                "style": "color-rgb(112,112,112)"
+              },
+              {
+                "offset": 370,
+                "length": 34,
+                "style": "color-rgb(112,112,112)"
+              },
+              {
+                "offset": 405,
+                "length": 4,
+                "style": "color-rgb(112,112,112)"
+              },
+              {
+                "offset": 410,
+                "length": 5,
+                "style": "color-rgb(112,112,112)"
+              },
+              {
+                "offset": 416,
+                "length": 28,
+                "style": "color-rgb(112,112,112)"
+              },
+              {
+                "offset": 445,
+                "length": 29,
+                "style": "color-rgb(112,112,112)"
+              },
+              {
+                "offset": 475,
+                "length": 39,
+                "style": "color-rgb(112,112,112)"
+              },
+              {
+                "offset": 515,
+                "length": 62,
+                "style": "color-rgb(112,112,112)"
+              },
+              {
+                "offset": 578,
+                "length": 10,
+                "style": "color-rgb(112,112,112)"
+              },
+              {
+                "offset": 0,
+                "length": 255,
+                "style": "fontsize-14"
+              },
+              {
+                "offset": 277,
+                "length": 2,
+                "style": "fontsize-14"
+              },
+              {
+                "offset": 280,
+                "length": 6,
+                "style": "fontsize-14"
+              },
+              {
+                "offset": 287,
+                "length": 82,
+                "style": "fontsize-14"
+              },
+              {
+                "offset": 370,
+                "length": 34,
+                "style": "fontsize-14"
+              },
+              {
+                "offset": 405,
+                "length": 4,
+                "style": "fontsize-14"
+              },
+              {
+                "offset": 410,
+                "length": 5,
+                "style": "fontsize-14"
+              },
+              {
+                "offset": 416,
+                "length": 28,
+                "style": "fontsize-14"
+              },
+              {
+                "offset": 445,
+                "length": 29,
+                "style": "fontsize-14"
+              },
+              {
+                "offset": 475,
+                "length": 39,
+                "style": "fontsize-14"
+              },
+              {
+                "offset": 515,
+                "length": 62,
+                "style": "fontsize-14"
+              },
+              {
+                "offset": 578,
+                "length": 10,
+                "style": "fontsize-14"
+              },
+              {
+                "offset": 255,
+                "length": 24,
+                "style": "bgcolor-transparent"
+              },
+              {
+                "offset": 280,
+                "length": 6,
+                "style": "bgcolor-transparent"
+              },
+              {
+                "offset": 287,
+                "length": 82,
+                "style": "bgcolor-transparent"
+              },
+              {
+                "offset": 370,
+                "length": 34,
+                "style": "bgcolor-transparent"
+              },
+              {
+                "offset": 405,
+                "length": 4,
+                "style": "bgcolor-transparent"
+              },
+              {
+                "offset": 410,
+                "length": 5,
+                "style": "bgcolor-transparent"
+              },
+              {
+                "offset": 416,
+                "length": 28,
+                "style": "bgcolor-transparent"
+              },
+              {
+                "offset": 445,
+                "length": 29,
+                "style": "bgcolor-transparent"
+              },
+              {
+                "offset": 475,
+                "length": 39,
+                "style": "bgcolor-transparent"
+              },
+              {
+                "offset": 515,
+                "length": 62,
+                "style": "bgcolor-transparent"
+              },
+              {
+                "offset": 578,
+                "length": 10,
+                "style": "bgcolor-transparent"
+              },
+              {
+                "offset": 255,
+                "length": 22,
+                "style": "bgcolor-rgb(233,233,233)"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "margin-left": "0px"
+            }
+          },
+          {
+            "key": "72avp",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "c7t0b",
+            "text": "Create a Hyperlink, Load a Web Page, and More with JavaScript",
+            "type": "header-two",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 61,
+                "style": "color-rgb(112,112,112)"
+              },
+              {
+                "offset": 0,
+                "length": 61,
+                "style": "fontsize-14"
+              },
+              {
+                "offset": 0,
+                "length": 61,
+                "style": "fontfamily-open-sans, sans-serif"
+              },
+              {
+                "offset": 0,
+                "length": 61,
+                "style": "BOLD"
+              }
+            ],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "e5gio",
+            "text": "JavaScript helps you include all sorts of fun and interactive elements on a Web page, and the following table shows you how to do the kinds of tasks you want to be able to do with JavaScript. Whether you want to load a Web page or copy some code, check for the how-to here:To Do ThisDo This in NavigatorDo This in Internet ExplorerLoad a JavaScript-enabled Web pageDouble-click on the Navigator icon of a file on your machine;\nor File→Open PageFile→OpenLook at someone else’s JavaScript codeView→Page SourceView→SourceFind a JavaScript-related news groupWindow→ Mail & NewsgroupsTools→Mail and News→Read NewsCopy and paste someone else’s JavaScript codeCtrl+C to copy; Ctrl+V to pasteCtrl+C to copy; Ctrl+V to pasteCreate a hyperlink. . .. . .Create an HTML form. . .. . .",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 426,
+                "style": "color-rgb(112,112,112)"
+              },
+              {
+                "offset": 427,
+                "length": 345,
+                "style": "color-rgb(112,112,112)"
+              },
+              {
+                "offset": 0,
+                "length": 273,
+                "style": "fontsize-14"
+              },
+              {
+                "offset": 331,
+                "length": 95,
+                "style": "fontsize-14"
+              },
+              {
+                "offset": 427,
+                "length": 345,
+                "style": "fontsize-14"
+              },
+              {
+                "offset": 273,
+                "length": 153,
+                "style": "bgcolor-transparent"
+              },
+              {
+                "offset": 427,
+                "length": 345,
+                "style": "bgcolor-transparent"
+              },
+              {
+                "offset": 273,
+                "length": 58,
+                "style": "bgcolor-rgb(233,233,233)"
+              },
+              {
+                "offset": 733,
+                "length": 10,
+                "style": "color-rgb(0,106,195)"
+              },
+              {
+                "offset": 743,
+                "length": 29,
+                "style": "bgcolor-rgb(250,250,250)"
+              }
+            ],
+            "entityRanges": [
+              {
+                "offset": 733,
+                "length": 5,
+                "key": 0
+              },
+              {
+                "offset": 738,
+                "length": 5,
                 "key": 1
               }
             ],
+            "data": {
+              "margin-left": "0px"
+            }
+          },
+          {
+            "key": "b26at",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
             "data": {}
           },
           {
-            "key": "6m7re",
+            "key": "33qpq",
+            "text": "Troubleshooting JavaScript",
+            "type": "header-two",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 26,
+                "style": "color-rgb(112,112,112)"
+              },
+              {
+                "offset": 0,
+                "length": 26,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 26,
+                "style": "fontsize-14"
+              },
+              {
+                "offset": 0,
+                "length": 26,
+                "style": "fontfamily-open-sans, sans-serif"
+              },
+              {
+                "offset": 0,
+                "length": 26,
+                "style": "BOLD"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "b9drc",
+            "text": "JavaScript is a wonderful tool to use to create interesting and interactive Web pages, but every once in a while nothing works and you have no idea where to start to get things moving again. Not to worry; take a look at the following list for hints on what to do to get back on track (try them in this order):",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 309,
+                "style": "color-rgb(112,112,112)"
+              },
+              {
+                "offset": 0,
+                "length": 309,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 309,
+                "style": "fontsize-14"
+              },
+              {
+                "offset": 0,
+                "length": 309,
+                "style": "fontfamily-open-sans, sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "1767f",
+            "text": "\n ",
+            "type": "unordered-list-item",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "f15cg",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "7tpv4",
+            "text": " ",
+            "type": "atomic",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [
+              {
+                "offset": 0,
+                "length": 1,
+                "key": 2
+              }
+            ],
+            "data": {}
+          },
+          {
+            "key": "8gm5p",
             "text": "",
             "type": "unstyled",
             "depth": 0,
@@ -1543,45 +2825,54 @@
         ],
         "entityMap": {
           "0": {
-            "type": "IMAGE",
+            "type": "LINK",
             "mutability": "MUTABLE",
             "data": {
-              "src": "https://images.unsplash.com/photo-1512850183-6d7990f42385?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2l0eXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-              "height": "auto",
-              "width": "auto"
+              "url": "",
+              "title": ". . .",
+              "targetOption": "",
+              "_map": {
+                "type": "LINK",
+                "mutability": "MUTABLE",
+                "data": {
+                  "url": "",
+                  "title": ". . .",
+                  "targetOption": ""
+                }
+              }
             }
           },
           "1": {
+            "type": "LINK",
+            "mutability": "MUTABLE",
+            "data": {
+              "url": "",
+              "title": ". . .",
+              "targetOption": "",
+              "_map": {
+                "type": "LINK",
+                "mutability": "MUTABLE",
+                "data": {
+                  "url": "",
+                  "title": ". . .",
+                  "targetOption": ""
+                }
+              }
+            }
+          },
+          "2": {
             "type": "IMAGE",
             "mutability": "MUTABLE",
             "data": {
-              "src": "https://images.unsplash.com/photo-1519501025264-65ba15a82390?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+              "src": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1422215434i/23368795._UY630_SR1200,630_.jpg",
               "height": "auto",
               "width": "auto"
             }
           }
         }
       },
-      "createdAt": "2021-05-04T09:17:51.984Z",
-      "id": 118
-    },
-    {
-      "content": {
-        "blocks": [
-          {
-            "key": "3febe",
-            "text": "Now it works",
-            "type": "header-one",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          }
-        ],
-        "entityMap": {}
-      },
-      "createdAt": "2021-05-07T19:17:02.007Z",
-      "id": 119
+      "createdAt": "2021-05-07T20:06:59.439Z",
+      "id": 4
     }
   ]
 }
