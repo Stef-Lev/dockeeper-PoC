@@ -32,49 +32,7 @@ const ButtonsContainer = styled(DialogActions)`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-`;
-
-const iconDimension = { width: "60px", height: "60px" };
-
-const DeleteIcon = styled(HighlightOffOutlinedIcon)`
-  color: ${theme.warning.base};
-  width: 60px;
-  height: 60px;
-`;
-
-const SuccessIcon = styled(CheckCircleOutlineOutlinedIcon)`
-  color: ${theme.success.base};
-  width: 60px;
-  height: 60px;
-`;
-
-const PrimaryActionBtn = styled(Button)`
-  background-color: ${theme.primary.base};
-  color: ${theme.buttonIcon};
-  :hover {
-    background-color: ${theme.primary.hovered};
-  }
-  transition: all 250ms linear;
-`;
-
-const SecondaryActionBtn = styled(Button)`
-  background-color: ${theme.secondary.base};
-  color: ${theme.buttonIcon};
-  margin-right: 16px;
-  :hover {
-    background-color: ${theme.secondary.hovered};
-  }
-  transition: all 250ms linear;
-`;
-
-const DeleteActionBtn = styled(Button)`
-  background-color: ${theme.warning.base};
-  color: ${theme.buttonIcon};
-  :hover {
-    background-color: ${theme.warning.hovered};
-  }
-  transition: all 250ms linear;
+  gap: 8px;
 `;
 
 function GenericModal({ shouldOpen, onClose, icon, title, text, buttons }) {

@@ -40,15 +40,6 @@
             "data": {}
           },
           {
-            "key": "7ehll",
-            "text": "Deleted one line",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
             "key": "42oa3",
             "text": " ",
             "type": "atomic",
@@ -85,7 +76,7 @@
           }
         }
       },
-      "createdAt": "2021-05-04T08:58:42.764Z",
+      "createdAt": "2021-05-07T17:21:58.544Z",
       "id": 101
     },
     {

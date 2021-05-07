@@ -62,7 +62,6 @@ const DeleteModalIcon = styled(HighlightOffOutlinedIcon)`
 const SecondaryActionBtn = styled(Button)`
   background-color: ${theme.secondary.base};
   color: ${theme.buttonIcon};
-  margin-right: 16px;
   :hover {
     background-color: ${theme.secondary.hovered};
   }
