@@ -16,6 +16,7 @@ import HighlightOffOutlinedIcon from "@material-ui/icons/HighlightOffOutlined";
 import CheckCircleOutlineOutlinedIcon from "@material-ui/icons/CheckCircleOutlineOutlined";
 import { theme } from "../themeColors";
 import ErrorOutlineIcon from "@material-ui/icons/ErrorOutline";
+import { getAllDocs, getDoc, deleteDoc, postDoc, updateDoc } from "../helpers";
 
 const Container = styled.div`
   padding: 16px;
@@ -88,7 +89,7 @@ const FailureIcon = styled(ErrorOutlineIcon)`
   height: 60px;
 `;
 
-function EditPage() {
+function EditDocPage() {
   const { id } = useParams();
   const history = useHistory();
 
@@ -109,10 +110,7 @@ function EditPage() {
       setLoading(true);
 
       if (id) {
-        const DOC_URL = `http://localhost:3002/documents/${id}`;
-
-        fetch(DOC_URL)
-          .then((res) => res.json())
+        getDoc("http://localhost:3002/documents/", id)
           .then((result) => {
             setEditorState(
               EditorState.createWithContent(convertFromRaw(result.content))
@@ -147,10 +145,7 @@ function EditPage() {
   };
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:3002/documents/${id}`, {
-      method: "DELETE",
-    })
-      .then((response) => response.json())
+    deleteDoc("http://localhost:3002/documents/", id)
       .then((data) => {
         console.log("Success:", data);
         history.push(`/`);
@@ -170,18 +165,13 @@ function EditPage() {
       setNoTitleModalOpen(true);
     } else {
       if (id) {
-        fetch(`http://localhost:3002/documents/${id}`, {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(
-            { content: raw, createdAt: new Date() },
-            null,
-            2
-          ),
-        })
-          .then((response) => response.json())
+        updateDoc(
+          "http://localhost:3002/documents/",
+          id,
+          { content: raw, createdAt: new Date() },
+          null,
+          2
+        )
           .then((data) => {
             console.log("Success:", data);
             setSaveModalOpen(true);
@@ -192,18 +182,12 @@ function EditPage() {
             setErrorMsg(error.message);
           });
       } else {
-        fetch("http://localhost:3002/documents", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(
-            { content: raw, createdAt: new Date() },
-            null,
-            2
-          ),
-        })
-          .then((response) => response.json())
+        postDoc(
+          "http://localhost:3002/documents",
+          { content: raw, createdAt: new Date() },
+          null,
+          2
+        )
           .then((data) => {
             console.log("Success:", data);
             setSaveModalOpen(true);
@@ -390,4 +374,4 @@ function EditPage() {
   );
 }
 
-export default EditPage;
+export default EditDocPage;

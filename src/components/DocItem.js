@@ -10,6 +10,7 @@ import { theme } from "../themeColors";
 import { useHistory } from "react-router-dom";
 import HighlightOffOutlinedIcon from "@material-ui/icons/HighlightOffOutlined";
 import ErrorOutlineIcon from "@material-ui/icons/ErrorOutline";
+import { getAllDocs, getDoc, deleteDoc } from "../helpers";
 
 const StyledContainer = styled.div`
   width: 90%;
@@ -101,10 +102,7 @@ function DocItem({ title, createdAt, id, withControls }) {
   const [errorMsg, setErrorMsg] = useState("");
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:3002/documents/${id}`, {
-      method: "DELETE",
-    })
-      .then((response) => response.json())
+    deleteDoc("http://localhost:3002/documents/", id)
       .then((data) => {
         console.log("Success:", data);
         window.location.reload();

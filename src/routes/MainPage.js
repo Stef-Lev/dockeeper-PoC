@@ -11,6 +11,7 @@ import { theme } from "../themeColors";
 import AddIcon from "@material-ui/icons/Add";
 import Switch from "@material-ui/core/Switch";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
+import { getAllDocs, getDoc } from "../helpers";
 
 import { useHistory } from "react-router-dom";
 
@@ -46,7 +47,7 @@ const StyledSwitch = styled(FormControlLabel)`
   }
 `;
 
-function BasicPage() {
+function MainPage() {
   const history = useHistory();
   const [withControls, setWithControls] = useState(true);
   const [loading, setLoading] = useState(true);
@@ -78,8 +79,7 @@ function BasicPage() {
     if (mounted) {
       setLoading(true);
 
-      fetch(REACT_APP_API_URL)
-        .then((res) => res.json())
+      getAllDocs(REACT_APP_API_URL)
         .then((result) => {
           setData(result);
           console.log(result);
@@ -166,4 +166,4 @@ function BasicPage() {
   );
 }
 
-export default BasicPage;
+export default MainPage;

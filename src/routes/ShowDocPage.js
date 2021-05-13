@@ -14,6 +14,7 @@ import EditIcon from "@material-ui/icons/Edit";
 import GenericModal from "../components/GenericModal";
 import ErrorOutlineIcon from "@material-ui/icons/ErrorOutline";
 import { Button } from "@material-ui/core";
+import { getAllDocs, getDoc } from "../helpers";
 
 const Container = styled.div`
   padding: 32px;
@@ -38,7 +39,7 @@ const PrimaryActionBtn = styled(Button)`
   transition: all 250ms linear;
 `;
 
-function DocPage() {
+function ShowDocPage() {
   const [loading, setLoading] = useState(true);
   const [content, setContent] = useState(null);
   const [error, setError] = useState(false);
@@ -46,7 +47,6 @@ function DocPage() {
 
   const { id } = useParams();
   const history = useHistory();
-  const DOC_URL = `http://localhost:3002/documents/${id}`;
 
   useEffect(() => {
     let mounted = true;
@@ -54,8 +54,7 @@ function DocPage() {
     if (mounted) {
       setLoading(true);
 
-      fetch(DOC_URL)
-        .then((res) => res.json())
+      getDoc("http://localhost:3002/documents/", id)
         .then((result) => {
           setContent(result.content);
           setLoading(false);
@@ -71,7 +70,7 @@ function DocPage() {
     return () => {
       mounted = false;
     };
-  }, [DOC_URL]);
+  }, []);
 
   return (
     <Container>
@@ -129,4 +128,4 @@ function DocPage() {
   );
 }
 
-export default DocPage;
+export default ShowDocPage;

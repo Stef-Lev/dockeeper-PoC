@@ -1,8 +1,8 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import BasicPage from "./routes/BasicPage";
-import EditPage from "./routes/EditPage";
-import DocPage from "./routes/DocPage";
+import MainPage from "./routes/MainPage";
+import EditDocPage from "./routes/EditDocPage";
+import ShowDocPage from "./routes/ShowDocPage";
 import Page404 from "./routes/Page404";
 import Container from "@material-ui/core/Container";
 
@@ -12,9 +12,9 @@ function App() {
       <div className="App">
         <Container maxWidth="lg">
           <Switch>
-            <Route exact path="/" component={BasicPage} />
-            <Route path="/edit/:id?" component={EditPage} />
-            <Route path="/document/:id" component={DocPage} />
+            <Route exact path="/" component={MainPage} />
+            <Route exact path="/edit/:id?" component={EditDocPage} />
+            <Route exact path="/document/:id" component={ShowDocPage} />
             <Route component={Page404} />
           </Switch>
         </Container>
@@ -23,10 +23,8 @@ function App() {
   );
 }
 // @TODOS
-// error handling modal
 // handle missing title
 // Wrong url handling
+// Use fuzzy searching fusejs.io
 // Date formatting
-// Create services for fetching
-// Refactor docs fetching to get title from raw
 export default App;
