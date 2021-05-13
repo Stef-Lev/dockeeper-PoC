@@ -121,7 +121,7 @@ function EditDocPage() {
             console.log("Error");
             setLoading(false);
             setError(true);
-            setErrorMsg(error.message);
+            setErrorMsg("Document not found!");
           });
       } else {
         setLoading(false);

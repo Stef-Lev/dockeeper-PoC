@@ -13,8 +13,8 @@ function App() {
         <Container maxWidth="lg">
           <Switch>
             <Route exact path="/" component={MainPage} />
-            <Route exact path="/edit/:id?" component={EditDocPage} />
-            <Route exact path="/document/:id" component={ShowDocPage} />
+            <Route exact path="/edit/:id(\d+)?" component={EditDocPage} />
+            <Route exact path="/document/:id(\d+)" component={ShowDocPage} />
             <Route component={Page404} />
           </Switch>
         </Container>
@@ -27,4 +27,5 @@ function App() {
 // Wrong url handling
 // Use fuzzy searching fusejs.io
 // Date formatting
+// regex to routes
 export default App;
