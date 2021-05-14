@@ -26,3 +26,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.main-title {
+  font-family: "Nova Flat", cursive !important;
+}

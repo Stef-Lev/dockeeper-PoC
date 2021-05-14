@@ -19,7 +19,7 @@ const { REACT_APP_API_URL } = process.env;
 
 const Container = styled.div`
   margin: 16px auto;
-  padding: 32px 16px;
+  padding: 16px 0px;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -32,6 +32,7 @@ const StyledSwitch = styled(FormControlLabel)`
   font-weight: bold;
   padding: 9px;
   border-radius: 8px;
+  margin: 0px;
   .MuiSwitch-switchBase {
     color: #00a2ed;
   }
@@ -100,12 +101,13 @@ function MainPage() {
 
   return (
     <Paper elevation={3}>
-      <Container>
+      <Container maxWidth="lg">
         <Typography
           variant="h1"
           style={{ fontSize: "2.5rem", marginBottom: "16px" }}
+          className="main-title"
         >
-          Document Keeper
+          Doc Keeper
         </Typography>
         <SearchBox
           onChange={(e) => {

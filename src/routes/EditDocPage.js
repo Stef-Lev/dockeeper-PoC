@@ -19,7 +19,7 @@ import ErrorOutlineIcon from "@material-ui/icons/ErrorOutline";
 import { getAllDocs, getDoc, deleteDoc, postDoc, updateDoc } from "../helpers";
 
 const Container = styled.div`
-  padding: 16px;
+  padding: 16px 0px;
 
   .rich-toolbar {
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -210,8 +210,8 @@ function EditDocPage() {
   };
 
   return (
-    <Container>
-      <Paper elevation={3} style={{ padding: "32px" }}>
+    <Paper elevation={3} style={{ padding: "16px", margin: "16px auto" }}>
+      <Container maxWidth="lg">
         {loading && <Loader />}
         {!loading && (
           <>
@@ -369,8 +369,8 @@ function EditDocPage() {
             />
           )}
         </ActionButtonsContainer>
-      </Paper>
-    </Container>
+      </Container>
+    </Paper>
   );
 }
 

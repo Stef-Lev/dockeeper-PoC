@@ -1,9 +1,9 @@
-export const getAllDocs = (url) => {
-  return fetch(url).then((res) => res.json());
-};
-
 export const getDoc = (url, id) => {
   return fetch(url + id).then((res) => res.json());
+};
+
+export const getAllDocs = (url) => {
+  return fetch(url).then((res) => res.json());
 };
 
 export const postDoc = (url, body) => {
@@ -31,3 +31,6 @@ export const deleteDoc = (url, id) => {
     method: "DELETE",
   }).then((res) => res.json());
 };
+
+// Fluid CSS
+export const px2vw = (size, width = 1440) => `${(size / width) * 100}vw`;

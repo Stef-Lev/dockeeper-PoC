@@ -2835,24 +2835,6 @@
       },
       "createdAt": "2021-05-07T20:23:59.577Z",
       "id": 4
-    },
-    {
-      "content": {
-        "blocks": [
-          {
-            "key": "bt96e",
-            "text": "test to post updated",
-            "type": "header-one",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          }
-        ],
-        "entityMap": {}
-      },
-      "createdAt": "2021-05-13T20:33:41.102Z",
-      "id": 5
     }
   ]
 }

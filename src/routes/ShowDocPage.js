@@ -17,7 +17,6 @@ import { Button } from "@material-ui/core";
 import { getAllDocs, getDoc } from "../helpers";
 
 const Container = styled.div`
-  padding: 32px;
   img {
     max-width: 900px;
     border-radius: 8px;

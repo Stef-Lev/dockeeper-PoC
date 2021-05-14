@@ -23,9 +23,7 @@ function App() {
   );
 }
 // @TODOS
-// handle missing title
-// Wrong url handling
 // Use fuzzy searching fusejs.io
 // Date formatting
-// regex to routes
+// Responsive design
 export default App;
