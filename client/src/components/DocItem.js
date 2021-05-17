@@ -3,14 +3,15 @@ import { Paper, Grid, Typography, Button } from "@material-ui/core";
 import styled from "styled-components";
 import IconButton from "@material-ui/core/IconButton";
 import DescriptionOutlinedIcon from "@material-ui/icons/DescriptionOutlined";
-import EditIcon from "@material-ui/icons/Edit";
-import DeleteIcon from "@material-ui/icons/Delete";
 import GenericModal from "../components/GenericModal";
 import { theme } from "../themeColors";
 import { useHistory } from "react-router-dom";
 import HighlightOffOutlinedIcon from "@material-ui/icons/HighlightOffOutlined";
 import ErrorOutlineIcon from "@material-ui/icons/ErrorOutline";
-import { getAllDocs, getDoc, deleteDoc } from "../helpers";
+import { deleteDoc } from "../helpers";
+import Menu from "@material-ui/core/Menu";
+import MenuItem from "@material-ui/core/MenuItem";
+import MoreVertIcon from "@material-ui/icons/MoreVert";
 
 const StyledContainer = styled.div`
   width: 90%;
@@ -33,26 +34,16 @@ const InfoContainer = styled.div`
 `;
 
 const ControlsContainer = styled.div`
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: 8px;
+  gap: 8px;
   transition: all 150 ease-in;
-`;
 
-const EditButton = styled(IconButton)`
-  background-color: ${theme.secondary.base};
-  color: ${theme.buttonIcon};
-  margin-right: 10px;
-  :hover {
-    background-color: ${theme.secondary.hovered};
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
   }
-  transition: all 250ms linear;
-`;
-
-const DeleteButton = styled(IconButton)`
-  background-color: ${theme.warning.base};
-  color: ${theme.buttonIcon};
-  :hover {
-    background-color: ${theme.warning.hovered};
-  }
-  transition: all 250ms linear;
 `;
 
 const DeleteModalIcon = styled(HighlightOffOutlinedIcon)`
@@ -94,14 +85,49 @@ const PrimaryActionBtn = styled(Button)`
   transition: all 250ms linear;
 `;
 
-function DocItem({ title, createdAt, id, withControls }) {
+// Fluid Constraints
+const fluidTitle = {
+  size: 3, // in vw
+  max: 30, // in px
+  min: 18, // in px
+};
+
+// Calculate Breakpoints
+const calcMinBreak = (size, min) => Math.round((min * 100) / size);
+const calcMaxBreak = (size, max) => Math.round((max * 100) / size);
+
+const StyledTypo = styled(Typography)`
+  font-size: ${fluidTitle.size}vw;
+
+  @media (max-width: ${calcMinBreak(fluidTitle.size, fluidTitle.min)}px) {
+    font-size: ${fluidTitle.min}px;
+  }
+
+  @media (min-width: ${calcMaxBreak(fluidTitle.size, fluidTitle.max)}px) {
+    font-size: ${fluidTitle.max}px;
+  }
+`;
+
+function DocItem({ title, createdAt, id }) {
   const history = useHistory();
 
   const [modalOpen, setModalOpen] = useState(false);
   const [error, setError] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
+  const [anchorEl, setAnchorEl] = useState(null);
+  const openMenu = Boolean(anchorEl);
 
-  const handleDelete = (id) => {
+  const handleMenuClick = (event) => {
+    event.stopPropagation();
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleMenuClose = (event) => {
+    event.stopPropagation();
+    setAnchorEl(null);
+  };
+
+  const handleDelete = () => {
     deleteDoc("http://localhost:3002/documents/", id)
       .then((data) => {
         console.log("Success:", data);
@@ -114,6 +140,21 @@ function DocItem({ title, createdAt, id, withControls }) {
         setErrorMsg("File was not deleted");
       });
   };
+
+  const handleClickEdit = (event) => {
+    event.stopPropagation();
+    history.push(`/edit/${id}`);
+  };
+
+  const handleClickDelete = (event) => {
+    event.stopPropagation();
+    setModalOpen(true);
+  };
+
+  const menuOptions = [
+    { label: "Edit", action: handleClickEdit },
+    { label: "Delete", action: handleClickDelete },
+  ];
 
   return (
     <>
@@ -128,44 +169,44 @@ function DocItem({ title, createdAt, id, withControls }) {
             <DataContainer>
               <InfoContainer>
                 <DescriptionOutlinedIcon
-                  style={{ width: "50px", height: "50px", marginRight: "16px" }}
+                  style={{ width: "50px", height: "50px", marginRight: "8px" }}
                 />
                 <div>
-                  <Typography
-                    variant="h3"
-                    style={{ fontSize: "1.8rem", marginBottom: "4px" }}
-                  >
+                  <StyledTypo variant="h3" style={{ marginBottom: "4px" }}>
                     {title}
-                  </Typography>
-                  <Typography
+                  </StyledTypo>
+                  {/* <Typography
                     variant="body1"
                     color="textSecondary"
                     style={{ fontSize: "1.2rem", marginBottom: "4px" }}
                   >
                     {createdAt ? createdAt.toString() : null}
-                  </Typography>
+                  </Typography> */}
                 </div>
               </InfoContainer>
-              {withControls && (
-                <ControlsContainer>
-                  <EditButton
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      history.push(`/edit/${id}`);
-                    }}
-                  >
-                    <EditIcon />
-                  </EditButton>
-                  <DeleteButton
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setModalOpen(true);
-                    }}
-                  >
-                    <DeleteIcon />
-                  </DeleteButton>
-                </ControlsContainer>
-              )}
+              <ControlsContainer>
+                <IconButton
+                  aria-label="more"
+                  aria-controls="long-menu"
+                  aria-haspopup="true"
+                  onClick={handleMenuClick}
+                >
+                  <MoreVertIcon />
+                </IconButton>
+                <Menu
+                  id="long-menu"
+                  anchorEl={anchorEl}
+                  keepMounted
+                  open={openMenu}
+                  onClose={handleMenuClose}
+                >
+                  {menuOptions.map((option) => (
+                    <MenuItem key={option.label} onClick={option.action}>
+                      {option.label}
+                    </MenuItem>
+                  ))}
+                </Menu>
+              </ControlsContainer>
             </DataContainer>
           </Paper>
         </Grid>

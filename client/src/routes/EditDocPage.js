@@ -16,7 +16,7 @@ import HighlightOffOutlinedIcon from "@material-ui/icons/HighlightOffOutlined";
 import CheckCircleOutlineOutlinedIcon from "@material-ui/icons/CheckCircleOutlineOutlined";
 import { theme } from "../themeColors";
 import ErrorOutlineIcon from "@material-ui/icons/ErrorOutline";
-import { getAllDocs, getDoc, deleteDoc, postDoc, updateDoc } from "../helpers";
+import { getDoc, deleteDoc, postDoc, updateDoc } from "../helpers";
 
 const Container = styled.div`
   padding: 16px 0px;

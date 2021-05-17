@@ -14,7 +14,7 @@ import EditIcon from "@material-ui/icons/Edit";
 import GenericModal from "../components/GenericModal";
 import ErrorOutlineIcon from "@material-ui/icons/ErrorOutline";
 import { Button } from "@material-ui/core";
-import { getAllDocs, getDoc } from "../helpers";
+import { getDoc } from "../helpers";
 
 const Container = styled.div`
   img {
@@ -69,7 +69,7 @@ function ShowDocPage() {
     return () => {
       mounted = false;
     };
-  }, []);
+  }, [id]);
 
   return (
     <Container>

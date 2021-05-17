@@ -9,10 +9,7 @@ import ActionButton from "../components/ActionButton";
 import ActionButtonsContainer from "../components/ActionButtonsContainer";
 import { theme } from "../themeColors";
 import AddIcon from "@material-ui/icons/Add";
-import Switch from "@material-ui/core/Switch";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import { getAllDocs, getDoc } from "../helpers";
-
+import { getAllDocs } from "../helpers";
 import { useHistory } from "react-router-dom";
 
 const { REACT_APP_API_URL } = process.env;
@@ -26,53 +23,36 @@ const Container = styled.div`
   align-items: center;
 `;
 
-const StyledSwitch = styled(FormControlLabel)`
-  background-color: ${theme.primary.base};
-  color: #fff;
-  font-weight: bold;
-  padding: 9px;
-  border-radius: 8px;
-  margin: 0px;
-  .MuiSwitch-switchBase {
-    color: #00a2ed;
+// Fluid Constraints
+const fluidTitle = {
+  size: 4, // in vw
+  max: 60, // in px
+  min: 36, // in px
+};
+
+// Calculate Breakpoints
+const calcMinBreak = (size, min) => Math.round((min * 100) / size);
+const calcMaxBreak = (size, max) => Math.round((max * 100) / size);
+
+const StyledTypo = styled(Typography)`
+  font-size: ${fluidTitle.size}vw;
+
+  @media (max-width: ${calcMinBreak(fluidTitle.size, fluidTitle.min)}px) {
+    font-size: ${fluidTitle.min}px;
   }
-  .MuiSwitch-colorPrimary.Mui-checked {
-    color: white;
-  }
-  .MuiSwitch-track {
-    color: black;
-    opacity: 0.5;
-  }
-  .MuiSwitch-colorPrimary.Mui-checked + .MuiSwitch-track {
-    background-color: white;
+
+  @media (min-width: ${calcMaxBreak(fluidTitle.size, fluidTitle.max)}px) {
+    font-size: ${fluidTitle.max}px;
   }
 `;
 
 function MainPage() {
   const history = useHistory();
-  const [withControls, setWithControls] = useState(true);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
   const [data, setData] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
-
-  const storeControlsState = (state) => {
-    window.localStorage.setItem("showControls", state);
-  };
-
-  const getControlsState = () => {
-    let value = window.localStorage.getItem("showControls");
-    if (value === "true" || !value) {
-      return true;
-    } else {
-      return false;
-    }
-  };
-
-  useEffect(() => {
-    setWithControls(getControlsState());
-  }, []);
 
   useEffect(() => {
     let mounted = true;
@@ -102,13 +82,13 @@ function MainPage() {
   return (
     <Paper elevation={3}>
       <Container maxWidth="lg">
-        <Typography
+        <StyledTypo
           variant="h1"
-          style={{ fontSize: "2.5rem", marginBottom: "16px" }}
+          style={{ marginBottom: "16px" }}
           className="main-title"
         >
           Doc Keeper
-        </Typography>
+        </StyledTypo>
         <SearchBox
           onChange={(e) => {
             setSearchTerm(e.target.value);
@@ -133,7 +113,6 @@ function MainPage() {
                 }
                 id={doc.id}
                 createdAt={doc.createdAt || null}
-                withControls={withControls}
               />
             ))}
         {!loading && error && <ErrorMessage msg={errorMsg} />}
@@ -145,23 +124,6 @@ function MainPage() {
           backgroundColor={theme.primary.base}
           hoverColor={theme.primary.hovered}
           icon={<AddIcon style={{ width: "50px", height: "50px" }} />}
-        />
-      </ActionButtonsContainer>
-      <ActionButtonsContainer position="left">
-        <StyledSwitch
-          value="top"
-          control={
-            <Switch
-              color="primary"
-              checked={withControls}
-              onChange={(e) => {
-                setWithControls(e.target.checked);
-                storeControlsState(e.target.checked);
-              }}
-            />
-          }
-          label="Show controls"
-          labelPlacement="top"
         />
       </ActionButtonsContainer>
     </Paper>
