@@ -52,9 +52,18 @@ function MainPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
-  const [data, setData] = useState(null);
-  const [searchTerm, setSearchTerm] = useState("");
-  const [fuse, setFuse] = useState(null);
+  const [data, setData] = useState([]);
+  const [query, setQuery] = useState("");
+
+  const options = {
+    includeScore: true,
+    keys: ["content.blocks.text"],
+  };
+  const fuse = new Fuse(data, options);
+  const results = fuse.search(query);
+  const searchResults = query
+    ? results.filter((doc) => doc.score < 0.5).map((doc) => doc.item)
+    : data;
 
   useEffect(() => {
     let mounted = true;
@@ -81,16 +90,8 @@ function MainPage() {
     };
   }, []);
 
-  const searchFor = (data) => {
-    const options = {
-      includeScore: true,
-      keys: ["content.blocks.text"],
-    };
-    const fuse = new Fuse(data, options);
-
-    const results = fuse.search("css");
-    console.log(data);
-    console.log(results);
+  const onSearch = (event) => {
+    setQuery(event.currentTarget.value);
   };
 
   return (
@@ -103,38 +104,21 @@ function MainPage() {
         >
           Doc Keeper
         </StyledTypo>
-        <SearchBox
-          onChange={(e) => {
-            setSearchTerm(e.target.value);
-          }}
-        />
+        <SearchBox onChange={onSearch} query={query} />
         {loading && <Loader />}
         {!loading &&
           data &&
-          data
-            .filter((doc) =>
-              doc.content.blocks
-                .find((item) => item.type === "header-one")
-                .text.toLowerCase()
-                .includes(searchTerm.toLowerCase())
-            )
-            .map((doc) => (
-              <>
-                <DocItem
-                  key={`document_ID${doc.id}`}
-                  title={
-                    doc.content.blocks.find(
-                      (item) => item.type === "header-one"
-                    ).text
-                  }
-                  id={doc.id}
-                  createdAt={doc.createdAt || null}
-                />
-                <button onClick={() => searchFor(data, "css")}>
-                  TEST SEARCH
-                </button>
-              </>
-            ))}
+          searchResults.map((doc) => (
+            <DocItem
+              key={`document_ID${doc.id}`}
+              title={
+                doc.content.blocks.find((item) => item.type === "header-one")
+                  .text
+              }
+              id={doc.id}
+              createdAt={doc.createdAt || null}
+            />
+          ))}
         {!loading && error && <ErrorMessage msg={errorMsg} />}
       </Container>
       <ActionButtonsContainer position="right">

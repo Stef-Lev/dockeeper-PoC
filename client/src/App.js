@@ -23,6 +23,6 @@ function App() {
   );
 }
 // @TODOS
-// Use fuzzy searching fusejs.io
-// Date formatting
+// Check ternary in fusejs query with Antonis for best practices
+// Date formatting if needed
 export default App;

@@ -14,10 +14,15 @@ const StyledSearch = styled(InputBase)`
   border: 1px solid rgba(0, 0, 0, 0.25);
 `;
 
-function SearchBox({ onChange }) {
+function SearchBox({ onChange, query }) {
   return (
     <Container>
-      <StyledSearch placeholder="Search..." fullWidth onChange={onChange} />
+      <StyledSearch
+        placeholder="Search..."
+        fullWidth
+        onChange={onChange}
+        value={query}
+      />
     </Container>
   );
 }
