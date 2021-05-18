@@ -3,8 +3,8 @@ import styled from "styled-components";
 import IconButton from "@material-ui/core/IconButton";
 
 const StyledIconButton = styled(IconButton)`
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   background-color: ${(props) => props.$backgroundColor};
   color: ${(props) => props.$color};
   :hover {

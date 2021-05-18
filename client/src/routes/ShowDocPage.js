@@ -14,7 +14,7 @@ import EditIcon from "@material-ui/icons/Edit";
 import GenericModal from "../components/GenericModal";
 import ErrorOutlineIcon from "@material-ui/icons/ErrorOutline";
 import { Button } from "@material-ui/core";
-import { getDoc } from "../helpers";
+import { getDoc, iconDimensions } from "../helpers";
 
 const Container = styled.div`
   img {
@@ -73,7 +73,7 @@ function ShowDocPage() {
 
   return (
     <Container>
-      <Paper elevation={3} style={{ padding: "32px" }}>
+      <Paper elevation={3} style={{ padding: "28px", margin: "16px auto" }}>
         {loading && <Loader />}
         {!loading && content && (
           <Editor
@@ -90,7 +90,7 @@ function ShowDocPage() {
           color={theme.buttonIcon}
           backgroundColor={theme.primary.base}
           hoverColor={theme.primary.hovered}
-          icon={<ArrowBackIcon style={{ width: "50px", height: "50px" }} />}
+          icon={<ArrowBackIcon style={iconDimensions} />}
         />
       </ActionButtonsContainer>
       <ActionButtonsContainer position="right">
@@ -99,7 +99,7 @@ function ShowDocPage() {
           color={theme.buttonIcon}
           backgroundColor={theme.primary.base}
           hoverColor={theme.primary.hovered}
-          icon={<EditIcon style={{ width: "50px", height: "50px" }} />}
+          icon={<EditIcon style={iconDimensions} />}
         />
       </ActionButtonsContainer>
       <GenericModal

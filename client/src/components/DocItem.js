@@ -224,7 +224,7 @@ function DocItem({ title, createdAt, id }) {
           >
             Cancel
           </SecondaryActionBtn>,
-          <DeleteActionBtn onClick={() => handleDelete(id)} key="delete_btn">
+          <DeleteActionBtn onClick={handleDelete} key="delete_btn">
             Delete
           </DeleteActionBtn>,
         ]}

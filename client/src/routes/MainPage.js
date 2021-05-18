@@ -9,7 +9,7 @@ import ActionButton from "../components/ActionButton";
 import ActionButtonsContainer from "../components/ActionButtonsContainer";
 import { theme } from "../themeColors";
 import AddIcon from "@material-ui/icons/Add";
-import { getAllDocs } from "../helpers";
+import { getAllDocs, iconDimensions } from "../helpers";
 import { useHistory } from "react-router-dom";
 
 const { REACT_APP_API_URL } = process.env;
@@ -123,7 +123,7 @@ function MainPage() {
           color={theme.buttonIcon}
           backgroundColor={theme.primary.base}
           hoverColor={theme.primary.hovered}
-          icon={<AddIcon style={{ width: "50px", height: "50px" }} />}
+          icon={<AddIcon style={iconDimensions} />}
         />
       </ActionButtonsContainer>
     </Paper>

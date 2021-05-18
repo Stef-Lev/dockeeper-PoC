@@ -16,7 +16,13 @@ import HighlightOffOutlinedIcon from "@material-ui/icons/HighlightOffOutlined";
 import CheckCircleOutlineOutlinedIcon from "@material-ui/icons/CheckCircleOutlineOutlined";
 import { theme } from "../themeColors";
 import ErrorOutlineIcon from "@material-ui/icons/ErrorOutline";
-import { getDoc, deleteDoc, postDoc, updateDoc } from "../helpers";
+import {
+  getDoc,
+  deleteDoc,
+  postDoc,
+  updateDoc,
+  iconDimensions,
+} from "../helpers";
 
 const Container = styled.div`
   padding: 16px 0px;
@@ -348,7 +354,7 @@ function EditDocPage() {
             color={theme.buttonIcon}
             backgroundColor={theme.primary.base}
             hoverColor={theme.primary.hovered}
-            icon={<ArrowBackIcon style={{ width: "50px", height: "50px" }} />}
+            icon={<ArrowBackIcon style={iconDimensions} />}
           />
         </ActionButtonsContainer>
         <ActionButtonsContainer position="right">
@@ -357,7 +363,7 @@ function EditDocPage() {
             color={theme.buttonIcon}
             backgroundColor={theme.primary.base}
             hoverColor={theme.primary.hovered}
-            icon={<SaveIcon style={{ width: "50px", height: "50px" }} />}
+            icon={<SaveIcon style={iconDimensions} />}
           />
           {id && (
             <ActionButton
@@ -365,7 +371,7 @@ function EditDocPage() {
               color={theme.buttonIcon}
               backgroundColor={theme.warning.base}
               hoverColor={theme.warning.hovered}
-              icon={<DeleteIcon style={{ width: "50px", height: "50px" }} />}
+              icon={<DeleteIcon style={iconDimensions} />}
             />
           )}
         </ActionButtonsContainer>
