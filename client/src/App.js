@@ -25,7 +25,4 @@ function App() {
 // @TODOS
 // Use fuzzy searching fusejs.io
 // Date formatting
-// Responsive design
-// Replace docitem icons with action menu
-// Make side buttons size fluid
 export default App;

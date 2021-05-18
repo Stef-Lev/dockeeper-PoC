@@ -2835,6 +2835,2390 @@
       },
       "createdAt": "2021-05-07T20:23:59.577Z",
       "id": 4
+    },
+    {
+      "content": {
+        "blocks": [
+          {
+            "key": "ao6pi",
+            "text": "How to Add Search to a React App with Fuse.js ",
+            "type": "header-one",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 45,
+                "style": "color-rgb(10,10,35)"
+              },
+              {
+                "offset": 0,
+                "length": 45,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 45,
+                "style": "fontsize-5rem"
+              },
+              {
+                "offset": 0,
+                "length": 45,
+                "style": "fontfamily-Lato, sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "7idma",
+            "text": "Search is a powerful way help people visiting your site find the content that's most important to them. But often it's really challenging to figure out the rules and logic to make that happen. In this article, we'll see how can we can use fuse.js to add search to our apps.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 273,
+                "style": "color-rgb(10,10,35)"
+              },
+              {
+                "offset": 0,
+                "length": 273,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 273,
+                "style": "fontsize-1.25em"
+              },
+              {
+                "offset": 0,
+                "length": 273,
+                "style": "fontfamily-Lato, sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "89rr1",
+            "text": "What is fuse.js?",
+            "type": "unordered-list-item",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 16,
+                "style": "color-rgb(10,10,35)"
+              },
+              {
+                "offset": 0,
+                "length": 16,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 16,
+                "style": "fontsize-22"
+              },
+              {
+                "offset": 0,
+                "length": 16,
+                "style": "fontfamily-Lato, sans-serif"
+              },
+              {
+                "offset": 0,
+                "length": 16,
+                "style": "fontfamily-inherit"
+              },
+              {
+                "offset": 0,
+                "length": 16,
+                "style": "color-var(--gray90)"
+              },
+              {
+                "offset": 0,
+                "length": 16,
+                "style": "bgcolor-transparent"
+              },
+              {
+                "offset": 0,
+                "length": 16,
+                "style": "UNDERLINE"
+              }
+            ],
+            "entityRanges": [
+              {
+                "offset": 0,
+                "length": 16,
+                "key": 0
+              }
+            ],
+            "data": {
+              "margin-left": "0px"
+            }
+          },
+          {
+            "key": "703lu",
+            "text": "Why is search important?",
+            "type": "unordered-list-item",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 24,
+                "style": "color-rgb(10,10,35)"
+              },
+              {
+                "offset": 0,
+                "length": 24,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 24,
+                "style": "fontsize-22"
+              },
+              {
+                "offset": 0,
+                "length": 24,
+                "style": "fontfamily-Lato, sans-serif"
+              },
+              {
+                "offset": 0,
+                "length": 24,
+                "style": "fontfamily-inherit"
+              },
+              {
+                "offset": 0,
+                "length": 24,
+                "style": "color-var(--gray90)"
+              },
+              {
+                "offset": 0,
+                "length": 24,
+                "style": "bgcolor-transparent"
+              },
+              {
+                "offset": 0,
+                "length": 24,
+                "style": "UNDERLINE"
+              }
+            ],
+            "entityRanges": [
+              {
+                "offset": 0,
+                "length": 24,
+                "key": 1
+              }
+            ],
+            "data": {
+              "margin-left": "0px"
+            }
+          },
+          {
+            "key": "fsfbq",
+            "text": "What are we going to build?",
+            "type": "unordered-list-item",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 27,
+                "style": "color-rgb(10,10,35)"
+              },
+              {
+                "offset": 0,
+                "length": 27,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 27,
+                "style": "fontsize-22"
+              },
+              {
+                "offset": 0,
+                "length": 27,
+                "style": "fontfamily-Lato, sans-serif"
+              },
+              {
+                "offset": 0,
+                "length": 27,
+                "style": "fontfamily-inherit"
+              },
+              {
+                "offset": 0,
+                "length": 27,
+                "style": "color-var(--gray90)"
+              },
+              {
+                "offset": 0,
+                "length": 27,
+                "style": "bgcolor-transparent"
+              },
+              {
+                "offset": 0,
+                "length": 27,
+                "style": "UNDERLINE"
+              }
+            ],
+            "entityRanges": [
+              {
+                "offset": 0,
+                "length": 27,
+                "key": 2
+              }
+            ],
+            "data": {
+              "margin-left": "0px"
+            }
+          },
+          {
+            "key": "80d94",
+            "text": "Step 0: Bootstrapping our app",
+            "type": "unordered-list-item",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 29,
+                "style": "color-rgb(10,10,35)"
+              },
+              {
+                "offset": 0,
+                "length": 29,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 29,
+                "style": "fontsize-22"
+              },
+              {
+                "offset": 0,
+                "length": 29,
+                "style": "fontfamily-Lato, sans-serif"
+              },
+              {
+                "offset": 0,
+                "length": 29,
+                "style": "fontfamily-inherit"
+              },
+              {
+                "offset": 0,
+                "length": 29,
+                "style": "color-var(--gray90)"
+              },
+              {
+                "offset": 0,
+                "length": 29,
+                "style": "bgcolor-transparent"
+              },
+              {
+                "offset": 0,
+                "length": 29,
+                "style": "UNDERLINE"
+              }
+            ],
+            "entityRanges": [
+              {
+                "offset": 0,
+                "length": 29,
+                "key": 3
+              }
+            ],
+            "data": {
+              "margin-left": "0px"
+            }
+          },
+          {
+            "key": "1qbpm",
+            "text": "Step 1: Installing Fuse.js",
+            "type": "unordered-list-item",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 26,
+                "style": "color-rgb(10,10,35)"
+              },
+              {
+                "offset": 0,
+                "length": 26,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 26,
+                "style": "fontsize-22"
+              },
+              {
+                "offset": 0,
+                "length": 26,
+                "style": "fontfamily-Lato, sans-serif"
+              },
+              {
+                "offset": 0,
+                "length": 26,
+                "style": "fontfamily-inherit"
+              },
+              {
+                "offset": 0,
+                "length": 26,
+                "style": "color-var(--gray90)"
+              },
+              {
+                "offset": 0,
+                "length": 26,
+                "style": "bgcolor-transparent"
+              },
+              {
+                "offset": 0,
+                "length": 26,
+                "style": "UNDERLINE"
+              }
+            ],
+            "entityRanges": [
+              {
+                "offset": 0,
+                "length": 26,
+                "key": 4
+              }
+            ],
+            "data": {
+              "margin-left": "0px"
+            }
+          },
+          {
+            "key": "9f4eu",
+            "text": "Step 2: Creating a new Fuse search instance",
+            "type": "unordered-list-item",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 43,
+                "style": "color-rgb(10,10,35)"
+              },
+              {
+                "offset": 0,
+                "length": 43,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 43,
+                "style": "fontsize-22"
+              },
+              {
+                "offset": 0,
+                "length": 43,
+                "style": "fontfamily-Lato, sans-serif"
+              },
+              {
+                "offset": 0,
+                "length": 43,
+                "style": "fontfamily-inherit"
+              },
+              {
+                "offset": 0,
+                "length": 43,
+                "style": "color-var(--gray90)"
+              },
+              {
+                "offset": 0,
+                "length": 43,
+                "style": "bgcolor-transparent"
+              },
+              {
+                "offset": 0,
+                "length": 43,
+                "style": "UNDERLINE"
+              }
+            ],
+            "entityRanges": [
+              {
+                "offset": 0,
+                "length": 43,
+                "key": 5
+              }
+            ],
+            "data": {
+              "margin-left": "0px"
+            }
+          },
+          {
+            "key": "5a019",
+            "text": "Step 3: Setting up dynamic search based on user input ",
+            "type": "unordered-list-item",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 53,
+                "style": "color-rgb(10,10,35)"
+              },
+              {
+                "offset": 0,
+                "length": 53,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 53,
+                "style": "fontsize-22"
+              },
+              {
+                "offset": 0,
+                "length": 53,
+                "style": "fontfamily-Lato, sans-serif"
+              },
+              {
+                "offset": 0,
+                "length": 53,
+                "style": "fontfamily-inherit"
+              },
+              {
+                "offset": 0,
+                "length": 53,
+                "style": "color-var(--gray90)"
+              },
+              {
+                "offset": 0,
+                "length": 53,
+                "style": "bgcolor-transparent"
+              },
+              {
+                "offset": 0,
+                "length": 53,
+                "style": "UNDERLINE"
+              }
+            ],
+            "entityRanges": [
+              {
+                "offset": 0,
+                "length": 53,
+                "key": 6
+              }
+            ],
+            "data": {
+              "margin-left": "0px"
+            }
+          },
+          {
+            "key": "emjjc",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "coqot",
+            "text": "What is fuse.js?",
+            "type": "header-two",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 16,
+                "style": "color-var(--gray85)"
+              },
+              {
+                "offset": 0,
+                "length": 16,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 16,
+                "style": "fontsize-3.6rem"
+              },
+              {
+                "offset": 0,
+                "length": 16,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "8g9u7",
+            "text": "Fuse.js is a JavaScript library that provides fuzzy search capabilities for applications and websites. It's nice and easy to use out of the box, but also includes configuration options that allow you to tweak and create powerful solutions.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 7,
+                "style": "color-rgb(10,10,35)"
+              },
+              {
+                "offset": 8,
+                "length": 231,
+                "style": "color-rgb(10,10,35)"
+              },
+              {
+                "offset": 0,
+                "length": 7,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 8,
+                "length": 231,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 7,
+                "style": "fontsize-22"
+              },
+              {
+                "offset": 8,
+                "length": 231,
+                "style": "fontsize-22"
+              },
+              {
+                "offset": 0,
+                "length": 7,
+                "style": "fontfamily-Lato, sans-serif"
+              },
+              {
+                "offset": 8,
+                "length": 231,
+                "style": "fontfamily-Lato, sans-serif"
+              },
+              {
+                "offset": 0,
+                "length": 7,
+                "style": "color-var(--gray90)"
+              },
+              {
+                "offset": 0,
+                "length": 7,
+                "style": "bgcolor-transparent"
+              },
+              {
+                "offset": 0,
+                "length": 7,
+                "style": "fontfamily-inherit"
+              },
+              {
+                "offset": 0,
+                "length": 7,
+                "style": "UNDERLINE"
+              }
+            ],
+            "entityRanges": [
+              {
+                "offset": 0,
+                "length": 7,
+                "key": 7
+              }
+            ],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "7ad9t",
+            "text": "Why is search important?",
+            "type": "header-two",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 24,
+                "style": "color-var(--gray85)"
+              },
+              {
+                "offset": 0,
+                "length": 24,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 24,
+                "style": "fontsize-3.6rem"
+              },
+              {
+                "offset": 0,
+                "length": 24,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "ftdh8",
+            "text": "Whether you're a content creator or are trying to sell a product with your website, it's important to help your visitors actually find what they're looking for.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 160,
+                "style": "color-rgb(10,10,35)"
+              },
+              {
+                "offset": 0,
+                "length": 160,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 160,
+                "style": "fontsize-22"
+              },
+              {
+                "offset": 0,
+                "length": 160,
+                "style": "fontfamily-Lato, sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "6cn31",
+            "text": "If you're building an ecommerce website, you want someone to be able to easily find your Bender vinyl figures rather than having to dig through the entire catalog first.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 169,
+                "style": "color-rgb(10,10,35)"
+              },
+              {
+                "offset": 0,
+                "length": 169,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 169,
+                "style": "fontsize-22"
+              },
+              {
+                "offset": 0,
+                "length": 169,
+                "style": "fontfamily-Lato, sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "bca1o",
+            "text": "What are we going to build?",
+            "type": "header-two",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 27,
+                "style": "color-var(--gray85)"
+              },
+              {
+                "offset": 0,
+                "length": 27,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 27,
+                "style": "fontsize-3.6rem"
+              },
+              {
+                "offset": 0,
+                "length": 27,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "ein8u",
+            "text": "We're going to start off with a basic Create React App example. It's going to include some character info as structured data for one of my favorite shows Futurama that's simply dumped out into an HTML list.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 206,
+                "style": "color-rgb(10,10,35)"
+              },
+              {
+                "offset": 0,
+                "length": 206,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 206,
+                "style": "fontsize-22"
+              },
+              {
+                "offset": 0,
+                "length": 206,
+                "style": "fontfamily-Lato, sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "8gqij",
+            "text": "With that list, we're going to use fuse.js to provide client-side search capabilities, allowing us to demonstrate searching for the character we're looking for by their name and other details.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 192,
+                "style": "color-rgb(10,10,35)"
+              },
+              {
+                "offset": 0,
+                "length": 192,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 192,
+                "style": "fontsize-22"
+              },
+              {
+                "offset": 0,
+                "length": 192,
+                "style": "fontfamily-Lato, sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "a2icr",
+            "text": "Step 0: Bootstrapping our app",
+            "type": "header-two",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 29,
+                "style": "color-var(--gray85)"
+              },
+              {
+                "offset": 0,
+                "length": 29,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 29,
+                "style": "fontsize-3.6rem"
+              },
+              {
+                "offset": 0,
+                "length": 29,
+                "style": "fontfamily--apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "4evhm",
+            "text": "To get started, we're going to need content to work with. I got started by building a list of characters from Futurama as structured json data that I put in a list with a fresh Create React App.\n ",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 194,
+                "style": "color-rgb(10,10,35)"
+              },
+              {
+                "offset": 0,
+                "length": 194,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 194,
+                "style": "fontsize-22"
+              },
+              {
+                "offset": 0,
+                "length": 194,
+                "style": "fontfamily-Lato, sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          }
+        ],
+        "entityMap": {
+          "0": {
+            "type": "LINK",
+            "mutability": "MUTABLE",
+            "data": {
+              "url": "https://www.freecodecamp.org/news/how-to-add-search-to-a-react-app-with-fuse-js/#what-is-fuse-js",
+              "title": "What is fuse.js?",
+              "targetOption": "",
+              "_map": {
+                "type": "LINK",
+                "mutability": "MUTABLE",
+                "data": {
+                  "url": "https://www.freecodecamp.org/news/how-to-add-search-to-a-react-app-with-fuse-js/#what-is-fuse-js",
+                  "title": "What is fuse.js?",
+                  "targetOption": ""
+                }
+              }
+            }
+          },
+          "1": {
+            "type": "LINK",
+            "mutability": "MUTABLE",
+            "data": {
+              "url": "https://www.freecodecamp.org/news/how-to-add-search-to-a-react-app-with-fuse-js/#why-is-search-important",
+              "title": "Why is search important?",
+              "targetOption": "",
+              "_map": {
+                "type": "LINK",
+                "mutability": "MUTABLE",
+                "data": {
+                  "url": "https://www.freecodecamp.org/news/how-to-add-search-to-a-react-app-with-fuse-js/#why-is-search-important",
+                  "title": "Why is search important?",
+                  "targetOption": ""
+                }
+              }
+            }
+          },
+          "2": {
+            "type": "LINK",
+            "mutability": "MUTABLE",
+            "data": {
+              "url": "https://www.freecodecamp.org/news/how-to-add-search-to-a-react-app-with-fuse-js/#what-are-we-going-to-build",
+              "title": "What are we going to build?",
+              "targetOption": "",
+              "_map": {
+                "type": "LINK",
+                "mutability": "MUTABLE",
+                "data": {
+                  "url": "https://www.freecodecamp.org/news/how-to-add-search-to-a-react-app-with-fuse-js/#what-are-we-going-to-build",
+                  "title": "What are we going to build?",
+                  "targetOption": ""
+                }
+              }
+            }
+          },
+          "3": {
+            "type": "LINK",
+            "mutability": "MUTABLE",
+            "data": {
+              "url": "https://www.freecodecamp.org/news/how-to-add-search-to-a-react-app-with-fuse-js/#step-0-bootstrapping-our-app",
+              "title": "Step 0: Bootstrapping our app",
+              "targetOption": "",
+              "_map": {
+                "type": "LINK",
+                "mutability": "MUTABLE",
+                "data": {
+                  "url": "https://www.freecodecamp.org/news/how-to-add-search-to-a-react-app-with-fuse-js/#step-0-bootstrapping-our-app",
+                  "title": "Step 0: Bootstrapping our app",
+                  "targetOption": ""
+                }
+              }
+            }
+          },
+          "4": {
+            "type": "LINK",
+            "mutability": "MUTABLE",
+            "data": {
+              "url": "https://www.freecodecamp.org/news/how-to-add-search-to-a-react-app-with-fuse-js/#step-1-installing-fuse-js",
+              "title": "Step 1: Installing Fuse.js",
+              "targetOption": "",
+              "_map": {
+                "type": "LINK",
+                "mutability": "MUTABLE",
+                "data": {
+                  "url": "https://www.freecodecamp.org/news/how-to-add-search-to-a-react-app-with-fuse-js/#step-1-installing-fuse-js",
+                  "title": "Step 1: Installing Fuse.js",
+                  "targetOption": ""
+                }
+              }
+            }
+          },
+          "5": {
+            "type": "LINK",
+            "mutability": "MUTABLE",
+            "data": {
+              "url": "https://www.freecodecamp.org/news/how-to-add-search-to-a-react-app-with-fuse-js/#step-2-creating-a-new-fuse-search-instance",
+              "title": "Step 2: Creating a new Fuse search instance",
+              "targetOption": "",
+              "_map": {
+                "type": "LINK",
+                "mutability": "MUTABLE",
+                "data": {
+                  "url": "https://www.freecodecamp.org/news/how-to-add-search-to-a-react-app-with-fuse-js/#step-2-creating-a-new-fuse-search-instance",
+                  "title": "Step 2: Creating a new Fuse search instance",
+                  "targetOption": ""
+                }
+              }
+            }
+          },
+          "6": {
+            "type": "LINK",
+            "mutability": "MUTABLE",
+            "data": {
+              "url": "https://www.freecodecamp.org/news/how-to-add-search-to-a-react-app-with-fuse-js/#step-3-setting-up-dynamic-search-based-on-user-input",
+              "title": "Step 3: Setting up dynamic search based on user input",
+              "targetOption": "",
+              "_map": {
+                "type": "LINK",
+                "mutability": "MUTABLE",
+                "data": {
+                  "url": "https://www.freecodecamp.org/news/how-to-add-search-to-a-react-app-with-fuse-js/#step-3-setting-up-dynamic-search-based-on-user-input",
+                  "title": "Step 3: Setting up dynamic search based on user input",
+                  "targetOption": ""
+                }
+              }
+            }
+          },
+          "7": {
+            "type": "LINK",
+            "mutability": "MUTABLE",
+            "data": {
+              "url": "https://fusejs.io/",
+              "title": "Fuse.js",
+              "targetOption": "",
+              "_map": {
+                "type": "LINK",
+                "mutability": "MUTABLE",
+                "data": {
+                  "url": "https://fusejs.io/",
+                  "title": "Fuse.js",
+                  "targetOption": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "createdAt": "2021-05-18T18:33:22.447Z",
+      "id": 5
+    },
+    {
+      "content": {
+        "blocks": [
+          {
+            "key": "4gi4d",
+            "text": "How To Mix and Master Trap Beats ",
+            "type": "header-one",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 32,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 0,
+                "length": 32,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 32,
+                "style": "fontsize-40"
+              },
+              {
+                "offset": 0,
+                "length": 32,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "7f4eo",
+            "text": "Trap music is on the rise, and with it, eager producers ready to release their unique sound into the world of rap and EDM trap music. One of the main aspects that will take your music, your sound, from the recording studio to large music platforms, is how well you mix and master it.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 283,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 0,
+                "length": 283,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 283,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 0,
+                "length": 283,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "f72j0",
+            "text": "Mixing and mastering a Trap song can be exceptionally different from other genres. It requires greater attention to details in some areas and knowing what parts of the song to focus on. We’re here to show you what those areas are and what to specifically look for, and tweak, in your tracks.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 291,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 0,
+                "length": 291,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 291,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 0,
+                "length": 291,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "3op2u",
+            "text": "\n\n",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "a416q",
+            "text": "Need a professional engineer to perfect your track? Check out our mixing and mastering services.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 51,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 52,
+                "length": 44,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 0,
+                "length": 51,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 52,
+                "length": 44,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 51,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 52,
+                "length": 44,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 0,
+                "length": 51,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              },
+              {
+                "offset": 52,
+                "length": 44,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              },
+              {
+                "offset": 52,
+                "length": 44,
+                "style": "color-rgb(30,115,190)"
+              },
+              {
+                "offset": 52,
+                "length": 44,
+                "style": "bgcolor-transparent"
+              }
+            ],
+            "entityRanges": [
+              {
+                "offset": 52,
+                "length": 44,
+                "key": 0
+              }
+            ],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "anq5m",
+            "text": "Important Aspects Of Mixing Trap",
+            "type": "header-two",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 32,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 0,
+                "length": 32,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 32,
+                "style": "fontsize-30"
+              },
+              {
+                "offset": 0,
+                "length": 32,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "c142r",
+            "text": "Before we get into the details of what to look for, you should be aware of some aspects of trap music that contrasts with regular track mixing.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 143,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 0,
+                "length": 143,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 143,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 0,
+                "length": 143,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "73f80",
+            "text": "In most tracks, you would coordinate the low end in mixing, meaning that you make sure the bass and kick complement each other. That’s not the case when it comes to this trap; instead, you want the bass to be the kick.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 127,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 128,
+                "length": 90,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 0,
+                "length": 127,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 128,
+                "length": 90,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 127,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 128,
+                "length": 90,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 0,
+                "length": 127,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              },
+              {
+                "offset": 128,
+                "length": 90,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              },
+              {
+                "offset": 128,
+                "length": 46,
+                "style": "color-rgb(30,115,190)"
+              },
+              {
+                "offset": 128,
+                "length": 46,
+                "style": "bgcolor-transparent"
+              }
+            ],
+            "entityRanges": [
+              {
+                "offset": 128,
+                "length": 46,
+                "key": 1
+              }
+            ],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "4gtq3",
+            "text": "Another thing to take note of is that Trap has a negotiable tempo. You’ll notice that there is a mixture of large, slow pulses, sub-rhythms, and fast hi-hats and snare rolls that all differ according to the track. So, when setting up the ambiance in a mix the style and setting options are relevant to the tempo.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 312,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 0,
+                "length": 312,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 312,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 0,
+                "length": 312,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "d1if3",
+            "text": "Now let’s get started on the two most important elements to consider.",
+            "type": "header-three",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 69,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 0,
+                "length": 69,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 69,
+                "style": "fontsize-20"
+              },
+              {
+                "offset": 0,
+                "length": 69,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "e001u",
+            "text": "1. The Low End",
+            "type": "header-two",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 14,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 0,
+                "length": 14,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 14,
+                "style": "fontsize-30"
+              },
+              {
+                "offset": 0,
+                "length": 14,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "buntj",
+            "text": "The first thing you’re going to want to focus on is the low end. To achieve a quality trap mix you need to have a massive low end. You want the kick to be loud, but not too loud to mask everything else; the challenge is finding the balance of the kick and the rest of the song without losing the “loudness” the kick brings. These mixing effects below are important to help make your kick sound louder than it actually is.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 421,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 0,
+                "length": 421,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 421,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 0,
+                "length": 421,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "fsqtb",
+            "text": "· Saturation and overdrive create a harmonic tone that is important to the kick. Not only will this give the kick more presence in the mix, but it will also give it character and texture.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 2,
+                "length": 24,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 27,
+                "length": 160,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 2,
+                "length": 24,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 27,
+                "length": 160,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 2,
+                "length": 24,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 27,
+                "length": 160,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              },
+              {
+                "offset": 2,
+                "length": 24,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              },
+              {
+                "offset": 27,
+                "length": 160,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "3euoc",
+            "text": "· Add bass enhancers to create sub-harmonic content based off the source sound. Software is available to use online that will give your track the added bass you need.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 2,
+                "length": 18,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 21,
+                "length": 145,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 2,
+                "length": 18,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 21,
+                "length": 145,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 2,
+                "length": 18,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 21,
+                "length": 145,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              },
+              {
+                "offset": 2,
+                "length": 18,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              },
+              {
+                "offset": 21,
+                "length": 145,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "6eqel",
+            "text": "· The 200 Hz range will give your average kick drum a good amount of punch. By layering the kick under the 808 and extending the 200hz range you are getting a sound that resembles a super punchy 808.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 2,
+                "length": 16,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 19,
+                "length": 180,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 2,
+                "length": 16,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 19,
+                "length": 180,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 2,
+                "length": 16,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 19,
+                "length": 180,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              },
+              {
+                "offset": 2,
+                "length": 16,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              },
+              {
+                "offset": 19,
+                "length": 180,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "fr581",
+            "text": "2. Rhythm",
+            "type": "header-two",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 9,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 0,
+                "length": 9,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 9,
+                "style": "fontsize-30"
+              },
+              {
+                "offset": 0,
+                "length": 9,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "b17ke",
+            "text": "To achieve a solid rhythm in your trap beat you want to aim for a unified reverb that never seems to step on any of the elements. To achieve this you want to break the elements down into their sub-rhythms and add adjustments correspondingly. On elements that move faster, put shorter reverbs, and elements that move slower add longer reverbs and delays. You want to make sure that the reverbs all blend together smoothly and sound cohesive. With those techniques, you will successfully get a unified reverb.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 507,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 0,
+                "length": 507,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 507,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 0,
+                "length": 507,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "4h97m",
+            "text": "What Gives Trap It’s Unique Sound?",
+            "type": "header-two",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 34,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 0,
+                "length": 34,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 34,
+                "style": "fontsize-30"
+              },
+              {
+                "offset": 0,
+                "length": 34,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "fin46",
+            "text": "An important part of producing, mixing, and mastering, is what aspects place your song in the Trap genre. Whether you’re creating a fire rap track or a head-banging EDM song, including these key elements will make it a %100 pure trap beat that anyone will love.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 261,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 0,
+                "length": 261,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 261,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 0,
+                "length": 261,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "33bgn",
+            "text": "· The Kick: In Trap, as we stated above, the kick is the bass. In other words, the kick drum acts as both itself and the bass instrument.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 2,
+                "length": 9,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 12,
+                "length": 125,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 2,
+                "length": 9,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 12,
+                "length": 125,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 2,
+                "length": 9,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 12,
+                "length": 125,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              },
+              {
+                "offset": 2,
+                "length": 9,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              },
+              {
+                "offset": 12,
+                "length": 125,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "23i4n",
+            "text": "· Tempo: Often widely varied, the tempo is negotiable but an important part of Trap music.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 2,
+                "length": 6,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 9,
+                "length": 81,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 2,
+                "length": 6,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 9,
+                "length": 81,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 2,
+                "length": 6,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 9,
+                "length": 81,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              },
+              {
+                "offset": 2,
+                "length": 6,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              },
+              {
+                "offset": 9,
+                "length": 81,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "96lvt",
+            "text": "· Orchestral synths: To make the sound heavy and dramatic the synth elements are layered up. In doing so, not only is the sound electrifying but also makes the song powerful and unique.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 2,
+                "length": 18,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 21,
+                "length": 164,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 2,
+                "length": 18,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 21,
+                "length": 164,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 2,
+                "length": 18,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 21,
+                "length": 164,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              },
+              {
+                "offset": 2,
+                "length": 18,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              },
+              {
+                "offset": 21,
+                "length": 164,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "f6kdk",
+            "text": "· Rhythm: As you might have noticed earlier in the article, rhythm is very important in mixing and mastering Trap. Like tempo, rhythm is negotiable and varies depending on the sound. For example, the rhythm is usually straight but sometimes there will be poly-rhythmic elements that will overlay a triplet feel over the eighth notes.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 2,
+                "length": 7,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 10,
+                "length": 323,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 2,
+                "length": 7,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 10,
+                "length": 323,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 2,
+                "length": 7,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 10,
+                "length": 323,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              },
+              {
+                "offset": 2,
+                "length": 7,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              },
+              {
+                "offset": 10,
+                "length": 323,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "dsuoj",
+            "text": "· Contrast: If you’re looking for one word to define the elements of a trap beat, then contrasting could be one of them. The whole point of the genre is based on how a song can go from one element to the next with a drastic but smooth sound change.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 2,
+                "length": 9,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 12,
+                "length": 236,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 2,
+                "length": 9,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 12,
+                "length": 236,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 2,
+                "length": 9,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 12,
+                "length": 236,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              },
+              {
+                "offset": 2,
+                "length": 9,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              },
+              {
+                "offset": 12,
+                "length": 236,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "fq5l9",
+            "text": "· Focused Pitched Drums The drums tend to be amply focused sounds, usually 808s and 909s.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 2,
+                "length": 21,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 24,
+                "length": 65,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 2,
+                "length": 21,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 24,
+                "length": 65,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 2,
+                "length": 21,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 24,
+                "length": 65,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 0,
+                "length": 1,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              },
+              {
+                "offset": 2,
+                "length": 21,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              },
+              {
+                "offset": 24,
+                "length": 65,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "ao9ep",
+            "text": "With these elements and what we recommended on focusing on above, you should be able to mix and master with confidence knowing exactly what to look for.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 152,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 0,
+                "length": 152,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 152,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 0,
+                "length": 152,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "18pea",
+            "text": "Not Familiar With Mixing and Mastering?",
+            "type": "header-three",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 39,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 0,
+                "length": 39,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 39,
+                "style": "fontsize-20"
+              },
+              {
+                "offset": 0,
+                "length": 39,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "8tdpq",
+            "text": "Mixing and mastering isn’t a simple task to learn, it takes hours of practice and trial and error to get your tracks sounding exactly how you want them to.",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 155,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 0,
+                "length": 155,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 155,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 0,
+                "length": 155,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          },
+          {
+            "key": "f3i2m",
+            "text": "If you need your tracks professionally mixed and mastered by trained engineers then you can count on. Whether your busy schedule doesn’t let you spend hours tweaking your tracks or you just want your song to be the highest quality it can, we’ll be happy to take over for you. Learn more about our service here!\n ",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [
+              {
+                "offset": 0,
+                "length": 310,
+                "style": "color-rgb(58,58,58)"
+              },
+              {
+                "offset": 0,
+                "length": 310,
+                "style": "bgcolor-rgb(255,255,255)"
+              },
+              {
+                "offset": 0,
+                "length": 310,
+                "style": "fontsize-17"
+              },
+              {
+                "offset": 0,
+                "length": 310,
+                "style": "fontfamily-Open Sans\", sans-serif"
+              }
+            ],
+            "entityRanges": [],
+            "data": {
+              "text-align": "start"
+            }
+          }
+        ],
+        "entityMap": {
+          "0": {
+            "type": "LINK",
+            "mutability": "MUTABLE",
+            "data": {
+              "url": "https://rangeofsounds.com/",
+              "title": "Check out our mixing and mastering services.",
+              "targetOption": "",
+              "_map": {
+                "type": "LINK",
+                "mutability": "MUTABLE",
+                "data": {
+                  "url": "https://rangeofsounds.com/",
+                  "title": "Check out our mixing and mastering services.",
+                  "targetOption": ""
+                }
+              }
+            }
+          },
+          "1": {
+            "type": "LINK",
+            "mutability": "MUTABLE",
+            "data": {
+              "url": "https://runthetrap.com/what-is-trap-music/",
+              "title": "That’s not the case when it comes to this trap",
+              "targetOption": "",
+              "_map": {
+                "type": "LINK",
+                "mutability": "MUTABLE",
+                "data": {
+                  "url": "https://runthetrap.com/what-is-trap-music/",
+                  "title": "That’s not the case when it comes to this trap",
+                  "targetOption": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "createdAt": "2021-05-18T18:35:53.398Z",
+      "id": 6
     }
   ]
 }

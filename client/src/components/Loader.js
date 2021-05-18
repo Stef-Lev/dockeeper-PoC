@@ -8,7 +8,11 @@ const LoadingCircle = styled(CircularProgress)`
 `;
 
 function Loader() {
-  return <LoadingCircle style={{ width: "200px", height: "200px" }} />;
+  return (
+    <LoadingCircle
+      style={{ width: "200px", height: "200px", margin: "50px auto" }}
+    />
+  );
 }
 
 export default Loader;

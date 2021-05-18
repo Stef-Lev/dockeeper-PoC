@@ -11,12 +11,13 @@ import { theme } from "../themeColors";
 import AddIcon from "@material-ui/icons/Add";
 import { getAllDocs, iconDimensions } from "../helpers";
 import { useHistory } from "react-router-dom";
+import Fuse from "fuse.js";
 
 const { REACT_APP_API_URL } = process.env;
 
 const Container = styled.div`
   margin: 16px auto;
-  padding: 16px 0px;
+  padding: 16px 0px 80px;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -53,6 +54,7 @@ function MainPage() {
   const [errorMsg, setErrorMsg] = useState("");
   const [data, setData] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
+  const [fuse, setFuse] = useState(null);
 
   useEffect(() => {
     let mounted = true;
@@ -78,6 +80,18 @@ function MainPage() {
       mounted = false;
     };
   }, []);
+
+  const searchFor = (data) => {
+    const options = {
+      includeScore: true,
+      keys: ["content.blocks.text"],
+    };
+    const fuse = new Fuse(data, options);
+
+    const results = fuse.search("css");
+    console.log(data);
+    console.log(results);
+  };
 
   return (
     <Paper elevation={3}>
@@ -105,15 +119,21 @@ function MainPage() {
                 .includes(searchTerm.toLowerCase())
             )
             .map((doc) => (
-              <DocItem
-                key={`document_ID${doc.id}`}
-                title={
-                  doc.content.blocks.find((item) => item.type === "header-one")
-                    .text
-                }
-                id={doc.id}
-                createdAt={doc.createdAt || null}
-              />
+              <>
+                <DocItem
+                  key={`document_ID${doc.id}`}
+                  title={
+                    doc.content.blocks.find(
+                      (item) => item.type === "header-one"
+                    ).text
+                  }
+                  id={doc.id}
+                  createdAt={doc.createdAt || null}
+                />
+                <button onClick={() => searchFor(data, "css")}>
+                  TEST SEARCH
+                </button>
+              </>
             ))}
         {!loading && error && <ErrorMessage msg={errorMsg} />}
       </Container>
